@@ -1,0 +1,17 @@
+method_class,n,cancer_specific,year_range,n_2024_26,gt_simulation,gt_orthogonal,gt_genotype,gt_mixture,gt_heldout,gt_expert,gt_unclear,robust_params,calibration,metric_validity,median_n_tools
+other preprocessing/platform benchmarks,55,9,2018-2026,21,15,4,0,4,0,3,31,3,1,1,7.0
+"spatial (deconvolution, domains, SVG, platforms)",36,6,2022-2026,28,19,8,0,1,0,2,10,1,2,1,11.0
+bulk deconvolution,29,10,2019-2026,17,16,8,0,2,0,0,8,1,0,0,9.5
+data integration/batch correction,25,1,2019-2026,15,5,6,1,0,0,3,12,1,0,1,12.0
+cell-type annotation & label transfer,17,3,2019-2026,11,1,1,0,0,0,9,7,0,0,0,8.0
+clonal phylogeny/scDNA,17,7,2006-2025,2,5,8,0,0,0,0,8,1,0,0,3.0
+single-cell foundation models,14,2,2024-2026,14,1,0,0,0,0,2,11,1,0,0,9.0
+GRN/regulon inference,13,0,2018-2026,4,8,1,0,0,1,0,2,0,1,1,7.0
+"doublet detection, demultiplexing & ambient RNA",13,0,2021-2026,6,7,1,10,0,0,0,2,1,0,0,7.0
+differential abundance & differential expression,12,0,2017-2024,2,6,1,0,0,0,1,5,2,4,0,11.5
+perturbation-response prediction,11,0,2025-2026,11,0,1,0,0,10,0,0,1,1,4,7.0
+trajectory inference & RNA velocity,8,0,2019-2026,6,3,0,0,0,0,1,5,0,0,0,15.0
+CNV inference & malignant-cell calling,7,7,2024-2026,7,1,2,0,1,0,3,1,3,0,0,5.0
+cell-cell communication,6,0,2022-2026,2,2,1,0,0,0,0,3,0,0,0,9.0
+drug-response prediction,3,2,2025-2026,3,0,0,0,0,1,0,2,0,0,0,8.0
+lineage tracing/mtDNA clone calling,3,1,2021-2026,2,2,2,0,0,0,0,0,0,0,0,2.0

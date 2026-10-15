@@ -1,0 +1,121 @@
+quantity,value_in_review,recomputed,source_file,match,note
+Subfield PubMed records 2015,443,443,pubmed_topic_volume_long.csv,True,
+Subfield PubMed records 2025,7556,7556,pubmed_topic_volume_long.csv,True,
+Subfield projected 2026 (~),9700,9674.5,pubmed_topic_volume_long.csv,True,"2026 partial (7,342, to 4 Oct = day 277) x 365/277; review says ""roughly 9,700"""
+Subfield papers 2023-2026,24226,24226,pubmed_topic_volume_long.csv,True,
+PubMed per-year counts,324,324,pubmed_topic_volume_long.csv,True,27 series (26 topics + subfield total) x 12 years
+Topics with absolute growth (2026 projected > 2025),26,26,pubmed_topic_volume.csv,True,all 26 have CAGR21-25>0; only 19/26 already exceed 2025 with partial 2026
+Abstracts in corpus,3627,3627,sc_cancer_corpus.csv,True,
+Limitation extraction rows,1757,1757,limitations_extracted.csv,True,
+Methodological open problems,1506,1506,limitations_extracted.csv,True,rows with problem_type!='none' and none!=True
+Evaluation-titled papers,486,486,benchmark_classification.csv,True,
+Verified benchmarks,158,158,benchmark_classification.csv,True,
+Verified benchmark share (%),33,32.5,benchmark_classification.csv,True,
+bioRxiv sc-cancer preprints,372,372,biorxiv_sc_cancer_preprints.csv,True,
+Share change 2025/2021: spatial_tumor,6.2,6.2,pubmed_topic_volume_long.csv (recomputed from counts),True,
+Share change 2025/2021: drug_response_pred,3.2,3.2,pubmed_topic_volume_long.csv (recomputed from counts),True,
+Share change 2025/2021: foundation_dl,3.1,3.1,pubmed_topic_volume_long.csv (recomputed from counts),True,
+Share change 2025/2021: cell_communication,2.3,2.3,pubmed_topic_volume_long.csv (recomputed from counts),True,
+Share change 2025/2021: clonal_phylogeny,0.44,0.44,pubmed_topic_volume_long.csv (recomputed from counts),True,
+Share change 2025/2021: ctc_liquid_biopsy,0.46,0.46,pubmed_topic_volume_long.csv (recomputed from counts),True,
+Share change 2025/2021: ith_quantification,0.67,0.67,pubmed_topic_volume_long.csv (recomputed from counts),True,
+Share change 2025/2021: lineage_barcoding,0.68,0.68,pubmed_topic_volume_long.csv (recomputed from counts),True,
+Spatial tumour papers 2025,970,970,pubmed_topic_volume_long.csv,True,
+Benchmarking papers 2025,87,87,pubmed_topic_volume_long.csv,True,
+Benchmarking share of subfield 2025 (%),1.2,1.2,pubmed_topic_volume_long.csv,True,
+Papers 2023-26: lineage_barcoding,260,260,pubmed_topic_volume_long.csv,True,
+Verified benchmarks: lineage_barcoding,0,0,benchmark_classification.csv + sc_cancer_corpus.csv topic tags,True,
+Papers 2023-26: perturbseq,108,108,pubmed_topic_volume_long.csv,True,
+Verified benchmarks: perturbseq,0,0,benchmark_classification.csv + sc_cancer_corpus.csv topic tags,True,
+Papers 2023-26: longitudinal_therapy,670,670,pubmed_topic_volume_long.csv,True,
+Verified benchmarks: longitudinal_therapy,1,1,benchmark_classification.csv + sc_cancer_corpus.csv topic tags,True,
+Papers per benchmark: longitudinal_therapy,670,670,derived,True,
+Papers 2023-26: drug_response_pred,3888,3888,pubmed_topic_volume_long.csv,True,
+Verified benchmarks: drug_response_pred,6,6,benchmark_classification.csv + sc_cancer_corpus.csv topic tags,True,
+Papers per benchmark: drug_response_pred,648,648,derived,True,
+Papers 2023-26: immunotherapy_resp,7484,7484,pubmed_topic_volume_long.csv,True,
+Verified benchmarks: immunotherapy_resp,13,13,benchmark_classification.csv + sc_cancer_corpus.csv topic tags,True,
+Papers per benchmark: immunotherapy_resp,576,576,derived,True,
+Papers 2023-26: metastasis,5663,5663,pubmed_topic_volume_long.csv,True,
+Verified benchmarks: metastasis,12,12,benchmark_classification.csv + sc_cancer_corpus.csv topic tags,True,
+Papers per benchmark: metastasis,472,472,derived,True,
+Papers 2023-26: cell_communication,2169,2169,pubmed_topic_volume_long.csv,True,
+Verified benchmarks: cell_communication,5,5,benchmark_classification.csv + sc_cancer_corpus.csv topic tags,True,
+Papers per benchmark: cell_communication,434,434,derived,True,
+Papers 2023-26: tme_composition,9284,9284,pubmed_topic_volume_long.csv,True,
+Verified benchmarks: tme_composition,22,22,benchmark_classification.csv + sc_cancer_corpus.csv topic tags,True,
+Papers per benchmark: tme_composition,422,422,derived,True,
+Papers 2023-26: ctc_liquid_biopsy,562,562,pubmed_topic_volume_long.csv,True,
+Verified benchmarks: ctc_liquid_biopsy,8,8,benchmark_classification.csv + sc_cancer_corpus.csv topic tags,True,
+Papers per benchmark: ctc_liquid_biopsy,70,70,derived,True,
+Papers 2023-26: clonal_phylogeny,464,464,pubmed_topic_volume_long.csv,True,
+Verified benchmarks: clonal_phylogeny,7,7,benchmark_classification.csv + sc_cancer_corpus.csv topic tags,True,
+Papers per benchmark: clonal_phylogeny,66,66,derived,True,
+Papers 2023-26: cnv_scdna,1041,1041,pubmed_topic_volume_long.csv,True,
+Verified benchmarks: cnv_scdna,16,16,benchmark_classification.csv + sc_cancer_corpus.csv topic tags,True,
+Papers per benchmark: cnv_scdna,65,65,derived,True,
+Papers 2023-26: deconvolution,838,838,pubmed_topic_volume_long.csv,True,
+Verified benchmarks: deconvolution,13,13,benchmark_classification.csv + sc_cancer_corpus.csv topic tags,True,
+Papers per benchmark: deconvolution,64,64,derived,True,
+Papers 2023-26: clinical_prognosis,13409,13409,pubmed_topic_volume_long.csv,True,
+Verified benchmarks: clinical_prognosis,37,37,benchmark_classification.csv + sc_cancer_corpus.csv topic tags,True,
+Papers per benchmark: clinical_prognosis,362,362,derived,True,
+Papers 2023-26: malignant_calling,1204,1204,pubmed_topic_volume_long.csv,True,
+Verified benchmarks: malignant_calling,8,8,benchmark_classification.csv + sc_cancer_corpus.csv topic tags,True,
+Papers per benchmark: malignant_calling,150,150,derived,True,
+Papers 2023-26: epigenome_multiome,566,566,pubmed_topic_volume_long.csv,True,
+Verified benchmarks: epigenome_multiome,3,3,benchmark_classification.csv + sc_cancer_corpus.csv topic tags,True,
+Papers per benchmark: epigenome_multiome,189,189,derived,True,
+Topics with zero verified benchmarks,2,2,derived,True,
+"Papers-per-benchmark range (cnv_scdna,deconvolution,clonal_phylogeny,ctc_liquid_biopsy)",64-70,64-70,derived,True,
+"Papers-per-benchmark range (longitudinal_therapy,drug_response_pred,immunotherapy_resp,metastasis,cell_communication,tme_composition)",400-670,422-670,derived,approx,"review range ""400-670"" is rounded; actual min 422"
+"Share of 1,506 problems: no_ground_truth (%)",24.2,24.2,limitations_extracted.csv,True,364/1506
+"Share of 1,506 problems: no_benchmark (%)",5.8,5.8,limitations_extracted.csv,True,87/1506
+"Share of 1,506 problems: metric_invalid (%)",1.1,1.1,limitations_extracted.csv,True,16/1506
+"Share of 1,506 problems: uncertainty (%)",0.7,0.7,limitations_extracted.csv,True,10/1506
+"Share of 1,506 problems: parameter_sensitivity (%)",2.3,2.3,limitations_extracted.csv,True,34/1506
+Topics where no_ground_truth is top problem,21,21,problem_type_by_topic.csv,True,
+Topics where causality displaces no_ground_truth,3,3,problem_type_by_topic.csv,True,
+Max metric_invalid share outside benchmarking (%),2.1,2.1,problem_type_by_topic.csv,True,denominator = all extracted problems per topic (row sum)
+Max uncertainty share in any topic (%),2.6,2.6,problem_type_by_topic.csv,True,
+parameter_sensitivity share in benchmarking (%),13,13.0,problem_type_by_topic.csv,True,
+Topics with parameter_sensitivity >5%,1,1,problem_type_by_topic.csv,True,
+Topics with parameter_sensitivity 0-5%,25,25,problem_type_by_topic.csv,True,
+Topics with uncertainty <3%,26,26,problem_type_by_topic.csv,True,
+"Cell-communication share change (P4, -fold)",2.3,2.3,pubmed_topic_volume_long.csv,True,
+Median topic tags per paper,3,3.0,sc_cancer_corpus.csv,True,"all 3,627; 96 untagged papers included as 0; median over tagged = 3.0"
+Preprints per 100 papers: benchmarking,4.8,5.2,biorxiv_sc_cancer_preprints.csv + pubmed_topic_volume_long.csv,False,"10 preprints; original ""equivalent window"" denominator not recorded; recomputed with 2025+2026-partial PubMed counts; rank order of the six largely preserved"
+Preprints per 100 papers: clonal_phylogeny,3.9,4.2,biorxiv_sc_cancer_preprints.csv + pubmed_topic_volume_long.csv,False,"12 preprints; original ""equivalent window"" denominator not recorded; recomputed with 2025+2026-partial PubMed counts; rank order of the six largely preserved"
+Preprints per 100 papers: perturbseq,3.9,4.1,biorxiv_sc_cancer_preprints.csv + pubmed_topic_volume_long.csv,False,"3 preprints; original ""equivalent window"" denominator not recorded; recomputed with 2025+2026-partial PubMed counts; rank order of the six largely preserved"
+Preprints per 100 papers: lineage_barcoding,3.5,3.8,biorxiv_sc_cancer_preprints.csv + pubmed_topic_volume_long.csv,False,"6 preprints; original ""equivalent window"" denominator not recorded; recomputed with 2025+2026-partial PubMed counts; rank order of the six largely preserved"
+Preprints per 100 papers: ith_quantification,3.3,3.2,biorxiv_sc_cancer_preprints.csv + pubmed_topic_volume_long.csv,False,"30 preprints; original ""equivalent window"" denominator not recorded; recomputed with 2025+2026-partial PubMed counts; rank order of the six largely preserved"
+Preprints per 100 papers: spatial_tumor,3.2,3.7,biorxiv_sc_cancer_preprints.csv + pubmed_topic_volume_long.csv,False,"85 preprints; original ""equivalent window"" denominator not recorded; recomputed with 2025+2026-partial PubMed counts; rank order of the six largely preserved"
+Shortlist score P1,4.85,4.85,project_shortlist.csv,True,
+Shortlist weeks P1,6,6,project_shortlist.csv,True,
+Shortlist score P6,4.69,4.69,project_shortlist.csv,True,
+Shortlist weeks P6,7,7,project_shortlist.csv,True,
+Shortlist score P8,4.62,4.62,project_shortlist.csv,True,
+Shortlist weeks P8,5,5,project_shortlist.csv,True,
+Shortlist score P2,4.59,4.59,project_shortlist.csv,True,
+Shortlist weeks P2,7,7,project_shortlist.csv,True,
+Shortlist score P3,3.8,3.8,project_shortlist.csv,True,
+Shortlist weeks P3,9,9,project_shortlist.csv,True,
+Shortlist score P4,3.71,3.71,project_shortlist.csv,True,
+Shortlist weeks P4,8,8,project_shortlist.csv,True,
+Shortlist score P5,3.04,3.04,project_shortlist.csv,True,
+Shortlist weeks P5,10,10,project_shortlist.csv,True,
+Shortlist score P7,2.64,2.64,project_shortlist.csv,True,
+Shortlist weeks P7,12,12,project_shortlist.csv,True,
+GEO human tumour scRNA-seq series,818,not in archive CSVs,project_shortlist.csv (text),not_verifiable,appears in project_shortlist.datasets text
+GEO tumour spatial series,925,not in archive CSVs,none,not_verifiable,GEO/bioRxiv probe results not stored in archive
+GEO scATAC/multiome series,444,not in archive CSVs,project_shortlist.csv (text),not_verifiable,appears in project_shortlist.datasets text
+GEO sc + matched WES/WGS,158,not in archive CSVs,project_shortlist.csv (text),not_verifiable,appears in project_shortlist.datasets text
+GEO CITE-seq,149,not in archive CSVs,project_shortlist.csv (text),not_verifiable,appears in project_shortlist.datasets text
+GEO paired spatial+scRNA,145,not in archive CSVs,project_shortlist.csv (text),not_verifiable,appears in project_shortlist.datasets text
+GEO paired bulk+sc,437,not in archive CSVs,project_shortlist.csv (text),not_verifiable,appears in project_shortlist.datasets text
+GEO mito-lineage,79,not in archive CSVs,project_shortlist.csv (text),not_verifiable,appears in project_shortlist.datasets text
+GEO longitudinal,49,not in archive CSVs,project_shortlist.csv (text),not_verifiable,appears in project_shortlist.datasets text
+GEO Perturb-seq/CROP-seq,174,not in archive CSVs,none,not_verifiable,GEO/bioRxiv probe results not stored in archive
+bioRxiv preprints screened,15682,not in archive CSVs,none,not_verifiable,GEO/bioRxiv probe results not stored in archive
+GEO availability probes,12,not in archive CSVs,project_shortlist.csv (text),not_verifiable,appears in project_shortlist.datasets text
+"Raw-to-verified evaluation ratio (""three times thinner"")",3,3.08,benchmark_classification.csv,True,

@@ -1,0 +1,10 @@
+# Python 3.11.16 (versions used for the published analysis)
+numpy==2.4.6
+pandas==2.3.3
+scipy==1.17.1
+statsmodels==0.15.0
+matplotlib==3.11.1
+requests==2.34.2
+# only for re-coding abstracts (src/02_sample_and_code_abstracts.py code ...)
+anthropic
+# manuscript build (not pip): pandoc 3.12.1, Tectonic 0.17.0

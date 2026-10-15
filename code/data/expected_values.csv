@@ -1,0 +1,86 @@
+quantity,published,decimals_in_manuscript,manuscript_phrase
+trend_poisson_RR,0.922,3,0.922
+trend_poisson_lo,0.875,3,0.875–0.972
+trend_poisson_hi,0.972,3,0.875–0.972
+trend_poisson_p,0.0027,4,0.0027
+trend_2015_25_RR,0.93,3,0.930
+trend_2015_25_p,0.02,3,0.020
+early_rate_per1000,6.77,2,6.77
+late_rate_per1000,3.88,2,3.88
+late_early_p,0.0085,4,0.0085
+verified_fraction_OR,0.973,3,0.973
+verified_fraction_p,0.4,2,0.40
+eval_titled_RR,0.94,3,0.940
+subfield_papers_2015_2026,34595.0,0,"34,595"
+benchmarks_2015_2026,157.0,0,157
+nb2_full_window_method_IRR,4.84,2,4.84
+nb2_full_window_method_lo,2.09,2,2.09
+nb2_full_window_method_hi,11.18,2,11.18
+nb2_full_window_excl_benchmarking_method_IRR,2.35,2,2.35
+nb2_full_window_excl_benchmarking_method_lo,1.66,2,1.66–3.31
+nb2_full_window_excl_benchmarking_method_hi,3.31,2,1.66–3.31
+nb2_full_window_excl_benchmarking_log_share_change_IRR,0.79,2,0.79
+nb2_full_window_excl_benchmarking_log_share_change_lo,0.6,2,0.60–1.06
+nb2_full_window_excl_benchmarking_log_share_change_hi,1.06,2,0.60–1.06
+nb2_full_window_alt_excl_benchmarking_method_alt_IRR,1.88,2,1.88
+nb2_full_window_alt_excl_benchmarking_method_alt_lo,1.19,2,1.19–2.98
+nb2_full_window_alt_excl_benchmarking_method_alt_hi,2.98,2,1.19–2.98
+nb2_window_matched_excl_benchmarking_method_IRR,2.81,2,2.81
+nb2_window_matched_excl_benchmarking_method_lo,1.87,2,1.87–4.22
+nb2_window_matched_excl_benchmarking_method_hi,4.22,2,1.87–4.22
+nb2_window_matched_excl_benchmarking_log_share_change_IRR,0.77,2,0.77
+nb2_window_matched_excl_benchmarking_log_share_change_lo,0.55,2,0.55–1.08
+nb2_window_matched_excl_benchmarking_log_share_change_hi,1.08,2,0.55–1.08
+panel_biology_RR,0.901,3,0.901
+panel_biology_lo,0.84,3,0.840–0.966
+panel_biology_hi,0.966,3,0.840–0.966
+panel_biology_p,0.0035,4,0.0035
+panel_method_RR,1.012,3,1.012
+panel_ratio,1.12,2,1.12
+panel_ratio_p,0.042,3,0.042
+panel_topic_years,294.0,0,294
+n_coded,1771.0,0,"1,771"
+n_sc_omics,989.0,0,989
+sc_share_2015_pct,17.0,0,17%
+sc_share_2026_pct,89.0,0,89%
+sc_trend_RR,0.92,3,0.920
+sc_trend_lo,0.844,3,0.844–1.003
+sc_trend_hi,1.003,3,0.844–1.003
+sc_trend_p,0.058,3,0.058
+sc_trend_2015_25_RR,0.95,2,"0.95, 0.86–1.06"
+sc_trend_2015_25_lo,0.86,2,0.86–1.06
+sc_trend_2015_25_hi,1.06,2,0.86–1.06
+sc_panel_biology_RR,0.882,3,0.882
+sc_panel_biology_lo,0.795,3,0.795–0.979
+sc_panel_biology_hi,0.979,3,0.795–0.979
+sc_panel_biology_p,0.018,3,p = 0.018
+sc_panel_ratio_p,0.086,3,p = 0.086
+sc_benchmarks,100.0,0,100
+prev_sample_size_pct,15.3,1,15.3%
+prev_generalization_pct,14.5,1,14.5%
+prev_clinical_translation_pct,8.5,1,8.5%
+prev_no_ground_truth_pct,1.1,1,1.1%
+prev_parameter_sensitivity_pct,1.8,1,1.8%
+prev_no_benchmark_pct,1.4,1,1.4%
+prev_uncertainty_pct,1.3,1,1.3%
+prev_metric_invalid_pct,0.4,1,0.4%
+clinical_translation_OR,1.14,2,OR 1.14
+any_check_OR,0.81,2,OR 0.81
+any_check_OR_lo,0.74,2,0.74–0.88
+any_check_OR_hi,0.88,2,0.74–0.88
+any_check_2015_18_pct,14.0,1,14.0%
+any_check_2024_26_pct,3.6,1,3.6%
+any_problem_2015_18_pct,55.0,1,55.0%
+any_problem_2024_26_pct,41.2,1,41.2%
+kappa_sc_genomics,0.88,2,κ = 0.88
+kappa_technical_artifact,0.85,2,κ = 0.85
+kappa_parameter_sensitivity,0.66,2,0.66
+kappa_sample_size,0.63,2,κ = 0.63
+kappa_any_problem,0.35,2,κ = 0.35
+rate15_deconvolution,11.54,2,11.54
+rate15_cnv_scdna,10.3,2,10.30
+rate15_clonal_phylogeny,8.17,2,8.17
+rate15_clinical_prognosis,2.19,2,2.19
+rate15_benchmarking,120.64,2,120.64
+papers15_clinical_prognosis,16859.0,0,"16,859"
+papers15_lineage_barcoding,397.0,0,397

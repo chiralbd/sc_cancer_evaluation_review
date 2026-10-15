@@ -1,0 +1,27 @@
+topic,label,method,method_alt,class,class_alt,rationale
+benchmarking,Benchmarking & evaluation,1,1,method/measurement,method/measurement,evaluation of methods
+cell_communication,Cell-cell communication,1,0,method/measurement,biology/application,computational inference task (ligand-receptor inference) [ambiguous]
+clinical_prognosis,Clinical prognosis & biomarkers,0,0,biology/application,biology/application,clinical/application endpoint
+clonal_phylogeny,Clonal evolution & phylogeny,1,1,method/measurement,method/measurement,computational inference task (tree/clone reconstruction)
+cnv_scdna,CNV inference / scDNA-seq,1,1,method/measurement,method/measurement,computational inference task (copy-number calling) / scDNA assay
+ctc_liquid_biopsy,CTC / liquid biopsy / MRD,1,0,method/measurement,biology/application,measurement/assay context [ambiguous]
+deconvolution,Bulk deconvolution,1,1,method/measurement,method/measurement,computational inference task
+drug_response_pred,Drug-response prediction,0,1,biology/application,method/measurement,clinical/application endpoint [ambiguous: computational prediction]
+epigenome_multiome,scATAC / multiome / epigenome,1,0,method/measurement,biology/application,measurement modality [ambiguous]
+foundation_dl,Deep learning / foundation models,1,1,method/measurement,method/measurement,modelling methodology
+immunotherapy_resp,Immunotherapy response,0,0,biology/application,biology/application,clinical/application endpoint
+integration_batch,Integration & batch effects,1,1,method/measurement,method/measurement,computational preprocessing task
+ith_quantification,Intratumor heterogeneity metrics,1,1,method/measurement,method/measurement,quantification metric/method
+lineage_barcoding,Lineage tracing & barcoding,1,1,method/measurement,method/measurement,"measurement technology (barcoding, mtDNA lineage)"
+longitudinal_therapy,Longitudinal / on-treatment,0,0,biology/application,biology/application,clinical study design/application
+malignant_calling,Malignant-vs-normal cell calling,1,1,method/measurement,method/measurement,computational inference task (cell classification)
+metastasis,Metastasis & dissemination,0,0,biology/application,biology/application,biological question
+pancancer_atlas,Pan-cancer atlases,0,0,biology/application,biology/application,descriptive atlas/application
+perturbseq,Perturbation screens,1,1,method/measurement,method/measurement,measurement technology (pooled perturbation assay)
+plasticity_emt,Plasticity / EMT / stemness,0,0,biology/application,biology/application,biological question
+qc_artifacts,QC artifacts (doublets/ambient),1,1,method/measurement,method/measurement,computational preprocessing / QC
+resistance_persister,Drug resistance & persisters,0,0,biology/application,biology/application,biological question
+spatial_tumor,Spatial transcriptomics in tumors,1,0,method/measurement,biology/application,measurement modality [ambiguous]
+tcell_exhaustion,T-cell states & exhaustion,0,0,biology/application,biology/application,biological question
+tcr_bcr_repertoire,TCR/BCR repertoire,1,0,method/measurement,biology/application,measurement modality [ambiguous]
+tme_composition,Tumor microenvironment composition,0,0,biology/application,biology/application,biological question

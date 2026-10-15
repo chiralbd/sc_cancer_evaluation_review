@@ -1,0 +1,10 @@
+modality,series,study_groups,median_samples,top_cancer_types,benchmark_tasks_enabled
+Paired bulk RNA,459,402,18,lung cancer (50); glioma/glioblastoma (47); melanoma (39),"deconvolution, pipeline_robustness"
+Longitudinal / on-treatment,297,266,18,acute myeloid leukaemia (36); glioma/glioblastoma (33); lung cancer (22),"pipeline_robustness, perturbation_response"
+Paired spatial,250,218,12,breast cancer (29); glioma/glioblastoma (24); pancreatic cancer (23),"deconvolution, CCC_spatial_referee"
+CITE-seq protein,227,216,16,acute myeloid leukaemia (23); myelodysplastic/myeloproliferative (22); lung cancer (19),annotation_calibration
+Genotype / hashtag multiplex,166,152,8,lung cancer (21); acute myeloid leukaemia (19); breast cancer (18),"malignant_calling, clone_calling, annotation_calibration, pipeline_robustness"
+Matched WES/WGS,138,117,18,lung cancer (19); colorectal cancer (13); lymphoma (12),"malignant_calling, clone_calling"
+Perturb-seq,89,77,14,chronic myeloid leukaemia (24); myelodysplastic/myeloproliferative (8); acute myeloid leukaemia (7),"pipeline_robustness, perturbation_response"
+Cell-line mixture,25,20,6,lung cancer (12); chronic myeloid leukaemia (6); sarcoma (3),"malignant_calling, deconvolution, annotation_calibration, pipeline_robustness"
+mtDNA lineage,18,9,25,chronic lymphocytic leukaemia (8); colorectal cancer (4); acute myeloid leukaemia (3),"malignant_calling, clone_calling"

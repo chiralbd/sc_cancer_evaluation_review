@@ -1,0 +1,8 @@
+model,effect,estimate,lower95,upper95,p,extra
+"Poisson GLM: benchmarks ~ year, offset log(subfield papers)",rate ratio per year,0.9223820663844434,0.8749266919304235,0.9724113851304159,0.002716879368924784,1.255971415918828
+"NB2: benchmarks ~ year, offset log(subfield papers)",rate ratio per year,0.9208489292966261,0.8698133525067997,0.9748789762112945,0.00458934983139181,0.012564080174182668
+Binomial GLM: benchmarks of subfield papers ~ year,odds ratio per year,0.9219831438741259,0.8744012613937564,0.9721542672903639,0.0026596021721078636,
+Binomial GLM: verified fraction of evaluation-titled ~ year,odds ratio per year,0.972830792786526,0.91185039153285,1.0378892855468669,0.4042889690556938,
+"Poisson GLM: evaluation-titled ~ year, offset log(subfield papers)",rate ratio per year,0.9397131101784576,0.9112268168422107,0.9690899270298605,7.523564303504801e-05,
+Poisson GLM 2015-2025 only (exclude partial 2026),rate ratio per year,0.9297469820873125,0.8744163665199394,0.9885787638453973,0.019970274228189224,
+Exact conditional rate comparison: 2023-26 vs 2015-20,rate ratio late/early,0.5741095270843789,,,0.008531908163707046,
