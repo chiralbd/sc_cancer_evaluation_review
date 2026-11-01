@@ -1,0 +1,25 @@
+arm,stage,box,n,detail
+1 benchmark screen,Identification,Evaluation-titled records identified in PubMed,489.0,486 retrieved 4 Oct 2026; 3 further records indexed 5-15 Oct 2026
+1 benchmark screen,Screening,Records screened on title and abstract,489.0,"two independent coding passes; inter-pass Cohen's kappa = 0.74 (0.68-0.80), 88.5% agreement"
+1 benchmark screen,Screening,Records excluded,331.0,"Biological or clinical evaluation, not a method benchmark: 167; Method paper with token baselines: 116; Review or narrative overview: 41; Other (not a genuine benchmark): 7"
+1 benchmark screen,Screening - exclusion reason,"Biological or clinical evaluation, not a method benchmark",167.0,
+1 benchmark screen,Screening - exclusion reason,Method paper with token baselines,116.0,
+1 benchmark screen,Screening - exclusion reason,Review or narrative overview,41.0,
+1 benchmark screen,Screening - exclusion reason,Other (not a genuine benchmark),7.0,
+1 benchmark screen,Included,Verified method benchmarks,158.0,32.3% of evaluation-titled records (Wilson 95% CI 28.3-36.6)
+1 benchmark screen,Included,Verified benchmarks in the 2015-2026 analysis window,157.0,one verified benchmark published in 2014 falls outside the window
+1 catalogue assembly,Identification,Additional records sought by targeted searching,,16 class-specific PubMed queries; about 90 targeted landmark searches; 14 supplementary queries
+1 catalogue assembly,Included,Benchmark catalogue (Supplementary Data S1),269.0,"54 carried from the verified first-pass screen, 215 added by targeted searching; all 269 resolved through PubMed efetch and re-checked by esummary title match; 267 dated 2015-2026"
+2 GEO screen,Identification,GEO DataSets base query (human tumour single-cell GSE),6141.0,"retrieved only; never classified, and not the denominator of any reported fraction"
+2 GEO screen,Identification,Union of the nine modality queries,2715.0,3473 hits before de-duplication
+2 GEO screen,Identification,Base-set series outside the modality union,3426.0,"56% of the base set; cannot enter the catalogue, so the catalogue is a lower bound"
+2 GEO screen,Screening,Passing eligibility filters 1-4,2024.0,"691 failed: gdstype not sequencing, non-human taxon, no single-cell regex, or no cancer regex"
+2 GEO screen,Screening,At least one modality rule fires on series-level text,1336.0,688 carried no modality call; 1166 study groups - this was the published catalogue
+2 GEO screen,Screening,Removed by the series-level eligibility re-screen,413.0,"No single-cell evidence in the series or its own samples (E1): 300; No human single-cell sample (E2): 1; No cancer material profiled (E3a): 60; Cancer only as reagent or co-culture target (E3b): 9; Cancer patient, but profiled material explicitly non-tumour (E3c): 43"
+2 GEO screen,Screening - exclusion reason,No single-cell evidence in the series or its own samples (E1),300.0,
+2 GEO screen,Screening - exclusion reason,No human single-cell sample (E2),1.0,
+2 GEO screen,Screening - exclusion reason,No cancer material profiled (E3a),60.0,
+2 GEO screen,Screening - exclusion reason,Cancer only as reagent or co-culture target (E3b),9.0,
+2 GEO screen,Screening - exclusion reason,"Cancer patient, but profiled material explicitly non-tumour (E3c)",43.0,
+2 GEO screen,Screening,Corrected CITE-seq rule applied,923.0,modality-level only: 6 of 227 CITE-seq calls dropped as androgen-deprivation-therapy false positives
+2 GEO screen,Included,Ground-truth catalogue (Supplementary Data S3),923.0,830 study groups; audited precision 130/140 = 92.9% (87.4-96.1)

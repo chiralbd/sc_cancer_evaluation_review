@@ -130,35 +130,50 @@ records in 2015 to 7,556 in 2025. Whether evaluation of its
 computational methods has kept pace has not been quantified.
 
 \textbf{Methods.} We combined a 26-topic PubMed volume series (2015 to
-15 October 2026); verification of all 486 evaluation-titled papers with
-an independent second coding pass; a catalogue of 269 PubMed-verified
+15 October 2026); verification of all 489 evaluation-titled papers with
+a second, model-based coding pass; a catalogue of 269 PubMed-verified
 benchmarks in 16 method classes, coded for ground-truth strategy and for
-assessment of robustness, calibration and metric validity; a
-catalogue of 1,336 GEO tumour single-cell series carrying orthogonal
-validation data; and explicit-definition coding of a stratified sample of 1,771 unique abstracts (150 draws per year, 2015--2026). Rates were modelled by
-negative-binomial and Poisson regression.
+assessment of robustness, calibration and metric validity; a catalogue
+of 923 GEO tumour single-cell series carrying orthogonal validation
+data; and explicit-definition coding of a stratified sample of 1,771
+unique abstracts (150 draws per year, 2015--2026). Rates were modelled
+by negative-binomial and Poisson regression with topic-clustered robust
+standard errors.
 
-\textbf{Results.} Of 486 evaluation-titled papers, 158 (32.5\%; 95\% CI
-28.5--36.8) were genuine benchmarks (inter-pass κ = 0.74). Benchmarks
+\textbf{Results.} Of 489 evaluation-titled papers, 158 (32.3\%; 95\% CI
+28.3--36.6) were genuine benchmarks (inter-pass κ = 0.74). Benchmarks
 per 1,000 papers declined by 7.8\% per year (rate ratio 0.922,
-0.875--0.972); the decline was concentrated in biology and application
-topics (0.90 per year, 0.84--0.97), whereas method topics were flat.
-Over 2015--2026, method topics received more benchmarks per paper (IRR
-2.35, 1.66--3.31). ``No ground truth'', the most frequently coded
-limitation (24.2\%), did not replicate on re-coding (κ ≈ 0) and was
-stated in 1.1\% of abstracts under an explicit definition. Abstracts
-stating any evaluation-check problem fell from 14.0\% (2015--18) to
-3.6\% (2024--26). Robustness to analytical choices was reported in 5.6\%
-of benchmarks, calibration in 3.3\% and metric validity in 3.0\%; metric
-validity was reported in none of the 48 cancer-specific benchmarks.
-Public validation data are more widely available than used: 138 series
-carry matched exomes, 227 CITE-seq protein and 250 paired spatial data,
-whereas 44 benchmarks state an orthogonal-assay ground truth.
+0.875--0.972). Coverage in method and measurement topics was flat under
+every variance estimator (1.012, 0.927--1.103), and the decline in
+biology and application topics (0.901) was consistent in direction but
+not robustly established, losing significance under topic-clustered
+standard errors (0.807--1.006, p = 0.064). Over 2015--2026, method
+topics received more benchmarks per paper (IRR 2.35, 1.66--3.31;
+1.80--2.30 across topic-overlap sensitivity analyses). ``No ground
+truth'', the most frequently coded limitation (24.2\%), did not
+replicate on re-coding (κ ≈ 0) and was stated in 1.1\% of abstracts
+under an explicit definition. Abstracts stating any evaluation-check
+problem fell from 14.0\% (2015--18) to 3.6\% (2024--26), with no
+corresponding decline in a non-single-cell control set. Calibration or
+uncertainty was reported in 3.7\% of benchmark abstracts, robustness to
+analytical choices in 15.6\% and metric validity in 13.4\% (13.0\%
+excluding one record flagged from its title alone); the 48
+cancer-specific benchmarks did not differ from the remainder on any of
+the three (Fisher p = 1.000, 1.000 and 0.351). This coding was
+model-assisted under explicit written criteria and hand-read in part,
+not in full. Public validation data exist on a scale the benchmark
+literature does not visibly draw on: 106 series carry matched exomes,
+181 CITE-seq protein and 186 paired spatial data, these being
+regular-expression calls with an audited precision of 92.9\% and
+per-modality count ranges given in Table 5.
 
-\textbf{Conclusions.} Evaluation in this field is limited less by absent
-ground truth than by rarely performed checks and under-used public
-validation data. We release both catalogues, a ten-item evaluation
-standard and an eight-study research agenda.
+\textbf{Conclusions.} Calibration is the genuinely neglected check in
+this field, reported in under 4\% of benchmark abstracts; robustness and
+metric validity are reported three to four times more often than a
+previous version of this analysis found, but still in fewer than one
+benchmark in six. Substantial public validation data exist for tasks
+that few benchmarks test. We release both catalogues, a ten-item
+evaluation standard and an eight-study research agenda.
 
 \textbf{Keywords:} single-cell RNA sequencing; cancer genomics;
 benchmarking; meta-research; ground truth; calibration; multiverse
@@ -174,7 +189,7 @@ cells, the integration of patients, the reference used to label the
 immune compartment and the inference of cell-type proportions or
 interactions are each delegated to software. That software typically
 returns point estimates; in the benchmark literature catalogued here,
-calibration or uncertainty is assessed in 3.3\% of studies (3.4).
+calibration or uncertainty is assessed in 3.7\% of studies (§3.4).
 Principles for evaluating such software are nevertheless established.
 Neutral comparison studies {[}1{]} should be designed to avoid the
 self-assessment trap, in which developers rank their own method best
@@ -224,20 +239,32 @@ lineage tracing, spatial transcriptomics) and biology and application
 (for example immunotherapy response, tumour microenvironment
 composition, metastasis). For each topic and for the subfield as a
 whole, we retrieved annual PubMed record counts for 2015--2026 through
-NCBI E-utilities, giving 324 topic-year counts. Counts for 2026 run to
-15 October 2026 (§2.7). We summarise growth as the ratio of a topic's
-2025 share of the subfield to its 2021 share. Abstracts for 2023--2026
-(n = 3,627) were harvested with topic tags; topics overlap and are not a
-partition. A bioRxiv screen (15,682 preprints, 18 months) yielded 372
-single-cell cancer preprints. Because the bioRxiv API exposes only a
-short abstract preview, preprint ratios are not used inferentially here.
+NCBI E-utilities {[}26{]}, giving 324 topic-year counts. Counts for 2026
+run to 15 October 2026 (§2.7). We summarise growth as the ratio of a
+topic's 2025 share of the subfield to its 2021 share. Abstracts for
+2023--2026 (n = 3,627) were harvested with topic tags; topics overlap
+and are not a partition. A bioRxiv {[}27{]} screen (15,682 preprints, 18
+months) yielded 372 single-cell cancer preprints. Because the bioRxiv
+API exposes only a short abstract preview, preprint ratios are not used
+inferentially here.
 
 \subsection{2.2 Benchmark verification and problem extraction}\label{benchmark-verification-and-problem-extraction}
 
-All 486 papers whose titles contained ``benchmark'', ``comparison'',
+All 489 papers whose titles contained ``benchmark'', ``comparison'',
 ``evaluation'' or ``assessment'' were classified from their abstracts as
-genuine methods benchmarks or not. A genuine benchmark is a systematic
-comparison of two or more named tools or platforms on a shared task.
+genuine methods benchmarks or not. The corpus held 486 records at the 4
+October 2026 retrieval; three further records were indexed between 5 and
+15 October 2026 and none was a methods benchmark (§2.7). A genuine
+benchmark is a systematic comparison of two or more named tools or
+platforms on a shared task. Because this title query defines the
+numerator of every coverage statistic, we measured its recall against
+the independently assembled benchmark catalogue (§2.5): the query
+captures 212 of the 267 catalogued benchmarks published in 2015--2026
+(79.4\%, 74.2--83.8), with no trend across years (logistic odds ratio
+1.042 per year, 0.929--1.170, p = 0.48). Coverage estimates are
+therefore scaled by a recall factor that is incomplete but temporally
+stable; this estimate is conditional on catalogue membership, since the
+catalogue was itself assembled partly through title-based queries.
 Separately, each abstract in the corpus was coded for its stated
 limitations and open problems into a 17-category controlled vocabulary,
 giving 1,757 extraction rows. Of these, 1,506 were methodological
@@ -291,50 +318,143 @@ that the primary contribution be a comparative evaluation of at least
 two existing methods, or of platforms with computational read-outs;
 preprint and journal versions were merged. All 269 records were resolved
 through PubMed efetch and re-checked by esummary title match. Evaluation
-fields were coded from abstracts by keyword rules, with manual
-correction of 40 records including all landmark records. The fields are
-the ground-truth strategy, the number of tools, and whether robustness
-to parameters, calibration or uncertainty, and the validity of the
-metric itself were assessed. A field is marked as assessed only when the
-abstract says so. All assessment counts are therefore lower bounds.
+fields are the ground-truth strategy, the number of tools, and whether
+robustness to analytical choices, calibration or uncertainty, and the
+validity of the metric itself were assessed. A field is marked as
+assessed only when the abstract says so. All assessment counts are
+therefore lower bounds.
+
+An earlier version of this analysis coded these fields by keyword rules
+with manual correction of 40 records. That procedure proved to have a
+high false-negative rate, and all 269 abstracts were therefore
+re-retrieved and re-coded under explicit written criteria, which we
+state here because the resulting counts differ materially from the
+keyword coding.
+
+\textbf{Robustness to analytical choices} is marked assessed when the
+abstract names robustness, stability, resilience or reproducibility as
+one of the dimensions on which the methods were evaluated, compared or
+ranked. The word ``robust'' used as a bare quality adjective, a tool
+name, or reproducibility of the authors' own code does not qualify. We
+report this narrow criterion because it is the construct the keyword
+coding attempted to capture. Two broader readings are released with the
+catalogue as sensitivity analyses: adding abstracts that report varying
+a named analyst-controlled choice (normalisation, imputation, reference
+panel, preprocessing, parameters) and its effect gives 79 of 269
+(29.4\%, 24.2--35.1); adding input-degradation stress tests and
+dependence on data properties such as sequencing depth, cell number or
+platform gives 141 of 269 (52.4\%, 46.5--58.3). The last of these
+conflates robustness to analytical choices with robustness to data
+quality and we do not use it.
+
+\textbf{Calibration or uncertainty} is marked assessed when the abstract
+states that the study examined the reliability of reported
+probabilities, confidences or error rates: calibration of scores,
+false-discovery-rate or type-I-error control, false positives on null
+data, uncertainty quantification, interval coverage, or rejection of
+out-of-distribution classes judged by the reliability of the prediction.
+Parameter tuning, instrument calibration, and sensitivity reported only
+as an accuracy metric at a fixed threshold do not qualify.
+
+\textbf{Metric validity} is marked assessed when the abstract states
+that the study interrogated the scoring function itself: whether a
+metric measures what it claims, disagreement between metrics or rank
+changes with the metric, a metric shown to be misleading or inflated,
+behaviour against null or trivial baselines, or a new metric proposed
+together with a stated deficiency of existing ones. Using several
+metrics does not qualify.
+
+Coding was model-assisted under these criteria and then hand-read in
+part: 132 of the 269 records for robustness and 82 for ground-truth
+strategy, covering every record whose label changed plus a seeded random
+sample of the unchanged, with measured agreement between the mechanical
+pass and hand reading of κ = 0.76 for robustness. Calibration and metric
+validity were screened for false negatives by keyword over all 269
+abstracts, with 3 and 38 flagged negatives then read, rather than by a
+full hand pass; those two counts may therefore still be slight
+undercounts. Per-record calls outside the hand-read strata rest on the
+model-assisted pass and are provisional at the level of the individual
+record, although the aggregate percentages are stable under the
+agreement measured above. Three records (PMIDs 41214134, 42637979,
+38977827) have no abstract in PubMed; their fields were carried from the
+earlier coding and are flagged in Supplementary Data S1. One of them
+(PMID 42637979) carries a metric-validity flag derived from its title in
+both codings, so the abstract-verifiable metric-validity count is 35
+rather than 36 of 269. Per-record evidence spans for every coded field
+are released in Supplementary Data S1 so that each call can be audited.
 
 \subsection{2.6 Ground-truth catalogue}\label{ground-truth-catalogue}
 
-We queried GEO DataSets for human tumour single-cell series. The base
-set held 6,141 series, and the union of nine modality queries gave 2,715
-records. After filtering to sequencing-based, human, single-cell, cancer
-series, 2,024 were eligible. From series-level text we classified nine
-validation modalities: matched WES/WGS, CITE-seq protein, genotype or
-hashtag multiplexing, paired bulk RNA, paired spatial, mtDNA lineage,
-longitudinal or on-treatment sampling, cell-line mixtures and
-Perturb-seq. Classification used documented, spot-audited
-regular-expression rules. The result is 1,336 validation-bearing series
-in 1,166 SuperSeries-collapsed study groups. Each series was mapped to
-the benchmark tasks it can support. A modality call means the submitters
-state that the data were generated. Controlled-access deposition
-(dbGaP/EGA) was not checked, recall was not measured, and ArrayExpress,
-HTAN and CELLxGENE were not searched.
+We queried GEO DataSets {[}28{]} for human tumour single-cell series. A
+base set of 6,141 series was retrieved for orientation but was not
+classified; the catalogue is assembled only from the union of nine
+modality queries, which returned 2,715 records. The remaining 3,426
+base-set series (56\%) were never screened, so a validation-bearing
+series missed by all nine modality queries cannot enter the catalogue
+and the counts below are lower bounds on what GEO holds. From
+series-level text we classified nine validation modalities: matched
+WES/WGS, CITE-seq protein, genotype or hashtag multiplexing, paired bulk
+RNA, paired spatial, mtDNA lineage, longitudinal or on-treatment
+sampling, cell-line mixtures and Perturb-seq. Classification used
+documented regular-expression rules.
+
+Both the eligibility filter and the modality rules were re-applied after
+the first version of this catalogue was found to admit ineligible series
+and to contain a systematic false positive. Records were re-retrieved
+from GEO at series level, and at sample level for the 780 series whose
+eligibility could not be settled from the series record alone. Three
+eligibility failures were screened for across all rows: SubSeries
+containing only bulk assays whose single-cell data sit in a sibling
+SubSeries; series that are not human or are dominated by non-human
+samples; and studies in which the cancer patients supply non-tumour
+control material only. Applying these screens removed 413 of the 1,336
+series, leaving 923 validation-bearing series in 830
+SuperSeries-collapsed study groups. The modality rule for CITE-seq
+protein was separately corrected: it had been matching the abbreviation
+``ADT'' where the context was androgen deprivation therapy rather than
+antibody-derived tags, which added six prostate or prostate-adjacent
+series carrying no surface-protein measurement.
+
+Each series was mapped to the benchmark tasks it can support, using the
+mapping documented in Supplementary Data S4. A modality call means the
+submitters state that the data were generated; it does not establish
+that the data are deposited in that accession, and in a structured check
+of 140 audited calls the modality was traceable to the accession itself
+in 67\% of cases. Precision was estimated on a seeded audit of 140
+modality calls (20 for longitudinal sampling, 15 for each other
+modality) and was 130 of 140 overall (92.9\%, 87.4--96.1); per-modality
+intervals are wide and are reported with each count in Table 5. Recall
+was not measured, controlled-access deposition (dbGaP {[}29{]} and EGA
+{[}30{]}) was not checked, and ArrayExpress {[}31{]}, HTAN {[}32{]} and
+CELLxGENE {[}33{]} were not searched.
 
 \subsection{2.7 Update of 2026 counts to 15 October 2026}\label{update-of-2026-counts-to-15-october-2026}
 
 The volume series was first retrieved on 4 October 2026. To extend 2026
 to 15 October 2026 without altering the 2015--2025 series, we
 reconstructed the subfield query and calibrated it against the archived
-counts: it reproduced every year from 2015 to 2025 within ±0.7\% (for
-example, 442 versus 443 records in 2015 and 7,528 versus 7,556 in 2025).
-For each topic we selected, from two or three candidate clauses, the one
-that best reproduced the archived 2017, 2021 and 2025 counts. For every
-series we then counted 2026 records with an Entrez date up to 4 October
-and all 2026 records on 15 October using the same reconstructed query,
-and multiplied the archived 2026 count by this growth ratio, so that
-differences between the reconstructed and original queries cancel.
-Growth ratios ranged from 1.014 to 1.064 across topics and were 1.031
-for the subfield, which rose from 7,342 to 7,571 records. The same title
-query identified three evaluation-titled 2026 records indexed after 4
-October; none was a methods benchmark, so the verified 2026 benchmark
-count remains 25. All models in §2.8 were refitted on the updated
-denominators. Queries, counts and ratios are released in Supplementary
-Data S7.
+counts: it reproduced every year from 2015 to 2025 within ±0.7\% at
+subfield level (for example, 442 versus 443 records in 2015 and 7,528
+versus 7,556 in 2025). The per-year counts behind this subfield figure
+were not archived, so the ±0.7\% claim cannot be re-derived from the
+released package; at topic level, where the reconstructed counts are
+released, agreement is considerably weaker, with 7 of 26 topics showing
+a mean absolute log error above 0.2 and the worst (T-cell states and
+exhaustion) off by a factor of 2.36. The reconstructed queries are
+therefore used only to form the 2026 growth ratios and never to replace
+an archived 2015--2025 count. For each topic we selected, from two or
+three candidate clauses, the one that best reproduced the archived 2017,
+2021 and 2025 counts. For every series we then counted 2026 records with
+an Entrez date up to 4 October and all 2026 records on 15 October using
+the same reconstructed query, and multiplied the archived 2026 count by
+this growth ratio, so that differences between the reconstructed and
+original queries cancel. Growth ratios ranged from 1.014 to 1.064 across
+topics and were 1.031 for the subfield, which rose from 7,342 to 7,571
+records. The same title query identified three evaluation-titled 2026
+records indexed after 4 October; none was a methods benchmark, so the
+verified 2026 benchmark count remains 25. All models in §2.8 were
+refitted on the updated denominators. Queries, counts and ratios are
+released in Supplementary Data S7.
 
 \subsection{2.8 Statistical analysis}\label{statistical-analysis}
 
@@ -361,17 +481,42 @@ sensitivity analyses for the subfield trend and the panel, numerators
 were restricted to single-cell-genomics benchmarks and denominators were
 multiplied by the yearly single-cell-omics share estimated from the
 stratified sample (§2.4). Prevalence trends in stated problems were
-tested by logistic regression on publication year. Before writing, 120
-quantities quoted in our earlier gap analysis were recomputed from the
-archived data. 101 matched exactly and one matched approximately. Six
-did not match: preprint-ratio denominators, one rounded range, and a
-numerator-window inconsistency discussed in §3.2. Twelve could not be
-checked from archived data, and none of those twelve is used here.
+tested by logistic regression on publication year.
+
+Three features of these data violate the independence assumptions of the
+primary fits, and each is addressed explicitly. First, the 26 topics are
+keyword-defined and overlapping rather than a partition: topic paper
+counts sum to 85,287 against a 34,595-paper subfield (2.47×), so a paper
+enters the topic models about 2.5 times on average. For benchmarks the
+duplication is similar but the pool is smaller than it appears: of the
+157 verified benchmarks published in 2015--2026, 32 carry no topic tag
+and are absent from the topic analyses altogether, and the remaining 125
+generate 270 topic-benchmark observations --- 2.16 per tagged benchmark,
+or 1.72 per benchmark in the window. Second, the topic-by-year panel
+observes each topic up to twelve times. All topic-level and panel models
+are therefore reported with topic-clustered robust standard errors as
+the primary inference, with model-based and HC0 intervals released
+alongside; because clustering by topic does not address the same paper
+appearing across topics, the topic models were additionally refitted
+under three single-primary-topic assignments and a 1,000-replicate
+bootstrap over benchmark PMIDs. Third, the analysis reports many tests.
+We declare three families --- subfield and panel trend tests,
+topic-coverage models, and stated-problem prevalence trends --- and
+report Benjamini--Hochberg q-values within each; conclusions are drawn
+only from estimates that survive adjustment, and estimates that do not
+are identified as such.
+
+Before writing, 120 quantities quoted in our earlier gap analysis were
+recomputed from the archived data. 101 matched exactly and one matched
+approximately. Six did not match: preprint-ratio denominators, one
+rounded range, and a numerator-window inconsistency discussed in §3.2.
+Twelve could not be checked from archived data, and none of those twelve
+is used here.
 
 \subsection{2.9 Reference verification}\label{reference-verification}
 
-Every work cited was resolved to its PubMed or Crossref record (one
-machine-learning conference paper via arXiv). For foundational
+Every work cited was resolved to its PubMed or Crossref {[}34{]} record
+(one machine-learning conference paper via arXiv). For foundational
 references, the claim attributed to each work was checked against its
 abstract and rewritten where it was not supported as first stated.
 Records that could not be resolved were dropped rather than cited from
@@ -414,7 +559,8 @@ decline in benchmark coverage.} (a) Annual PubMed records for the
 subfield, 2015--2026; the subfield grew 17-fold between 2015 (443) and
 2025 (7,556). The hatched 2026 bar covers 1 January--15 October (7,571
 records). (b) Verified methods benchmarks per 1,000 subfield papers by
-publication year, with exact Poisson 95\% intervals (n = 12 years, 157 benchmarks). The line is the fitted Poisson trend with an offset of log
+publication year, with exact Poisson 95\% intervals (n = 12 years, 157
+benchmarks). The line is the fitted Poisson trend with an offset of log
 subfield volume: rate ratio 0.922 per year (95\% CI 0.875--0.972; p =
 0.0027). (c) Ratio of each topic's 2025 share of the subfield to its
 2021 share (log scale; 1× marks growth equal to the subfield). Colour
@@ -538,20 +684,27 @@ Clonal evolution \& phylogeny & method/measurement & 88 & 131 & 158 &
 
 \subsection{3.2 Benchmark coverage is thin, uneven and declining}\label{benchmark-coverage-is-thin-uneven-and-declining}
 
-Of the 486 evaluation-titled papers, 158 (32.5\%; 95\% CI 28.5--36.8)
+Of the 489 evaluation-titled papers, 158 (32.3\%; 95\% CI 28.3--36.6)
 were genuine method benchmarks; the remainder used ``evaluation'' for
 clinical or biological assessments, or were reviews or method papers
-with token baselines. One of the 158 was published in 2014, so analyses over 2015--2026 use 157. Across 2015--2026, verified benchmarks per 1,000
-subfield papers fell from 6.77 in 2015--2020 to 3.88 in 2023--2026 (rate
-ratio 0.57; exact conditional p = 0.0085). The yearly trend was a 7.8\%
-annual decline (Poisson rate ratio 0.922, 95\% CI 0.875--0.972, p =
-0.0027; Fig. 1b). The decline held when the partial year 2026 was
+with token baselines. One of the 158 was published in 2014, so analyses
+over 2015--2026 use 157. Across 2015--2026, verified benchmarks per
+1,000 subfield papers fell from 6.77 in 2015--2020 to 3.88 in 2023--2026
+(rate ratio 0.57; exact conditional p = 0.0085). The yearly trend was a
+7.8\% annual decline (Poisson rate ratio 0.922, 95\% CI 0.875--0.972, p
+= 0.0027; Fig. 1b). The decline held when the partial year 2026 was
 excluded (0.930, p = 0.020) and under NB2 and binomial specifications.
 The share of evaluation-titled papers that were genuine benchmarks
-showed no trend (odds ratio 0.973 per year, p = 0.40). Coverage
-therefore fell because evaluation-titled work of every kind failed to
-keep pace with the field (rate ratio 0.940 per year, 0.911--0.969), not
-because evaluation work became less rigorous.
+showed no detectable trend (odds ratio 0.973 per year, 0.912--1.038, p =
+0.40). This interval is wide: over the eleven year-steps it is
+compatible with the classification yield holding steady and with its
+falling to about a third of its 2015 value, so it excludes only a large
+change, not a modest one. What the data establish positively is that
+evaluation-titled work of every kind failed to keep pace with the field
+(rate ratio 0.940 per year, 0.911--0.969 --- a separate quantity from
+the 0.922 trend in verified benchmarks above, computed on all 489
+evaluation-titled papers rather than the 157 verified ones); we cannot
+additionally establish that the composition of that work was unchanged.
 
 The subfield query does not capture single-cell genomics alone. In the
 stratified sample (§2.4), the share of abstracts that used single-cell
@@ -582,24 +735,43 @@ by the benchmarking topic itself, which is by construction dense in
 benchmarks. Excluding it reduced overdispersion to near zero (α = 0.05)
 and gave IRR 2.35 (1.66--3.31). The method-topic effect was robust to an
 alternative topic coding (IRR 1.88, 1.19--2.98) and to a 2023--26 window
-(2.81, 1.87--4.22). Share growth was associated with fewer benchmarks
-per paper in every specification, but the association was not
-significant over the full window (IRR 0.79 per e-fold, 0.60--1.06, p =
-0.11) or in the 2023--26 window (0.77, 0.55--1.08), and it should be
-read as suggestive.
+(2.81, 1.87--4.22). Because topics overlap, the same paper enters this
+model about 2.5 times (§2.8); refitting under three single-primary-topic
+assignments and a bootstrap over benchmark PMIDs gave 1.80--2.30, so the
+effect is attenuated but remains above 1 in every variant. Share growth
+was associated with fewer benchmarks per paper in every specification
+(Fig. 2b), but the association was not significant over the full window
+(IRR 0.79 per e-fold, 0.60--1.06, p = 0.11) or in the 2023--26 window
+(0.77, 0.55--1.08), and it should be read as suggestive.
 
-A topic-by-year panel locates the decline (§2.8). With topic fixed
-effects and an offset of log topic-year volume (294 topic-years, 25
-topics), benchmark coverage in biology and application topics fell by
-9.9\% per year (rate ratio 0.901, 0.840--0.966, p = 0.0035), whereas
-coverage in method and measurement topics did not change (rate ratio
-1.012, 0.927--1.103). The two slopes differed (ratio 1.12, 1.00--1.26, p
-= 0.042). Restricting the panel to single-cell-genomics benchmarks and
-genomics-adjusted denominators preserved the decline in biology and
-application topics (rate ratio 0.882, 0.795--0.979, p = 0.018), although
-the difference between slopes was no longer significant (p = 0.086). The
-evaluation deficit is thus growing specifically in the application
-topics that account for most of the literature.
+A topic-by-year panel asks where the decline sits (§2.8). With topic
+fixed effects and an offset of log topic-year volume (294 topic-years,
+25 topics), the estimated annual change in coverage was 0.901 in biology
+and application topics and 1.012 in method and measurement topics. The
+method-topic estimate is flat under every variance estimator
+(0.927--1.103 model-based; p = 0.81 topic-clustered). The biology
+estimate is not robust: significant under model-based standard errors
+(0.840--0.966, p = 0.0035) and under HC0 (p = 0.0062), it loses
+significance once standard errors are clustered on topic, the level at
+which observations repeat (0.807--1.006, p = 0.064), and a GEE fit with
+an exchangeable working correlation falls either side of the
+conventional threshold (0.817--0.996, p = 0.041). The difference between
+the two slopes is weaker still: nominally 1.12 (1.00--1.26, p = 0.042),
+it becomes 0.97--1.30 (p = 0.118) under clustering, 0.057 under HC0, and
+does not survive multiplicity adjustment within its test family
+(Benjamini--Hochberg q = 0.065). Restricting the panel to
+single-cell-genomics benchmarks gives the same pattern more weakly
+(biology 0.882, p = 0.018 model-based, p = 0.118 clustered).
+
+The honest reading is therefore narrower than a located decline.
+Coverage in method and measurement topics is flat, and coverage in
+biology and application topics is estimated to fall by about 10\% per
+year, but that fall and the contrast between the two classes are
+consistent in direction without being established at conventional levels
+once the repeated structure of the panel is respected. The subfield-wide
+decline (§3.2, rate ratio 0.922) does not depend on this panel and is
+unaffected: it survives HC0, quasi-Poisson and NB2 specifications and
+multiplicity adjustment (q = 0.0092).
 
 The numerator window also qualifies a claim in our earlier gap analysis.
 Counting benchmarks from all years against 2023--26 papers makes CTC and
@@ -791,8 +963,18 @@ absence of benchmarks 1.4\% (0.8--2.4), uncertainty 1.3\% (0.8--2.2),
 absence of ground truth 1.1\% (0.6--2.0) and metric validity 0.4\%
 (0.2--1.0). Taken together, the share of abstracts stating any of the
 five fell from 14.0\% in 2015--18 to 3.6\% in 2024--26 (OR 0.81 per
-year, 0.74--0.88; Fig. 4c), a steeper decline than for any stated
-problem (55.0\% to 41.2\%; OR 0.94 per year (0.90--0.98)). Agreement
+year, 0.74--0.88, q = 4 × 10⁻⁶; Fig. 4c), a steeper decline than for any
+stated problem (55.0\% to 41.2\%; OR 0.94 per year (0.90--0.98)). These
+percentages rest on few positive abstracts --- 18, 15, 7 and 14 across
+the four periods, 54 of 989 in total --- so the trend, not any single
+period estimate, is the finding. Two checks argue that the trend is real
+rather than an artefact of how abstracts are written. Among the 782
+sampled abstracts that do not use single-cell omics data, and which are
+excluded from these analyses, there is no decline at all (OR 1.07 per
+year, 0.96--1.18, p = 0.23), so the fall is specific to the single-cell
+literature. And median abstract length rose over the window (1,436 to
+1,660 characters), which would if anything predict more stated problems;
+adjusting for length leaves the estimate unchanged (OR 0.80). Agreement
 between two model coders on 150 abstracts was high for the
 single-cell-omics flag (κ = 0.88) and for technical artefacts (κ =
 0.85), moderate for sample size (κ = 0.63), and low for the presence of
@@ -806,33 +988,47 @@ approximate.
 \centering
 \pandocbounded{\includegraphics[keepaspectratio,alt={Figure 3.
 Reliability of benchmark and problem-type coding. (a) First-pass versus
-second-pass classification of the 486 evaluation-titled papers; Cohen's
-κ = 0.74 (bootstrap 95\% CI 0.68--0.80), with 88.5\% agreement. (b)
-Per-category Cohen's κ (bootstrap 95\% CI) for problem-type coding on a
-random subsample of 200 abstracts, for categories with at least five
-positives in either pass. Numbers at right give positives under the
-first and the second pass. The red marker is ``no ground truth'' (45
-versus 1; κ = −0.01). The black diamond merges no ground truth,
-causality and interpretability into one knowledge-gap category (κ =
-0.51). Categories with almost no positives in either pass (metric
-invalidity, parameter sensitivity and uncertainty) are omitted because κ
-is undefined or uninformative at that prevalence. Second-pass labels for
-92 benchmark abstracts and all 200 problem-type abstracts were produced
-by a language-model rater (§2.3).}]{fig/fig4_reliability.pdf}}
-\caption{\textbf{Figure 3. Reliability of benchmark and problem-type
-coding.} (a) First-pass versus second-pass classification of the 486
-evaluation-titled papers; Cohen's κ = 0.74 (bootstrap 95\% CI
-0.68--0.80), with 88.5\% agreement. (b) Per-category Cohen's κ
+second-pass classification of evaluation-titled papers; Cohen's κ = 0.74
+(bootstrap 95\% CI 0.68--0.80), with 88.5\% agreement. The matrix covers
+the 486 records retrieved on 4 October 2026; the three records indexed
+between 5 and 15 October were classified in a single pass and so do not
+enter the agreement analysis, although they are included in the
+489-record denominator used elsewhere. (b) Per-category Cohen's κ
 (bootstrap 95\% CI) for problem-type coding on a random subsample of 200
 abstracts, for categories with at least five positives in either pass.
 Numbers at right give positives under the first and the second pass. The
 red marker is ``no ground truth'' (45 versus 1; κ = −0.01). The black
 diamond merges no ground truth, causality and interpretability into one
-knowledge-gap category (κ = 0.51). Categories with almost no positives
-in either pass (metric invalidity, parameter sensitivity and
-uncertainty) are omitted because κ is undefined or uninformative at that
-prevalence. Second-pass labels for 92 benchmark abstracts and all 200
-problem-type abstracts were produced by a language-model rater (§2.3).}
+knowledge-gap category (κ = 0.51). Nine of the 17 categories are
+plotted. Eight are omitted for having fewer than five positives in both
+passes, which for metric invalidity, parameter sensitivity and
+uncertainty means κ is undefined or uninformative at that prevalence;
+``other'' (6 versus 18 positives, κ = −0.05) clears the inclusion rule
+but is omitted as a residual category rather than a problem type.
+Second-pass labels for 92 benchmark abstracts and all 200 problem-type
+abstracts were produced by a language-model rater
+(§2.3).}]{fig/fig4_reliability.pdf}}
+\caption{\textbf{Figure 3. Reliability of benchmark and problem-type
+coding.} (a) First-pass versus second-pass classification of
+evaluation-titled papers; Cohen's κ = 0.74 (bootstrap 95\% CI
+0.68--0.80), with 88.5\% agreement. The matrix covers the 486 records
+retrieved on 4 October 2026; the three records indexed between 5 and 15
+October were classified in a single pass and so do not enter the
+agreement analysis, although they are included in the 489-record
+denominator used elsewhere. (b) Per-category Cohen's κ (bootstrap 95\%
+CI) for problem-type coding on a random subsample of 200 abstracts, for
+categories with at least five positives in either pass. Numbers at right
+give positives under the first and the second pass. The red marker is
+``no ground truth'' (45 versus 1; κ = −0.01). The black diamond merges
+no ground truth, causality and interpretability into one knowledge-gap
+category (κ = 0.51). Nine of the 17 categories are plotted. Eight are
+omitted for having fewer than five positives in both passes, which for
+metric invalidity, parameter sensitivity and uncertainty means κ is
+undefined or uninformative at that prevalence; ``other'' (6 versus 18
+positives, κ = −0.05) clears the inclusion rule but is omitted as a
+residual category rather than a problem type. Second-pass labels for 92
+benchmark abstracts and all 200 problem-type abstracts were produced by
+a language-model rater (§2.3).}
 \end{figure}
 
 \begin{figure}[!htbp]
@@ -869,20 +1065,25 @@ per year, 0.74--0.88).}
 \begin{tablefont}
 
 \begin{longtable}[l]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.2400}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.2000}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.0800}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.2000}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.2000}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.0800}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.2222}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1852}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.0741}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1852}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1852}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.0741}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.0741}}@{}}
 \caption{\textbf{Table 3.} Stated methodological problems: archived first-pass
 coding (2023--26) and explicit-definition coding (2015--26). Left:
 first-pass shares of 1,506 methodological problems (Wilson 95\% CI) and
 Cohen's κ against an independent re-coding of 200 abstracts. Right:
 percentage of 989 single-cell-omics abstracts (stratified sample,
 2015--26) stating each problem under explicit definitions, odds ratio
-per year from logistic regression, and κ between two model coders on 150
-abstracts. --- indicates undefined or inestimable.}\tabularnewline
+per year from logistic regression, the Benjamini--Hochberg q-value
+within the prevalence-trend family (§2.8), and κ between two model
+coders on 150 abstracts. Of the 16 estimable odds ratios, clinical
+translation (q = 0.013) remains significant after adjustment and absence
+of benchmarks (p = 0.022, q = 0.054) does not. --- indicates undefined
+or inestimable.}\tabularnewline
 \toprule
 \begin{minipage}[b]{\linewidth}\raggedright
 \thead{Problem type}
@@ -894,6 +1095,8 @@ abstracts. --- indicates undefined or inestimable.}\tabularnewline
 \thead{2015--26 \% (95\% CI)}
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 \thead{OR per year (95\% CI)}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\thead{BH q}
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 \thead{κ model pair}
 \end{minipage} \\
@@ -911,6 +1114,8 @@ abstracts. --- indicates undefined or inestimable.}\tabularnewline
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 \thead{OR per year (95\% CI)}
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\thead{BH q}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 \thead{κ model pair}
 \end{minipage} \\
 \midrule
@@ -918,38 +1123,38 @@ abstracts. --- indicates undefined or inestimable.}\tabularnewline
 \bottomrule
 \endlastfoot
 no ground truth & 24.2 (22.1--26.4) & -0.01 & 1.1 (0.6--2.0) & 0.70
-(0.57--0.85) & -0.01 \\
+(0.57--0.85) & 0.00339 & -0.01 \\
 causality & 19.9 (17.9--21.9) & 0.26 & 5.4 (4.1--6.9) & 1.01
-(0.92--1.11) & 0.38 \\
+(0.92--1.11) & 0.865 & 0.38 \\
 interpretability & 12.5 (11.0--14.3) & 0.07 & 4.6 (3.4--6.0) & 0.88
-(0.80--0.96) & 0.25 \\
-other & 6.4 (5.2--7.7) & -0.05 & 0.1 (0.0--0.6) & --- & 0.00 \\
+(0.80--0.96) & 0.0196 & 0.25 \\
+other & 6.4 (5.2--7.7) & -0.05 & 0.1 (0.0--0.6) & --- & --- & 0.00 \\
 no benchmark & 5.8 (4.7--7.1) & 0.10 & 1.4 (0.8--2.4) & 0.82
-(0.70--0.97) & --- \\
+(0.70--0.97) & 0.0537 & --- \\
 generalization & 5.7 (4.6--7.0) & -0.01 & 14.5 (12.4--16.8) & 0.99
-(0.93--1.05) & 0.13 \\
+(0.93--1.05) & 0.721 & 0.13 \\
 resolution limit & 5.6 (4.5--6.9) & 0.30 & 1.7 (1.1--2.7) & 0.70
-(0.60--0.82) & 0.39 \\
+(0.60--0.82) & 0.000278 & 0.39 \\
 technical artifact & 5.2 (4.2--6.4) & 0.45 & 1.7 (1.1--2.7) & 0.80
-(0.69--0.93) & 0.85 \\
+(0.69--0.93) & 0.0125 & 0.85 \\
 confounding & 3.3 (2.5--4.4) & 0.17 & 0.3 (0.1--0.9) & 0.82 (0.58--1.17)
-& 0.00 \\
+& 0.469 & 0.00 \\
 clinical translation & 3.1 (2.3--4.1) & 0.29 & 8.5 (6.9--10.4) & 1.14
-(1.05--1.24) & 0.03 \\
+(1.05--1.24) & 0.0125 & 0.03 \\
 parameter sensitivity & 2.3 (1.6--3.1) & 0.00 & 1.8 (1.2--2.9) & 0.78
-(0.67--0.91) & 0.66 \\
+(0.67--0.91) & 0.00596 & 0.66 \\
 sample size & 1.5 (1.0--2.2) & 0.00 & 15.3 (13.2--17.6) & 0.96
-(0.90--1.01) & 0.63 \\
+(0.90--1.01) & 0.237 & 0.63 \\
 cost scalability & 1.3 (0.9--2.0) & -0.01 & 0.3 (0.1--0.9) & 1.33
-(0.77--2.28) & 0.00 \\
+(0.77--2.28) & 0.469 & 0.00 \\
 metric invalid & 1.1 (0.7--1.7) & 0.00 & 0.4 (0.2--1.0) & 1.20
-(0.80--1.81) & 0.00 \\
+(0.80--1.81) & 0.517 & 0.00 \\
 data access & 0.9 (0.6--1.6) & 0.66 & 0.2 (0.1--0.7) & 0.84 (0.54--1.29)
-& 0.00 \\
+& 0.517 & 0.00 \\
 reproducibility & 0.7 (0.4--1.3) & 0.80 & 0.9 (0.5--1.7) & 0.83
-(0.68--1.02) & 0.00 \\
+(0.68--1.02) & 0.171 & 0.00 \\
 uncertainty & 0.7 (0.4--1.2) & --- & 1.3 (0.8--2.2) & 0.93 (0.78--1.11)
-& 0.00 \\
+& 0.517 & 0.00 \\
 \end{longtable}
 
 \end{tablefont}
@@ -959,26 +1164,58 @@ uncertainty & 0.7 (0.4--1.2) & --- & 1.3 (0.8--2.2) & 0.93 (0.78--1.11)
 The 269 catalogued benchmarks span 16 method classes (Table 4). 151
 (56.1\%) were published in 2024--2026 and 48 (17.8\%) are
 cancer-specific. Simulation was the most commonly stated source of
-ground truth (91; 33.8\%). Orthogonal assays were stated in 44 (16.4\%)
-and expert or published labels in 24 (8.9\%). Held-out experimental
-measurements appeared in 12, genotype multiplexing in 11 and cell-line
-mixtures in 8. 107 abstracts (39.8\%) did not state their ground truth
-at all (Fig. 5a).
+ground truth (97; 36.1\%). Orthogonal assays were stated in 35 (13.0\%)
+and expert or published labels in 25 (9.3\%). Cell-line mixtures
+appeared in 16, held-out experimental measurements in 13 and genotype
+multiplexing in 9. 99 abstracts (36.8\%) did not state their ground
+truth at all (Fig. 5a).
 
 Physical ground truth is concentrated in a few classes. Doublet and
-ambient-RNA benchmarks use genotype or synthetic-barcode truth in 10 of
+ambient-RNA benchmarks use genotype, hashtag or mixture truth in 8 of
 13. Perturbation-prediction benchmarks score held-out measurements in 10
-of 11. Annotation benchmarks rely on expert labels in 9 of 17, and
-foundation-model evaluations do not state truth in 11 of 14.
+of 11. Annotation benchmarks rely on expert labels in 8 of 17, and
+foundation-model evaluations do not state truth in 12 of 14.
 
-Robustness to parameters or pipeline choices was stated in 15 benchmarks
-(5.6\%), calibration or uncertainty in 9 (3.3\%) and metric validity in
-8 (3.0\%) (Fig. 5b). Among the 48 cancer-specific benchmarks the counts
-were 4, 2 and 0. Abstract-level coding undercounts these checks. Even
-so, the same three dimensions are the least represented both in what the
-literature states as problems and in what the benchmarks report doing.
-This convergence, from two independent sources, is the central empirical
-result of this review.
+Under the explicit criteria of §2.5, calibration or uncertainty was
+reported in 10 benchmark abstracts (3.7\%, 2.0--6.7), robustness to
+analytical choices in 42 (15.6\%, 11.8--20.4) and metric validity in 36
+(13.4\%, 9.8--18.0; 35 excluding one record flagged from its title
+alone) (Fig. 5b). Abstract-level coding undercounts all three, so these
+remain lower bounds.
+
+These figures revise an earlier version of this analysis substantially,
+and the revision is itself informative. Keyword coding of the same
+abstracts returned, in the same order, 9, 15 and 8. Re-reading all 269
+abstracts under written criteria left calibration almost unchanged but
+raised robustness and metric validity roughly three- and four-fold,
+because the keyword rules missed abstracts that name robustness among
+their evaluation dimensions, and missed metric critiques phrased as a
+property of the metric rather than of the methods. The direction of that
+error is the one an abstract-level protocol is most prone to, and it is
+why the criteria are now stated in full and the per-record evidence
+released.
+
+The corrected counts change the interpretation in two ways. First,
+calibration is the check that is genuinely rare: at 3.7\% it is reported
+four times less often than either of the others, and it is the only one
+of the three that no amount of recoding moved. Robustness and metric
+validity are reported in roughly one benchmark in six to seven --- still
+a minority, but not the near-absence the earlier figures implied.
+Second, the cancer-specific benchmarks are not the weak point. Among the
+48, the counts are 7 robustness, 1 calibration and 4 metric validity,
+and none differs from the other 221 records (Fisher exact p = 1.000,
+1.000 and 0.351). An earlier version of this analysis reported that no
+cancer-specific benchmark assessed metric validity; four do. There is no
+evidence here of a cancer-specific evaluation deficit over and above the
+field-wide one, and we withdraw that claim.
+
+What survives is a statement about calibration, and it is consistent
+with what the literature says about itself: uncertainty is among the
+rarest stated problems under explicit definitions (1.3\%) and among the
+rarest reported analyses (3.7\%). We note this consistency rather than
+treating it as corroboration, because both measurements are
+abstract-level codings made by the same pipeline and share its failure
+modes --- as the revision above demonstrates.
 
 \begin{figure}[!htbp]
 \centering
@@ -988,53 +1225,62 @@ Ground-truth strategies and reported checks in 269 benchmark studies.
 and shading gives the fraction of benchmarks in the class; a benchmark
 may state more than one strategy. Row labels give class size and the
 number of cancer-specific benchmarks. Simulation is the most frequent
-stated strategy (91 of 269); 107 abstracts state none. (b) Percentage of
-benchmarks whose abstract reports an assessment of robustness to
-analytical choices (15), calibration or uncertainty (9) or metric
-validity (8) (squares; n = 269). Circles show the share of the
-corresponding categories among 1,506 first-pass stated methodological
-problems (34, 10 and 16). Intervals are Wilson 95\% CIs. Because coding
-used abstracts, all values are lower bounds.}]{fig/fig3_practice.pdf}}
+stated strategy (97 of 269); 99 abstracts state none. (b) Percentage of
+benchmarks whose abstract reports an assessment of calibration or
+uncertainty (10), metric validity (36) or robustness to analytical
+choices (42) under the explicit criteria of §2.5 (squares; n = 269).
+Circles show the share of the corresponding categories among 1,506
+first-pass stated methodological problems (10, 16 and 34). Intervals are
+Wilson 95\% CIs. Because coding used abstracts, all values are lower
+bounds; the superseded keyword coding of the same abstracts gave 9, 8
+and 15 (§3.4).}]{fig/fig3_practice.pdf}}
 \caption{\textbf{Figure 5. Ground-truth strategies and reported checks
 in 269 benchmark studies.} (a) Stated ground-truth strategy by method
 class. Cell values are counts and shading gives the fraction of
 benchmarks in the class; a benchmark may state more than one strategy.
 Row labels give class size and the number of cancer-specific benchmarks.
-Simulation is the most frequent stated strategy (91 of 269); 107
+Simulation is the most frequent stated strategy (97 of 269); 99
 abstracts state none. (b) Percentage of benchmarks whose abstract
-reports an assessment of robustness to analytical choices (15),
-calibration or uncertainty (9) or metric validity (8) (squares; n =
-269). Circles show the share of the corresponding categories among 1,506
-first-pass stated methodological problems (34, 10 and 16). Intervals are
-Wilson 95\% CIs. Because coding used abstracts, all values are lower
-bounds.}
+reports an assessment of calibration or uncertainty (10), metric
+validity (36) or robustness to analytical choices (42) under the
+explicit criteria of §2.5 (squares; n = 269). Circles show the share of
+the corresponding categories among 1,506 first-pass stated
+methodological problems (10, 16 and 34). Intervals are Wilson 95\% CIs.
+Because coding used abstracts, all values are lower bounds; the
+superseded keyword coding of the same abstracts gave 9, 8 and 15
+(§3.4).}
 \end{figure}
 
 \begin{tablefont}
 
 \setlength{\tabcolsep}{2pt}
 \begin{longtable}[l]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 26\tabcolsep) * \real{0.1350}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 26\tabcolsep) * \real{0.0300}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 26\tabcolsep) * \real{0.0650}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 26\tabcolsep) * \real{0.1000}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 26\tabcolsep) * \real{0.0660}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 26\tabcolsep) * \real{0.0660}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 26\tabcolsep) * \real{0.0660}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 26\tabcolsep) * \real{0.0660}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 26\tabcolsep) * \real{0.0660}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 26\tabcolsep) * \real{0.0660}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 26\tabcolsep) * \real{0.0660}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 26\tabcolsep) * \real{0.0660}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 26\tabcolsep) * \real{0.0660}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 26\tabcolsep) * \real{0.0660}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 30\tabcolsep) * \real{0.1350}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 30\tabcolsep) * \real{0.0300}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 30\tabcolsep) * \real{0.0500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 30\tabcolsep) * \real{0.0950}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 30\tabcolsep) * \real{0.0575}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 30\tabcolsep) * \real{0.0575}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 30\tabcolsep) * \real{0.0575}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 30\tabcolsep) * \real{0.0575}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 30\tabcolsep) * \real{0.0575}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 30\tabcolsep) * \real{0.0575}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 30\tabcolsep) * \real{0.0575}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 30\tabcolsep) * \real{0.0575}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 30\tabcolsep) * \real{0.0575}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 30\tabcolsep) * \real{0.0575}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 30\tabcolsep) * \real{0.0575}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 30\tabcolsep) * \real{0.0575}}@{}}
 \caption{\textbf{Table 4.} Benchmark catalogue by method class. Counts of
 benchmarks whose abstract states each ground-truth strategy or
 assessment (lower bounds). Sim., simulation; Orth., orthogonal assay;
 Geno., genotype multiplexing; Mix., cell-line mixture; Held-out,
 held-out experimental measurements; Expert, expert or published labels;
-Robust., robustness to parameters; Calib., calibration/uncertainty;
-Metric, metric validity.}\tabularnewline
+Curated, curated reference (literature, ChIP or database); Consensus,
+consensus of methods only; Robust., robustness to analytical choices;
+Calib., calibration/uncertainty; Metric, metric validity. Assessment
+columns follow the explicit criteria of §2.5 and supersede the keyword
+coding of an earlier version.}\tabularnewline
 \toprule
 \begin{minipage}[b]{\linewidth}\raggedright
 \thead{Class}
@@ -1056,6 +1302,10 @@ Metric, metric validity.}\tabularnewline
 \thead{Held-out}
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 \thead{Expert}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\thead{Curated}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\thead{Consensus}
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 \thead{Not stated}
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
@@ -1089,6 +1339,10 @@ Metric, metric validity.}\tabularnewline
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 \thead{Expert}
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\thead{Curated}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\thead{Consensus}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 \thead{Not stated}
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 \thead{Robust.}
@@ -1101,37 +1355,38 @@ Metric, metric validity.}\tabularnewline
 \endhead
 \bottomrule
 \endlastfoot
-Preprocessing / platforms & 55 & 9 & 2018-2026 & 15 & 4 & 0 & 4 & 0 & 3
-& 31 & 3 & 1 & 1 \\
-Spatial & 36 & 6 & 2022-2026 & 19 & 8 & 0 & 1 & 0 & 2 & 10 & 1 & 2 &
-1 \\
-Bulk deconvolution & 29 & 10 & 2019-2026 & 16 & 8 & 0 & 2 & 0 & 0 & 8 &
-1 & 0 & 0 \\
-Integration & 25 & 1 & 2019-2026 & 5 & 6 & 1 & 0 & 0 & 3 & 12 & 1 & 0 &
-1 \\
-Annotation / label transfer & 17 & 3 & 2019-2026 & 1 & 1 & 0 & 0 & 0 & 9
-& 7 & 0 & 0 & 0 \\
-Clonal phylogeny / scDNA & 17 & 7 & 2006-2025 & 5 & 8 & 0 & 0 & 0 & 0 &
-8 & 1 & 0 & 0 \\
-Foundation models & 14 & 2 & 2024-2026 & 1 & 0 & 0 & 0 & 0 & 2 & 11 & 1
-& 0 & 0 \\
-GRN inference & 13 & 0 & 2018-2026 & 8 & 1 & 0 & 0 & 1 & 0 & 2 & 0 & 1 &
-1 \\
-Doublets / ambient RNA & 13 & 0 & 2021-2026 & 7 & 1 & 10 & 0 & 0 & 0 & 2
-& 1 & 0 & 0 \\
-DE / DA & 12 & 0 & 2017-2024 & 6 & 1 & 0 & 0 & 0 & 1 & 5 & 2 & 4 & 0 \\
-Perturbation prediction & 11 & 0 & 2025-2026 & 0 & 1 & 0 & 0 & 10 & 0 &
-0 & 1 & 1 & 4 \\
-Trajectory / velocity & 8 & 0 & 2019-2026 & 3 & 0 & 0 & 0 & 0 & 1 & 5 &
-0 & 0 & 0 \\
-CNV / malignant calling & 7 & 7 & 2024-2026 & 1 & 2 & 0 & 1 & 0 & 3 & 1
-& 3 & 0 & 0 \\
-Cell--cell communication & 6 & 0 & 2022-2026 & 2 & 1 & 0 & 0 & 0 & 0 & 3
-& 0 & 0 & 0 \\
-Drug response & 3 & 2 & 2025-2026 & 0 & 0 & 0 & 0 & 1 & 0 & 2 & 0 & 0 &
-0 \\
-Lineage / mtDNA & 3 & 1 & 2021-2026 & 2 & 2 & 0 & 0 & 0 & 0 & 0 & 0 & 0
+Preprocessing / platforms & 55 & 9 & 2018-2026 & 16 & 6 & 0 & 7 & 0 & 5
+& 1 & 0 & 26 & 8 & 0 & 5 \\
+Spatial & 36 & 6 & 2022-2026 & 20 & 6 & 0 & 1 & 1 & 4 & 0 & 0 & 9 & 10 &
+3 & 4 \\
+Bulk deconvolution & 29 & 10 & 2019-2026 & 18 & 7 & 0 & 3 & 0 & 2 & 1 &
+0 & 6 & 9 & 0 & 1 \\
+Integration & 25 & 1 & 2019-2026 & 5 & 3 & 0 & 0 & 0 & 3 & 0 & 0 & 14 &
+0 & 0 & 5 \\
+Annotation / label transfer & 17 & 3 & 2019-2026 & 3 & 0 & 0 & 0 & 0 & 8
+& 0 & 0 & 7 & 1 & 1 & 2 \\
+Clonal phylogeny / scDNA & 17 & 7 & 2006-2025 & 5 & 5 & 0 & 2 & 0 & 0 &
+0 & 0 & 7 & 4 & 0 & 0 \\
+Foundation models & 14 & 2 & 2024-2026 & 1 & 0 & 0 & 0 & 0 & 0 & 1 & 0 &
+12 & 0 & 0 & 3 \\
+GRN inference & 13 & 0 & 2018-2026 & 7 & 0 & 0 & 0 & 1 & 0 & 6 & 0 & 2 &
+1 & 2 & 4 \\
+Doublets / ambient RNA & 13 & 0 & 2021-2026 & 6 & 2 & 8 & 1 & 0 & 0 & 0
+& 0 & 2 & 2 & 0 & 1 \\
+DE / DA & 12 & 0 & 2017-2024 & 8 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 4 & 1 & 4
 & 0 \\
+Perturbation prediction & 11 & 0 & 2025-2026 & 0 & 0 & 1 & 0 & 10 & 0 &
+0 & 0 & 0 & 0 & 0 & 8 \\
+Trajectory / velocity & 8 & 0 & 2019-2026 & 3 & 0 & 0 & 0 & 0 & 0 & 0 &
+1 & 4 & 4 & 0 & 2 \\
+CNV / malignant calling & 7 & 7 & 2024-2026 & 1 & 1 & 0 & 1 & 0 & 2 & 0
+& 0 & 2 & 1 & 0 & 0 \\
+Cell--cell communication & 6 & 0 & 2022-2026 & 2 & 3 & 0 & 1 & 0 & 0 & 0
+& 1 & 2 & 1 & 0 & 0 \\
+Drug response & 3 & 2 & 2025-2026 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 2 &
+0 & 0 & 0 \\
+Lineage / mtDNA & 3 & 1 & 2021-2026 & 2 & 2 & 0 & 0 & 0 & 0 & 0 & 0 & 0
+& 0 & 0 & 1 \\
 \end{longtable}
 
 \end{tablefont}
@@ -1147,14 +1402,14 @@ abstracts report.
 \subsection{4.1 CNV inference and malignant-cell calling}\label{cnv-inference-and-malignant-cell-calling}
 
 All seven benchmarks in this class are cancer-specific and published in
-2024--2026 {[}26--31{]}. A consensus is emerging but conditional.
+2024--2026 {[}35--41{]}. A consensus is emerging but conditional.
 Haplotype-aware inference with Numbat {[}24{]} leads when allelic
 information is available. Expression-only callers such as copyKAT
-{[}23{]} and SCEVAN {[}32{]} are the practical default otherwise, though
+{[}23{]} and SCEVAN {[}42{]} are the practical default otherwise, though
 inferCNV-style smoothing {[}20,21{]} remains the most used. Two
 disease-specific comparisons found less than 30\% overlap between
-callers and many false positives {[}28,29{]}. Reference choice, depth
-and purity change results {[}26,27{]}. This is the only class in which
+callers and many false positives {[}37,38{]}. Reference choice, depth
+and purity change results {[}35,36{]}. This is the only class in which
 sensitivity to the reference is routinely reported. No benchmark scores
 the binary malignant call against a shared, matched DNA-level truth
 across tumour types, or stratifies by aneuploidy burden. Near-diploid
@@ -1169,26 +1424,30 @@ of them cancer-specific. Its ground truth is mostly pseudo-bulk
 simulation (16 of 29). Results are sensitive to normalisation and
 reference construction {[}18{]} and degrade sharply when a cell type is
 missing from the reference {[}18{]}. More realistic heterogeneous
-pseudo-bulk reorders the methods {[}33{]}. None of the 29 abstracts
-reports uncertainty on estimated proportions, and none examines metric
+pseudo-bulk reorders the methods {[}43{]}. None of the 29 abstracts
+reports uncertainty on estimated proportions, and one examines metric
 validity. For tumours, deconvolution of malignant states against
-DNA-level truth is missing. The ground-truth catalogue lists 459 series
+DNA-level truth is missing. The ground-truth catalogue lists 233 series
 with paired bulk and single-cell data from the same tumours that could
-anchor such a test.
+anchor such a test. For immuno-oncology specifically, a cancer-specific
+evaluation of transcriptome-based cell-type quantification methods
+benchmarked them against immunohistochemistry and flow-cytometry
+estimates {[}44{]}.
 
 \subsection{4.3 Integration and batch correction}\label{integration-and-batch-correction}
 
 Atlas-level integration has a mature benchmark {[}14{]}, earlier
-comparisons {[}13{]} and the only dedicated metric critique in the
-catalogue. That critique shows that silhouette-based scores cannot
-reliably assess batch removal or conservation of biological signal
-{[}34{]}. Only 1 of 25 integration benchmarks is cancer-specific.
-Integration benchmarks score the removal of batch effects jointly with
-the conservation of biological variation {[}14{]}. In tumours,
-patient-specific malignant programmes {[}21,22{]} are confounded with
-patient as a batch variable. No integration benchmark in the catalogue
-quantifies how much of that patient-specific malignant signal is
-removed.
+comparisons {[}13{]} and the catalogue's densest concentration of metric
+critique: 5 of its 25 records interrogate the scoring function itself,
+the highest share of any class outside perturbation prediction. The most
+direct of them shows that silhouette-based scores cannot reliably assess
+batch removal or conservation of biological signal {[}45{]}. Only 1 of
+25 integration benchmarks is cancer-specific. Integration benchmarks
+score the removal of batch effects jointly with the conservation of
+biological variation {[}14{]}. In tumours, patient-specific malignant
+programmes {[}21,22{]} are confounded with patient as a batch variable.
+No integration benchmark in the catalogue quantifies how much of that
+patient-specific malignant signal is removed.
 
 \subsection{4.4 Annotation and label transfer}\label{annotation-and-label-transfer}
 
@@ -1198,8 +1457,8 @@ author-supplied labels (9 of 17), which raises a circularity problem:
 the labels were usually derived from the same marker genes that the
 evaluated tools use. Calibration of label confidence and rejection of
 unknown cell types are assessed in only one record, and it is not
-cancer-specific {[}35{]}. Conformal prediction sets for annotation with
-guaranteed coverage have been proposed {[}36{]}, but have not been
+cancer-specific {[}46{]}. Conformal prediction sets for annotation with
+guaranteed coverage have been proposed {[}47{]}, but have not been
 evaluated on tumour data. Whether confidence scores remain calibrated
 when the malignant compartment is absent from the reference, the default
 situation in tumour data, has not been tested.
@@ -1210,37 +1469,45 @@ Communication inference is shaped as much by the choice of
 ligand--receptor resource as by the choice of method {[}16{]}. Only 6
 benchmarks exist and none is cancer-specific, although communication is
 among the fastest-growing topics (2.3-fold share gain). Spatial
-co-localisation is used as a proxy truth {[}16,37{]}. No benchmark uses
+co-localisation is used as a proxy truth {[}16,48{]}. No benchmark uses
 matched spatial data from the same tumour as an external referee, though
-the ground-truth catalogue lists 250 series with paired spatial data.
+the ground-truth catalogue lists 186 series with paired spatial data.
 
 \subsection{4.6 Spatial transcriptomics}\label{spatial-transcriptomics}
 
 Spatial methods have 36 benchmarks. For spot deconvolution,
-cell2location and RCTD are repeatedly among the best {[}17,38{]}, but a
-simple regression baseline outperforms nearly half of the dedicated
-methods {[}38{]}. No domain-detection method wins across platforms
-{[}39{]}. Metric validity is beginning to be examined in this class,
-with critiques of spatial ARI {[}40{]} and of clustering-benchmark
-pitfalls {[}41{]}. A type-I-error assessment of co-localisation
-statistics in cancer {[}42{]} is one of only two calibration analyses
-among cancer-specific benchmarks.
+cell2location {[}49{]} and RCTD {[}50{]} are repeatedly among the best
+{[}17,51{]}, but a simple regression baseline outperforms nearly half of
+the dedicated methods {[}51{]}. No domain-detection method wins across
+platforms {[}52{]}. Metric validity is beginning to be examined in this
+class, with critiques of spatial ARI {[}53{]} and of
+clustering-benchmark pitfalls {[}54{]}. A type-I-error assessment of
+co-localisation statistics in cancer {[}55{]} is the only calibration
+analysis among the 48 cancer-specific benchmarks.
 
 \subsection{4.7 Gene-regulatory-network inference}\label{gene-regulatory-network-inference}
 
-GRN benchmarks report modest performance overall. On experimental data,
-methods often do not beat random predictors {[}43,44{]}, and
-interventional methods do not beat observational ones {[}45{]}. None of
-the 13 GRN benchmarks is cancer-specific. The aneuploid tumour genome,
-where expression changes track copy number, breaks assumptions that GRN
+GRN benchmarks report modest performance overall; the reference
+benchmark for the class reports moderate area under the precision-recall
+curve and early precision across algorithms {[}56{]}. Methods that are
+accurate on microarray and bulk RNA-seq data perform markedly worse on
+single-cell data {[}57{]}, accuracy on experimental single-cell data is
+low in absolute terms {[}58{]}, an eleven-method comparison across seven
+datasets reports only modest recovery of experimentally derived
+interactions {[}59{]}, and interventional methods do not beat
+observational ones {[}60{]}. We previously stated that methods often
+fail to beat random predictors; no abstract in this literature reports
+that as its own finding, and the statement is withdrawn. None of the 13
+GRN benchmarks is cancer-specific. The aneuploid tumour genome, where
+expression changes track copy number, breaks assumptions that GRN
 inference makes in normal tissue, and this has not been benchmarked.
 
 \subsection{4.8 Lineage tracing and clonal phylogeny}\label{lineage-tracing-and-clonal-phylogeny}
 
 Lineage tracing is the thinnest class: 3 records, none of which
 benchmarks mitochondrial-variant clone callers. Natural mtDNA mutations
-are now an established lineage marker in human cells {[}46--49{]}, and
-dedicated variant-selection tools exist {[}50{]}. Yet 266
+are now an established lineage marker in human cells {[}61--64{]}, and
+dedicated variant-selection tools exist {[}65{]}. Yet 266
 lineage-tracing papers in 2023--26 rely on these callers without a
 neutral comparison. Clonal-phylogeny benchmarks are mostly older
 comparisons of whole-genome amplification protocols. No neutral
@@ -1252,8 +1519,8 @@ found.
 DE has the most consistent methodological consensus in the catalogue.
 Tests that treat cells as independent replicates inflate false
 discoveries, while pseudobulk and mixed models control them
-{[}10,51,52{]}. This is the single-cell form of a classical
-pseudoreplication error {[}53{]}. DE is also the class in which
+{[}10,66,67{]}. This is the single-cell form of a classical
+pseudoreplication error {[}68{]}. DE is also the class in which
 calibration (FDR control) is most often assessed (4 of 12). No DE or DA
 benchmark is cancer-specific. In tumours, patient-specific malignant
 states violate the assumption that cell types are shared across
@@ -1261,100 +1528,126 @@ conditions.
 
 \subsection{4.10 Doublets, demultiplexing and ambient RNA}\label{doublets-demultiplexing-and-ambient-rna}
 
-This is the best-grounded class. Genotype multiplexing {[}54--56{]} and
-antibody or lipid hashing {[}57--59{]} supply truth in 10 of 13
-benchmarks {[}15,60{]}. None of the 13 is cancer-specific. Because
-doublet and ambient-RNA correction precede malignant-cell calling
-(§4.1), errors at this step propagate to it, but that propagation has
-not been measured in tumour data. Genetic demultiplexing has been shown
-to work in pooled tumour samples {[}61{]}, so the experimental design
-for a tumour-specific benchmark exists.
+This is the best-grounded class; an integrative benchmark of
+demultiplexing and doublet-detection methods reports improved droplet
+assignment when they are combined {[}69{]}. Genotype multiplexing
+{[}70--72{]} and antibody or lipid hashing {[}73--75{]} supply truth in
+10 of 13 benchmarks {[}15,76{]}. None of the 13 is cancer-specific.
+Because doublet and ambient-RNA correction precede malignant-cell
+calling (§4.1), errors at this step propagate to it, but that
+propagation has not been measured in tumour data. Genetic demultiplexing
+has been shown to work in pooled tumour samples {[}77{]}, so the
+experimental design for a tumour-specific benchmark exists.
 
 \subsection{4.11 Perturbation prediction and foundation models}\label{perturbation-prediction-and-foundation-models}
 
 Perturbation prediction has the strongest consensus in the catalogue.
 Simple linear or mean baselines match or beat deep-learning and
-foundation-model predictors {[}19,62{]}. It is also the class where
-metric validity is most actively studied (4 of 11 records).
-Correlation-based scores can be inflated by reusing control cells
-{[}63{]}, and R² can hide failures on differentially expressed genes
-{[}64{]}. Foundation models do not consistently beat simpler baselines
-in zero-shot evaluation {[}65{]}, and show limited advantage for cancer
-patient outcomes {[}66{]}. None of these abstracts states a check for
-leakage between pretraining corpora and test sets.
+foundation-model predictors {[}19,78{]}. It is also the class where
+metric validity is most actively studied (8 of 11 records, the highest
+share in the catalogue). Correlation-based scores can be inflated by
+reusing control cells {[}79{]}, and R² can hide failures on
+differentially expressed genes {[}80{]}. Foundation models do not
+consistently beat simpler baselines in zero-shot evaluation {[}81{]},
+and show limited advantage for cancer patient outcomes {[}82{]}. None of
+these abstracts states a check for leakage between pretraining corpora
+and test sets.
 
 \subsection{4.12 Drug-response prediction}\label{drug-response-prediction}
 
 Drug-response prediction gained share 3.2-fold since 2021 but has 3
-benchmarks in the catalogue {[}67{]}. No shared single-cell truth set
-with measured per-cell or per-clone response exists. Pooled cell-line
-designs with SNP demultiplexing {[}68{]} and patient-model
-Perturb-CITE-seq {[}69{]} show how one could be built.
+benchmarks in the catalogue {[}83--85{]}. No shared single-cell truth
+set with measured per-cell or per-clone response exists. Pooled
+cell-line designs with SNP demultiplexing {[}86{]} and patient-model
+Perturb-CITE-seq {[}87{]} show how one could be built.
 
-\section{5. Three neglected checks}\label{three-neglected-checks}
+\section{5. Three checks that need no gold standard}\label{three-checks-that-need-no-gold-standard}
 
-The analyses in §3 identify three checks that are rare both as stated
-problems and as reported analyses. None of them requires a new gold
-standard.
+The analyses in §3 identify three checks that need no new gold standard
+and are reported by a minority of benchmarks. They are not equally
+neglected, and we order them by how rarely they appear: calibration in
+3.7\% of benchmark abstracts, metric validity in 13.4\% and robustness
+to analytical choices in 15.6\%. Calibration is the priority; the other
+two are better described as uneven than as absent, and §4 shows that
+both are concentrated in a few classes while others report neither.
 
-\subsection{5.1 Is the metric measuring what it claims?}\label{is-the-metric-measuring-what-it-claims}
-
-A benchmark is only as informative as its scoring function.
-Chance-corrected partition agreement {[}70{]} has known dependence on
-cluster number and balance {[}71{]}. Silhouette widths {[}72{]} can
-reward over-correction in integration {[}34{]}. Two-dimensional
-embeddings distort high-dimensional structure in ways that make them
-poor evaluation targets {[}73{]}. In perturbation prediction, the choice
-of metric and control can change the ranking of methods {[}63,64{]}.
-Metric validity can be checked without ground truth. A valid metric must
-respond monotonically to controlled degradation (adding noise, merging
-clusters, permuting labels). It must not be maximised by trivial
-baselines, and it must rank methods consistently with an orthogonal
-criterion where one exists. Not one of the 48 cancer-specific benchmarks
-in the catalogue reports such a check in its abstract.
-
-\subsection{5.2 Is the conclusion robust to defensible analytical choices?}\label{is-the-conclusion-robust-to-defensible-analytical-choices}
-
-Outside genomics, analytical flexibility is a documented source of false
-or fragile findings {[}74,75{]}. Two remedies exist. Multiverse analysis
-{[}76{]} and specification-curve analysis {[}77{]} report a result
-across all defensible pipelines. Many-analyst studies show directly that
-teams given the same data reach different conclusions {[}78,79{]}. A
-standard single-cell workflow involves a sequence of defensible but
-consequential analytical choices. Transformation choice {[}80{]},
-preprocessing pipeline {[}81--83{]} and preprocessing for RNA velocity
-{[}84{]} each change downstream results. A recent study of cancer
-scRNA-seq reports that normalisation choice alone drives biological
-interpretation {[}85{]}. Yet robustness was stated in 5.6\% of
-benchmarks and in 4 of 48 cancer-specific ones. The parallel question
-for biological claims has not been asked systematically: how often does
-the headline result of a tumour scRNA-seq paper survive the defensible
-alternatives? Community best-practice guides {[}86,87{]} narrow the
-range of choices but do not quantify the sensitivity of conclusions to
-the choices that remain.
-
-\subsection{5.3 Is the stated confidence honest?}\label{is-the-stated-confidence-honest}
+\subsection{5.1 Is the stated confidence honest?}\label{is-the-stated-confidence-honest}
 
 Modern predictive models are often overconfident {[}88{]}. Conformal
 prediction provides distribution-free coverage guarantees for any model
 {[}89--91{]}. Single-cell applications are only beginning to appear, for
-cell-type annotation {[}36{]} and in the recognition that
+cell-type annotation {[}47{]} and in the recognition that
 reference-based annotation needs explicit uncertainty {[}92{]}.
-Calibration was stated in 3.3\% of benchmarks. Per-cell malignancy
-probabilities, deconvolution proportions, annotation scores, inferred
-interactions and perturbation predictions are almost never reported with
-calibrated uncertainty. The relevant test is simple: a reliability
-diagram and an expected calibration error against an independent label.
-Its most informative stress case is the tumour-specific one, cells from
+Calibration or uncertainty was reported in 3.7\% of benchmark abstracts,
+and in one of the 48 cancer-specific records. It is the only one of the
+three checks whose prevalence did not rise when every abstract was
+re-read under explicit criteria (§3.4), which is evidence that its
+rarity is real rather than an artefact of coding. Outside differential
+expression and abundance, where false-discovery control is assessed in 4
+of 12 records, the catalogue contains almost no calibration analysis:
+none in 29 bulk-deconvolution benchmarks, none in 17 clonal-phylogeny
+benchmarks, none in 14 foundation-model evaluations, none in 7 CNV and
+malignant-calling benchmarks. Per-cell malignancy probabilities,
+deconvolution proportions, annotation scores, inferred interactions and
+perturbation predictions are almost never reported with calibrated
+uncertainty. The relevant test is simple: a reliability diagram and an
+expected calibration error against an independent label. Its most
+informative stress case is the tumour-specific one, cells from
 populations absent from the reference.
+
+\subsection{5.2 Is the metric measuring what it claims?}\label{is-the-metric-measuring-what-it-claims}
+
+A benchmark is only as informative as its scoring function.
+Chance-corrected partition agreement {[}93{]} has known dependence on
+cluster number and balance {[}94{]}. Silhouette widths {[}95{]} can
+reward over-correction in integration {[}45{]}. Two-dimensional
+embeddings distort high-dimensional structure in ways that make them
+poor evaluation targets {[}96{]}. In perturbation prediction, the choice
+of metric and control can change the ranking of methods {[}79,80{]}.
+Metric validity can be checked without ground truth. A valid metric must
+respond monotonically to controlled degradation (adding noise, merging
+clusters, permuting labels). It must not be maximised by trivial
+baselines, and it must rank methods consistently with an orthogonal
+criterion where one exists. Such checks are reported by 13.4\% of the
+catalogue, but their distribution is extremely uneven: 8 of 11
+perturbation-prediction benchmarks and 5 of 25 integration benchmarks
+interrogate their metrics, against 1 of 29 in bulk deconvolution and
+none in 17 clonal-phylogeny or 7 CNV and malignant-calling benchmarks.
+The classes whose outputs feed tumour biology most directly are the ones
+least likely to ask whether their scores mean what they claim.
+
+\subsection{5.3 Is the conclusion robust to defensible analytical choices?}\label{is-the-conclusion-robust-to-defensible-analytical-choices}
+
+Outside genomics, analytical flexibility is a documented source of false
+or fragile findings {[}97,98{]}. Two remedies exist. Multiverse analysis
+{[}99{]} and specification-curve analysis {[}100{]} report a result
+across all defensible pipelines. Many-analyst studies show directly that
+teams given the same data reach different conclusions {[}101,102{]}. A
+standard single-cell workflow involves a sequence of defensible but
+consequential analytical choices. Transformation choice {[}103{]},
+preprocessing pipeline {[}104--106{]} and preprocessing for RNA velocity
+{[}107{]} each change downstream results. A recent study of cancer
+scRNA-seq reports that normalisation choice alone drives biological
+interpretation {[}108{]}. Robustness is named as an evaluated dimension
+by 15.6\% of the catalogue, and a broader reading that counts any
+reported sensitivity to a named analytical choice reaches 29.4\% (§2.5)
+--- so this check is performed considerably more often than the other
+two, and the gap is one of reporting convention as much as of practice.
+The parallel question for biological claims, however, has not been asked
+systematically: how often does the headline result of a tumour scRNA-seq
+paper survive the defensible alternatives? No benchmark in the catalogue
+addresses that, and it is the form of the question that matters most for
+the literature §3.1 describes. Community best-practice guides
+{[}109,110{]} narrow the range of choices but do not quantify the
+sensitivity of conclusions to the choices that remain.
 
 \subsection{5.4 Null models}\label{null-models}
 
 A fourth, related check is comparison against an appropriate null. Most
 random gene-expression signatures are significantly associated with
-breast-cancer outcome {[}93{]}. Meta-analysis of published
+breast-cancer outcome {[}111{]}. Meta-analysis of published
 ovarian-cancer signatures found modest, overlapping performance across
-validation cohorts {[}94{]}. Clinical prognosis is the largest topic in
+validation cohorts {[}112{]}. Clinical prognosis is the largest topic in
 this subfield (13,532 papers in 2023--26) and produced 23 benchmarks in
 that window. Single-cell-derived prognostic signatures have not been
 systematically tested against size- and proliferation-matched random
@@ -1366,85 +1659,111 @@ sets.
 
 Several experimental designs provide truth independent of the
 transcriptome being analysed (Table 5). Cell-line mixtures with known
-composition {[}95--98{]} supply known identity and proportions. Genotype
-multiplexing with demuxlet, souporcell and vireo {[}54--56{]} and
-antibody or lipid hashing {[}57,58{]} supply known sample of origin and
-doublet status. Genotype demultiplexing works in pooled tumour samples
-{[}61{]}. CITE-seq and related assays {[}99--102{]} give a protein
-readout that is measured independently of the RNA used for annotation.
-Spike-ins {[}103--105{]} supply known molecule counts. Somatic mtDNA
-variants supply lineage relationships {[}46--48{]}. Pooled CRISPR
-screens with single-cell readout {[}69,106--108{]} supply known
+composition {[}113--116{]} supply known identity and proportions.
+Genotype multiplexing with demuxlet, souporcell and vireo {[}70--72{]}
+and antibody or lipid hashing {[}73,74{]} supply known sample of origin
+and doublet status. Genotype demultiplexing works in pooled tumour
+samples {[}77{]}. CITE-seq and related assays {[}117--120{]} give a
+protein readout that is measured independently of the RNA used for
+annotation. Spike-ins {[}121--123{]} supply known molecule counts.
+Somatic mtDNA variants supply lineage relationships {[}61--63{]}. Pooled
+CRISPR screens with single-cell readout {[}87,124--126{]} supply known
 interventions. Matched exome or genome sequencing supplies DNA-level
 truth for malignancy and clone structure.
 
 Simulation remains the most common stated ground truth (33.8\% of
 benchmarks), but its fidelity is limited. Most scRNA-seq simulators fail
-to reproduce multi-group and batch structure {[}109,110{]}. Newer
-simulators improve fidelity {[}111--113{]}, but a ranking obtained on
+to reproduce multi-group and batch structure {[}127,128{]}. Newer
+simulators improve fidelity {[}129--131{]}, but a ranking obtained on
 simulated data needs confirmation on physical truth.
 
 \subsection{6.2 Where it is, publicly}\label{where-it-is-publicly}
 
-The ground-truth catalogue locates 1,336 GEO series (1,166 study groups)
-of human tumour single-cell data with at least one orthogonal validation
-modality (Fig. 6; Table 5). The modalities are paired bulk RNA in 459
-series, longitudinal or on-treatment sampling in 297, paired spatial
-data in 250, CITE-seq protein in 227, genotype or hashtag multiplexing
-in 166, matched WES/WGS in 138, Perturb-seq in 89, cell-line mixtures in
-25 and mtDNA lineage in 18. Three quarters of these series (75.7\%) were
-deposited in 2023--26, so the resource is newer than most of the
-benchmarks that could use it. Coverage is uneven. Lung cancer is
-represented by 19--50 series in each of the six most frequent
-modalities, and breast cancer and glioma by 8--47. Cell-line mixtures
-and mtDNA lineage data are rare everywhere: 25 and 18 series, with mtDNA
-lineage concentrated in chronic lymphocytic leukaemia and colorectal
-cancer. Mapping modalities to tasks gives 162 series usable for
-malignant-calling truth, 153 for clone calling, 356 for annotation
-calibration and 250 for a spatial referee of communication inference.
-These complement curated atlases and portals {[}22,25,114--121{]}, which
-index expression data but not the validation modalities that make data
-usable for evaluation.
+The ground-truth catalogue locates 923 GEO series (830 study groups) of
+human tumour single-cell data with at least one orthogonal validation
+modality (Fig. 6; Table 5). The modalities are paired bulk RNA in 233
+series, longitudinal or on-treatment sampling in 229, paired spatial
+data in 186, CITE-seq protein in 181, genotype or hashtag multiplexing
+in 134, matched WES/WGS in 106, Perturb-seq in 57, cell-line mixtures in
+24 and mtDNA lineage in 15. These are regular-expression calls on
+series-level text with an audited precision of 92.9\% (87.4--96.1)
+overall; per-modality precision is estimated on 15--20 series each and
+the resulting count ranges are given in Table 5, the widest being
+longitudinal sampling (133--211 of the 229 calls). Because the catalogue
+screens only the 2,715-record modality-query union and not the
+6,141-series base set (§2.6), these are lower bounds on what GEO holds.
+
+Nearly three quarters of these series (72.2\%) were deposited in
+2023--26, so the resource is newer than most of the benchmarks that
+could use it. Coverage is uneven. Lung cancer is represented by 13--23
+series in each of the six most frequent modalities, and breast cancer
+and glioma by 4--30. Cell-line mixtures and mtDNA lineage data are rare
+everywhere: 24 and 15 series, with mtDNA lineage concentrated in chronic
+lymphocytic leukaemia and colorectal cancer. Mapping modalities to tasks
+gives 129 series usable for malignant-calling truth, 118 for clone
+calling, 288 for annotation calibration and 186 for a spatial referee of
+communication inference. These complement curated atlases and portals
+{[}22,25,32,33,132--137{]}, which index expression data but not the
+validation modalities that make data usable for evaluation.
+
+A modality call states that the study generated that data type, not that
+the data sit in that accession; in a structured check of the 140 audited
+calls, the modality was traceable to the accession itself in 67\%.
+Series counted here should therefore be treated as leads to follow, not
+as a ready-made evaluation corpus.
 
 \begin{figure}[!htbp]
 \centering
 \pandocbounded{\includegraphics[keepaspectratio,alt={Figure 6. Public
 ground truth for evaluating tumour single-cell methods. (a) Number of
 GEO series of human tumour single-cell data carrying each orthogonal
-validation modality (n = 1,336 series in 1,166 study groups; a series
-can carry several modalities). (b) Validation-bearing series by year of
-deposition; 75.7\% were deposited in 2023--26, and the hatched 2026 bar
+validation modality (n = 923 series in 830 study groups; a series can
+carry several modalities). (b) Validation-bearing series by year of
+deposition; 72.2\% were deposited in 2023--26, and the hatched 2026 bar
 is partial. (c) Series by modality for the 14 most frequent cancer
 types; dots indicate zero. Chronic myeloid leukaemia counts are
 dominated by K562 Perturb-seq screens. Modality calls were derived from
-series-level text with spot-audited regular-expression rules; recall was
-not measured, and deposition of controlled-access data was not
-verified.}]{fig/fig5_ground_truth.pdf}}
+series-level text with regular-expression rules after re-screening
+against freshly retrieved GEO records (§2.6); audited precision is
+92.9\% (87.4--96.1) on 140 calls, per-modality precision rests on 15--20
+series each, recall was not measured, and deposition of
+controlled-access data was not verified.}]{fig/fig5_ground_truth.pdf}}
 \caption{\textbf{Figure 6. Public ground truth for evaluating tumour
 single-cell methods.} (a) Number of GEO series of human tumour
-single-cell data carrying each orthogonal validation modality (n = 1,336
-series in 1,166 study groups; a series can carry several modalities).
-(b) Validation-bearing series by year of deposition; 75.7\% were
-deposited in 2023--26, and the hatched 2026 bar is partial. (c) Series
-by modality for the 14 most frequent cancer types; dots indicate zero.
-Chronic myeloid leukaemia counts are dominated by K562 Perturb-seq
-screens. Modality calls were derived from series-level text with
-spot-audited regular-expression rules; recall was not measured, and
-deposition of controlled-access data was not verified.}
+single-cell data carrying each orthogonal validation modality (n = 923
+series in 830 study groups; a series can carry several modalities). (b)
+Validation-bearing series by year of deposition; 72.2\% were deposited
+in 2023--26, and the hatched 2026 bar is partial. (c) Series by modality
+for the 14 most frequent cancer types; dots indicate zero. Chronic
+myeloid leukaemia counts are dominated by K562 Perturb-seq screens.
+Modality calls were derived from series-level text with
+regular-expression rules after re-screening against freshly retrieved
+GEO records (§2.6); audited precision is 92.9\% (87.4--96.1) on 140
+calls, per-modality precision rests on 15--20 series each, recall was
+not measured, and deposition of controlled-access data was not
+verified.}
 \end{figure}
 
 \begin{tablefont}
 
 \begin{longtable}[l]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1786}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.0714}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.0714}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.0714}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.3214}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.2857}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1250}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.0500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.0500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.0500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.2250}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1500}}@{}}
 \caption{\textbf{Table 5.} Public validation-bearing tumour single-cell series in
 GEO, by modality. Study groups collapse SuperSeries and their SubSeries.
-Tasks are those the modality can supply truth for.}\tabularnewline
+Tasks are those the modality can supply truth for, following the mapping
+in Supplementary Data S4. Counts follow the eligibility re-screen
+described in §2.6 and are lower bounds, since only the modality-query
+union was screened. The audit column gives confirmed calls out of those
+sampled, the Wilson 95\% interval on that precision, and the resulting
+range for the modality count; where several cancer types tie on count,
+the displayed choice is arbitrary.}\tabularnewline
 \toprule
 \begin{minipage}[b]{\linewidth}\raggedright
 \thead{Modality}
@@ -1458,6 +1777,10 @@ Tasks are those the modality can supply truth for.}\tabularnewline
 \thead{Most frequent cancer types (series)}
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 \thead{Benchmark tasks enabled}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\thead{Audit (confirmed/n; precision 95\% CI)}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\thead{Precision-adjusted series}
 \end{minipage} \\
 \midrule
 \endfirsthead
@@ -1474,36 +1797,43 @@ Tasks are those the modality can supply truth for.}\tabularnewline
 \thead{Most frequent cancer types (series)}
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 \thead{Benchmark tasks enabled}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\thead{Audit (confirmed/n; precision 95\% CI)}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\thead{Precision-adjusted series}
 \end{minipage} \\
 \midrule
 \endhead
 \bottomrule
 \endlastfoot
-Paired bulk RNA & 459 & 402 & 18 & lung cancer (50); glioma/glioblastoma
-(47); melanoma (39) & deconvolution, pipeline robustness \\
-Longitudinal / on-treatment & 297 & 266 & 18 & acute myeloid leukaemia
-(36); glioma/glioblastoma (33); lung cancer (22) & pipeline robustness,
-perturbation response \\
-Paired spatial & 250 & 218 & 12 & breast cancer (29);
-glioma/glioblastoma (24); pancreatic cancer (23) & deconvolution, CCC
-spatial referee \\
-CITE-seq protein & 227 & 216 & 16 & acute myeloid leukaemia (23);
-myelodysplastic/myeloproliferative (22); lung cancer (19) & annotation
-calibration \\
-Genotype / hashtag multiplex & 166 & 152 & 8 & lung cancer (21); acute
-myeloid leukaemia (19); breast cancer (18) & malignant calling, clone
-calling, annotation calibration, pipeline robustness \\
-Matched WES/WGS & 138 & 117 & 18 & lung cancer (19); colorectal cancer
-(13); lymphoma (12) & malignant calling, clone calling \\
-Perturb-seq & 89 & 77 & 14 & chronic myeloid leukaemia (24);
-myelodysplastic/myeloproliferative (8); acute myeloid leukaemia (7) &
-pipeline robustness, perturbation response \\
-Cell-line mixture & 25 & 20 & 6 & lung cancer (12); chronic myeloid
+Paired bulk RNA & 233 & 206 & 20 & glioma/glioblastoma (25); acute
+myeloid leukaemia (25); lung cancer (23) & deconvolution, pipeline
+robustness & 14/15 (70--99\%) & 163--231 \\
+Longitudinal / on-treatment & 229 & 209 & 16 & acute myeloid leukaemia
+(32); glioma/glioblastoma (30); breast cancer (17) & pipeline
+robustness, perturbation response & 16/20 (58--92\%) & 133--211 \\
+Paired spatial & 186 & 167 & 12 & glioma/glioblastoma (22); breast
+cancer (20); pancreatic cancer (20) & deconvolution, CCC spatial referee
+& 14/15 (70--99\%) & 130--184 \\
+CITE-seq protein & 181 & 175 & 16 & acute myeloid leukaemia (23);
+myelodysplastic/myeloproliferative (19); lung cancer (19) & annotation
+calibration & 13/15 (62--96\%) & 112--175 \\
+Genotype / hashtag multiplex & 134 & 123 & 8 & acute myeloid leukaemia
+(19); lung cancer (17); renal cell carcinoma (13) & annotation
+calibration, pipeline robustness & 15/15 (80--100\%) & 106--134 \\
+Matched WES/WGS & 106 & 91 & 18 & lung cancer (13); colorectal cancer
+(12); lymphoma (10) & malignant calling, clone calling & 14/15
+(70--99\%) & 74--105 \\
+Perturb-seq & 57 & 54 & 13 & chronic myeloid leukaemia (21); breast
+cancer (6); acute myeloid leukaemia (6) & pipeline robustness,
+perturbation response & 14/15 (70--99\%) & 40--57 \\
+Cell-line mixture & 24 & 19 & 6 & lung cancer (11); chronic myeloid
 leukaemia (6); sarcoma (3) & malignant calling, deconvolution,
-annotation calibration, pipeline robustness \\
-mtDNA lineage & 18 & 9 & 25 & chronic lymphocytic leukaemia (8);
-colorectal cancer (4); acute myeloid leukaemia (3) & malignant calling,
-clone calling \\
+annotation calibration, pipeline robustness & 15/15 (80--100\%) &
+19--24 \\
+mtDNA lineage & 15 & 9 & 29 & chronic lymphocytic leukaemia (5);
+colorectal cancer (4); acute myeloid leukaemia (3) & clone calling &
+15/15 (80--100\%) & 11--15 \\
 \end{longtable}
 
 \end{tablefont}
@@ -1513,8 +1843,11 @@ clone calling \\
 On the basis of the gaps quantified in §3, we propose a ten-item
 standard that method papers and benchmarks in this field could meet with
 existing data (Box 1). It extends general benchmarking guidelines
-{[}1,4{]} with the four checks found to be least often reported: metric
-validity, analytical robustness, calibration and null-model comparison.
+{[}1,4{]} with four checks that this review finds under-reported,
+ordered by how rarely they appear in benchmark abstracts: calibration
+(3.7\%), metric validity (13.4\%), robustness to analytical choices
+(15.6\%) and comparison against an appropriate null, which no catalogued
+benchmark reports for prognostic signatures.
 
 \begin{tcolorbox}[enhanced,breakable,colback=gray!5,colframe=gray!55,boxrule=0.6pt,arc=2pt,left=8pt,right=8pt,top=6pt,bottom=6pt,fonttitle=\bfseries,coltitle=black,colbacktitle=gray!18,title={Box 1. Minimum evaluation standard for single-cell cancer methods}]\small
 
@@ -1532,7 +1865,7 @@ validity, analytical robustness, calibration and null-model comparison.
 \item
   \textbf{Prefer physical truth.} Where the ground-truth catalogue lists
   a matching modality (Table 5), use it; treat simulation as a
-  complement, and report a realism check {[}109{]}.
+  complement, and report a realism check {[}127{]}.
 \item
   \textbf{Validate the metric.} Show that the metric responds to
   controlled degradation and is not maximised by a trivial baseline.
@@ -1540,18 +1873,18 @@ validity, analytical robustness, calibration and null-model comparison.
   \textbf{Report a multiverse.} Re-run the headline comparison across
   the defensible preprocessing choices (normalisation, feature
   selection, integration, resolution, reference) and report the spread
-  {[}76,77{]}.
+  {[}99,100{]}.
 \item
   \textbf{Report calibration.} For any probability or confidence score,
   report a reliability diagram and expected calibration error; include
   cells from populations absent from the reference.
 \item
   \textbf{Use the replicate as the unit.} Infer at the level of patients
-  or samples, not cells {[}10,51{]}.
+  or samples, not cells {[}10,66{]}.
 \item
   \textbf{Include simple baselines and nulls.} Linear or mean
   predictors, random gene sets of matched size, and permuted labels
-  {[}19,93{]}.
+  {[}19,111{]}.
 \item
   \textbf{Stratify by tumour properties.} Report performance by
   aneuploidy burden, purity and cancer type where the data allow.
@@ -1617,46 +1950,50 @@ the method or prior art each builds on.}\tabularnewline
 \endlastfoot
 A1 & Metric-validity audit of tumour benchmarks & Do the metrics used in
 cancer-specific benchmarks respond to controlled degradation, and do
-they rank trivial baselines last? & Metric validity stated in 0/48
-cancer-specific benchmarks; 1.1\% of stated problems & Cell-line
-mixtures (25 series); genotype multiplex (166) & {[}34,63,70{]} \\
+they rank trivial baselines last? & Metric validity stated in 4/48
+cancer-specific benchmarks (8.3\%) and 36/269 overall (13.4\%),
+indistinguishable between the two (Fisher p = 0.351); 1.1\% of stated
+problems & Cell-line mixtures (24 series); genotype multiplex (134) &
+{[}45,79,93{]} \\
 A2 & Pipeline multiverse for tumour scRNA-seq claims & In what fraction
 of published tumour composition or state claims does the sign or
-significance change across defensible pipelines? & Robustness stated in
-5.6\% of benchmarks (4/48 cancer); 2.3\% of stated problems &
-Longitudinal (297); genotype multiplex (166); paired bulk (459) &
-{[}76,77,85{]} \\
+significance change across defensible pipelines? & Robustness named as
+an evaluated dimension in 42/269 benchmarks (15.6\%) and 7/48
+cancer-specific (14.6\%; Fisher p = 1.000); 2.3\% of stated problems &
+Longitudinal (229); genotype multiplex (134); paired bulk (233) &
+{[}99,100,108{]} \\
 A3 & Calibration of label transfer and malignancy probabilities & Are
 reference-mapping and malignant-call confidence scores calibrated on
 tumours, including populations absent from the reference? Does a
-conformal wrapper restore coverage? & Calibration stated in 3.3\% of
-benchmarks (2/48 cancer); 0.7\% of stated problems & CITE-seq protein
-(227); matched WES/WGS (138) & {[}36,88,91{]} \\
+conformal wrapper restore coverage? & Calibration stated in 10/269
+benchmarks (3.7\%) and 1/48 cancer-specific (2.1\%; Fisher p = 1.000);
+0.7\% of stated problems & CITE-seq protein (181); matched WES/WGS (106)
+& {[}47,88,91{]} \\
 A4 & mtDNA clone-caller benchmark & Which mitochondrial-variant callers
 recover known clone or donor structure, and at what coverage do they
 fail? & 0 PubMed-indexed mtDNA clone-caller benchmarks; 0 verified
-benchmarks in 266 lineage papers (2023--26) & mtDNA lineage (18 series,
-9 groups); genotype multiplex (166) as donor truth & {[}46,48,50{]} \\
+benchmarks in 266 lineage papers (2023--26) & mtDNA lineage (15 series,
+9 groups); genotype multiplex (134) as donor truth & {[}61,63,65{]} \\
 A5 & Malignant calling in low-aneuploidy tumours & How accurate are
 CNV-based and allele-aware malignant calls against DNA-level truth,
 stratified by aneuploidy burden? & 7 CNV/malignant-calling benchmarks;
 none stratified by ploidy against shared DNA truth & Matched WES/WGS
-(138); haematological series well represented & {[}23,24,32{]} \\
+(106); haematological series well represented & {[}23,24,42{]} \\
 A6 & Spatial referee for communication inference & What fraction of
 inferred tumour ligand--receptor interactions involve cell types that
 co-localise in matched spatial data? & 6 CCC benchmarks, 0
-cancer-specific; topic share 2.3× since 2021 & Paired spatial (250
-series) & {[}16,37{]} \\
+cancer-specific; topic share 2.3× since 2021 & Paired spatial (186
+series) & {[}16,48{]} \\
 A7 & Single-cell prognostic signatures vs random-set null & Do
 single-cell-derived prognostic signatures beat size- and
 proliferation-matched random gene sets on independent cohorts? & 13,532
 prognosis papers and 23 benchmarks in 2023--26 & Public bulk cohorts
-with survival (not in GEO catalogue) & {[}93,94{]} \\
+with survival (not in GEO catalogue) & {[}111,112{]} \\
 A8 & Tumour-specific integration benchmark & How much patient-specific
 malignant biology do integration methods remove, and do standard metrics
 detect it? & 1/25 integration benchmarks cancer-specific & Genotype
-multiplex (166); matched WES/WGS (138) for malignant labels &
-{[}14,34{]} \\
+multiplex (134); matched WES/WGS (106) for malignant labels &
+{[}14,45{]} \\
 \end{longtable}
 
 \end{tablefont}
@@ -1667,12 +2004,33 @@ Several limitations qualify these findings.
 
 First, all problem coding and benchmark-attribute coding used abstracts
 rather than full texts. A robustness or calibration analysis reported
-only in a supplement is not captured, so the 5.6\%, 3.3\% and 3.0\%
+only in a supplement is not captured, so the 15.6\%, 3.7\% and 13.4\%
 figures are lower bounds. The direction of this bias is known but its
 magnitude is not; a full-text audit of the 48 cancer-specific benchmarks
 would bound it.
 
-Second, coding was model-assisted, and the second coding pass was not
+Second, and more seriously, the abstract-level protocol is not the only
+source of undercounting in these three figures. An earlier version of
+this analysis coded the same abstracts by keyword rules and reported
+5.6\%, 3.3\% and 3.0\%; re-reading all 269 abstracts under the written
+criteria of §2.5 raised two of the three three- to four-fold, because
+abstracts that named robustness among their evaluation dimensions, and
+metric critiques phrased as properties of the metric, were being missed.
+The error was in the coding, not in the lower-bound argument that was
+used to defend it. We report the revised figures, state the criteria in
+full, and release a per-record evidence span for every coded field so
+that the calls can be checked rather than taken on trust; but a reader
+should treat any abstract-derived prevalence in this paper, including
+the revised ones, as carrying coder error of this kind in addition to
+the abstract-versus-full-text gap. The published figure for robustness
+also depends on where the construct boundary is drawn: naming robustness
+as an evaluated dimension gives 15.6\%, counting reported sensitivity to
+any named analytical choice gives 29.4\%, and counting input-degradation
+stress tests as well gives 52.4\%. We use the first because it is what
+the superseded keyword coding attempted to measure, and release the
+others.
+
+Third, coding was model-assisted, and the second coding pass was not
 performed by an independent human. Benchmark classification replicated
 well (κ = 0.74), whereas problem-type coding did not (pooled κ = 0.23),
 and its most frequent category did not replicate at all. For this reason
@@ -1685,52 +2043,115 @@ reliability estimates therefore rest entirely on a model second rater.
 No pass was adjudicated, and a human-coded reliability sample is the
 most important next step for this evidence layer.
 
-Third, coverage of both catalogues is incomplete. PubMed searches were
+Fourth, coverage of both catalogues is incomplete and the ground-truth
+catalogue's precision is imperfect. PubMed searches were
 relevance-ranked and capped, so benchmarks available only as preprints
 are missing. The ground-truth catalogue was built with
-regular-expression rules on series-level text; precision was
-spot-audited, recall was not measured, and only GEO was searched.
+regular-expression rules on series-level text, and its first version
+admitted ineligible series at a rate the present screening removed 413
+of 1,336 records to correct; the counts reported here follow
+re-screening against freshly retrieved GEO records. Audited precision is
+92.9\% overall (87.4--96.1) on 140 calls, but per-modality estimates
+rest on 15--20 series each and are correspondingly wide, so every
+modality count in Table 5 carries a range rather than a point value.
+Recall was not measured, only the 2,715-record modality-query union was
+screened rather than the 6,141-series base set, controlled-access
+deposition was not checked, and only GEO was searched.
 
-Fourth, topics are keyword-defined and overlapping, and the
-method/biology indicator is an author classification. An alternative
-coding was fitted as a sensitivity analysis and preserved the direction
-of every effect.
+Fifth, topics are keyword-defined and overlapping, and the
+method/biology indicator is an author classification. The overlap is
+substantial rather than incidental: topic paper counts sum to 2.47 times
+the subfield total, so a paper enters the topic models about 2.5 times,
+and of the 157 verified benchmarks in the window 32 carry no topic tag
+and are absent from those models entirely while the other 125 contribute
+270 topic-benchmark observations (§2.8). Topic-clustered standard errors
+address the repeated observation of a topic but not the repeated
+counting of a paper across topics; single-primary-topic assignments and
+a bootstrap over benchmark PMIDs were therefore fitted as sensitivity
+analyses (§2.8) and left the method-topic effect above 1 in every
+variant, though attenuated. An alternative topic coding preserved the
+direction of every effect. Readers should treat the topic-level
+intervals as optimistic even after these corrections.
 
-Fifth, influence is proxied by publication volume rather than citations;
+Sixth, influence is proxied by publication volume rather than citations;
 citation-weighted analysis could change which gaps are judged most
 consequential.
 
-Sixth, the subfield query captures single-cell work beyond genomics,
+Seventh, the subfield query captures single-cell work beyond genomics,
 especially before 2020: only 17\% of sampled 2015 abstracts used
 single-cell omics data, against 89\% in 2026. The subfield-wide decline
 in benchmark coverage is robust, but restricted to single-cell genomics
 it is consistent in direction and not significant (rate ratio 0.92,
-0.84--1.00); the decline in biology and application topics persists
-under the same restriction.
+0.84--1.00). This drift also means the sampled population whose stated
+problems are tracked in §3.3 changes character across the window --- the
+2015--18 stratum is 129 abstracts drawn from an era when single-cell
+omics was a sixth of the query, the 2024--26 stratum is 391 drawn from
+one where it is nearly all of it --- so the 14.0\%-to-3.6\% comparison
+is between somewhat different kinds of paper. The absence of any decline
+in the non-single-cell control set argues the trend is not an artefact
+of changing abstract conventions, but it does not rule out composition
+shift within the single-cell stratum itself.
 
-Seventh, the 2015--2026 problem coding is model-based, and agreement
+Eighth, the 2015--2026 problem coding is model-based, and agreement
 between two model coders was low for the presence of any stated problem
 (κ = 0.35) and for most rare categories. Prevalence trends are
 interpretable because one coder and one prompt were applied to all
 years, but absolute prevalences are approximate.
 
+Ninth, no coding in this study was performed or adjudicated by a human.
+Every reliability statistic reported here, including κ = 0.74 for
+benchmark classification, is a model-against-model comparison, and the
+subset rated by the coordinating agent rather than by a separate model
+is the one with the weakest agreement (κ = 0.48 against 0.76). A
+hand-coded sample of 100--150 abstracts, reported as human-against-model
+agreement, would convert this evidence layer from internally consistent
+to externally anchored, and it remains the single most important thing
+missing from this study.
+
+Tenth, the analysis was not preregistered and no protocol was deposited
+before coding began. The coverage models, the topic-by-year panel and
+the problem-prevalence trends were specified after the volume series had
+been inspected, so the sensitivity analyses reported here --- robust
+standard errors, topic-overlap variants, multiplicity adjustment, the
+recall and negative-control checks --- should be read as post hoc
+robustness assessment rather than as a preregistered analysis plan.
+
 \section{10. Conclusions}\label{conclusions}
 
 Publication volume in single-cell cancer genomics has grown faster than
 the evaluation of the methods on which that literature depends.
-Benchmark coverage per paper is falling (rate ratio 0.922 per year), and
-the fall is concentrated in biology and application topics (0.90 per
-year). Over the same period, the share of abstracts that state any
-evaluation-check problem fell from 14.0\% to 3.6\%. The most frequently
-coded limitation, an absence of ground truth, did not replicate under
-independent coding (κ = −0.01). Public ground truth is available:
-matched exomes, surface-protein measurements, genotype pools and spatial
-data exist for 1,336 tumour series. The checks that are missing, namely
-metric validity, robustness to analytical choices and calibrated
-uncertainty, require no new ground truth. These checks are rare both
-among the problems the literature states and among the analyses its
-benchmarks report. The catalogues released with this review are intended
-to lower the cost of performing them.
+Benchmark coverage per paper is falling (rate ratio 0.922 per year), a
+result that holds under every variance estimator and survives
+multiplicity adjustment. Whether that fall is specific to biology and
+application topics is suggested by the data but not established: the
+estimated annual change is 0.901 in those topics against 1.012 in method
+and measurement topics, but the difference does not survive clustering
+on topic or correction for multiple testing. Over the same period, the
+share of abstracts that state any evaluation-check problem fell from
+14.0\% to 3.6\%, with no corresponding fall in a non-single-cell control
+set. The most frequently coded limitation, an absence of ground truth,
+did not replicate under independent coding (κ = −0.01).
+
+Of the three checks that need no new gold standard, calibration is the
+one that is genuinely rare: 3.7\% of benchmark abstracts report it, and
+that figure did not move when every abstract was re-read under explicit
+criteria. Robustness to analytical choices (15.6\%) and metric validity
+(13.4\%) are reported three to four times more often than an earlier
+version of this analysis found, and are better described as unevenly
+distributed than as absent --- concentrated in perturbation prediction,
+integration and spatial methods, and close to absent in the classes that
+feed tumour biology most directly. We find no evidence that
+cancer-specific benchmarks are worse on any of the three than the rest
+of the catalogue.
+
+Public validation data exist on a substantial scale: matched exomes,
+surface-protein measurements, genotype pools and spatial data are
+reported for 923 tumour series, with the caveat that these are
+regex-derived calls whose modality is traceable to the accession itself
+in about two thirds of audited cases. The catalogues released with this
+review are intended to lower the cost of using them. The most useful
+next step for this evidence base is not more counting but a human-coded
+reliability sample, which would anchor every prevalence reported here.
 
 \section{Supplementary information}\label{supplementary-information}
 
@@ -1747,8 +2168,8 @@ The following files accompany this review:
   synthesis of the benchmark catalogue.
 \item
   \textbf{Supplementary Data S3} (ground\_truth\_catalogue.csv).
-  Ground-truth catalogue: 1,336 validation-bearing GEO tumour
-  single-cell series.
+  Ground-truth catalogue: 923 validation-bearing GEO tumour single-cell
+  series, with per-series eligibility and modality evidence.
 \item
   \textbf{Supplementary Data S4} (ground\_truth\_methods.md). GEO
   queries, classification rules and audit for S3.
@@ -1772,6 +2193,11 @@ The following files accompany this review:
   scripts, query definitions, coding instructions, standalone statistics
   and figure scripts with a reproduction check, and the full execution
   record (see code/README.md).
+\item
+  \textbf{Supplementary Data S10} (PRISMA\_checklist.md;
+  PRISMA\_flow.pdf). PRISMA 2020 checklist and a two-arm flow diagram
+  covering the evaluation-titled benchmark screen and the GEO
+  ground-truth screen, with exclusion counts and reasons at each step.
 \end{itemize}
 
 Literature and repository data were retrieved from PubMed (NCBI
@@ -1787,9 +2213,14 @@ only.
 \textbf{Consent for publication.} Not applicable.
 
 \textbf{Availability of data and materials.} All derived data are
-provided as Supplementary Data S1--S8 (listed above) and in the
-accompanying archive. Source records are publicly available from PubMed,
-Crossref, bioRxiv and NCBI GEO.
+provided as Supplementary Data S1--S10 (listed above) and are deposited,
+with the analysis code, in a public archive under DOI {[}to be inserted
+on acceptance{]}; the deposit is the citable version of record for both
+catalogues. Source records are publicly available from PubMed
+(https://pubmed.ncbi.nlm.nih.gov), Crossref (https://www.crossref.org),
+bioRxiv (https://www.biorxiv.org) and NCBI GEO
+(https://www.ncbi.nlm.nih.gov/geo). This study was not preregistered and
+no protocol was deposited before coding began.
 
 \textbf{Code availability.} Model inputs (coverage\_model\_input.csv)
 and full model specifications (methods\_statistics.md) are provided in
@@ -1802,18 +2233,20 @@ reported model from the supplied inputs and check the results against
 the values printed in this article, the PubMed query definitions and
 E-utilities retrieval scripts, the verbatim coding instructions, and the
 complete record of executed analysis code. Analyses used Python 3.11.16
-with NumPy 2.4.6, pandas 2.3.3, SciPy 1.17.1, statsmodels 0.15.0 and
-Matplotlib 3.11.1; the manuscript was typeset with pandoc 3.12.1 and
-Tectonic 0.17.0.
+{[}138{]} with NumPy 2.4.6 {[}139{]}, pandas 2.3.3 {[}140{]}, SciPy
+1.17.1 {[}141{]}, statsmodels 0.15.0 {[}142{]} and Matplotlib 3.11.1
+{[}143{]}; the manuscript was typeset with pandoc 3.12.1
+(https://pandoc.org) and Tectonic 0.17.0
+(https://tectonic-typesetting.github.io).
 
 \textbf{Competing interests.} The author declares no competing
 interests.
 
 \textbf{Funding.} This work received no specific funding.
 
-\textbf{Authors' contributions.} M.J.H. conceived and designed the study,
-curated the data, performed the analyses, prepared the figures and
-wrote and revised the manuscript.
+\textbf{Authors' contributions.} M.J.H. conceived and designed the
+study, curated the data, performed the analyses, prepared the figures
+and wrote and revised the manuscript.
 
 \textbf{Acknowledgements.} None.
 
@@ -1979,6 +2412,60 @@ responsibility for the content.
   doi:\href{https://doi.org/10.7554/eLife.27041}{\nolinkurl{10.7554/eLife.27041}}.
   PMID 29206104.
 \item
+  Sayers EW, Beck J, Bolton EE, Brister JR, Chan J, Connor R, et
+  al.~Database resources of the National Center for Biotechnology
+  Information in 2025. \emph{Nucleic Acids Res}. 2025;53:D20-D29.
+  doi:\href{https://doi.org/10.1093/nar/gkae979}{\nolinkurl{10.1093/nar/gkae979}}.
+  PMID 39526373.
+\item
+  Sever R, Hindle S, Roeder T, Fereres S, Fernández Gayol O, Ghosh S, et
+  al.~bioRxiv: the preprint server for biology. \emph{bioRxiv}. 2019.
+  doi:\href{https://doi.org/10.1101/833400}{\nolinkurl{10.1101/833400}}. Preprint.
+  API at \url{https://api.biorxiv.org}.
+\item
+  Barrett T, Wilhite SE, Ledoux P, Evangelista C, Kim IF, Tomashevsky M,
+  et al.~NCBI GEO: archive for functional genomics data sets--update.
+  \emph{Nucleic Acids Res}. 2013;41:D991-5.
+  doi:\href{https://doi.org/10.1093/nar/gks1193}{\nolinkurl{10.1093/nar/gks1193}}.
+  PMID 23193258.
+\item
+  Mailman MD, Feolo M, Jin Y, Kimura M, Tryka K, Bagoutdinov R, et
+  al.~The NCBI dbGaP database of genotypes and phenotypes. \emph{Nat
+  Genet}. 2007;39:1181-6.
+  doi:\href{https://doi.org/10.1038/ng1007-1181}{\nolinkurl{10.1038/ng1007-1181}}.
+  PMID 17898773.
+\item
+  Freeberg MA, Fromont LA, D'Altri T, Romero AF, Ciges JI, Jene A, et
+  al.~The European Genome-phenome Archive in 2021. \emph{Nucleic Acids
+  Res}. 2022;50:D980-D987.
+  doi:\href{https://doi.org/10.1093/nar/gkab1059}{\nolinkurl{10.1093/nar/gkab1059}}.
+  PMID 34791407.
+\item
+  Sarkans U, Füllgrabe A, Ali A, Athar A, Behrangi E, Diaz N, et
+  al.~From ArrayExpress to BioStudies. \emph{Nucleic Acids Res}.
+  2021;49:D1502-D1506.
+  doi:\href{https://doi.org/10.1093/nar/gkaa1062}{\nolinkurl{10.1093/nar/gkaa1062}}.
+  PMID 33211879.
+\item
+  Rozenblatt-Rosen O, Regev A, Oberdoerffer P, Nawy T, Hupalowska A,
+  Rood JE, et al.~The Human Tumor Atlas Network: Charting Tumor
+  Transitions across Space and Time at Single-Cell Resolution.
+  \emph{Cell}. 2020;181:236-249.
+  doi:\href{https://doi.org/10.1016/j.cell.2020.03.053}{\nolinkurl{10.1016/j.cell.2020.03.053}}.
+  PMID 32302568.
+\item
+  Abdulla S, Aevermann B, Assis P, Badajoz S, Bell SM, Bezzi E, et
+  al.~CZ CELLxGENE Discover: a single-cell data platform for scalable
+  exploration, analysis and modeling of aggregated data. \emph{Nucleic
+  Acids Res}. 2025;53:D886-D900.
+  doi:\href{https://doi.org/10.1093/nar/gkae1142}{\nolinkurl{10.1093/nar/gkae1142}}.
+  PMID 39607691.
+\item
+  Hendricks G, Tkaczyk D, Lin J, Feeney P. Crossref: The sustainable
+  source of community-owned scholarly metadata. \emph{Quantitative
+  Science Studies}. 2020;1:414-427.
+  doi:\href{https://doi.org/10.1162/qss_a_00022}{\nolinkurl{10.1162/qss\_a\_00022}}.
+\item
   Chen X, Fang LT, Chen Z, Chen W, Wu H, Zhu B, et al.~A benchmarking
   study of copy number variation inference methods using single-cell
   RNA-sequencing data. \emph{Precis Clin Med}. 2025;8:pbaf011.
@@ -2017,6 +2504,12 @@ responsibility for the content.
   doi:\href{https://doi.org/10.1038/s41467-025-62359-9}{\nolinkurl{10.1038/s41467-025-62359-9}}.
   PMID 41038850.
 \item
+  Han S, Xiong Z, Zhou Y, Yang C. Benchmarking copy number alteration
+  inference methods for spatial transcriptomics. \emph{Nat Commun}.
+  2026;17:10565.
+  doi:\href{https://doi.org/10.1038/s41467-026-77500-5}{\nolinkurl{10.1038/s41467-026-77500-5}}.
+  PMID 42838986.
+\item
   De Falco A, Caruso F, Su XD, Iavarone A, Ceccarelli M. A variational
   algorithm to detect the clonal copy number substructure of tumors from
   scRNA-seq data. \emph{Nat Commun}. 2023;14:1074.
@@ -2028,6 +2521,13 @@ responsibility for the content.
   2024;25:169.
   doi:\href{https://doi.org/10.1186/s13059-024-03292-w}{\nolinkurl{10.1186/s13059-024-03292-w}}.
   PMID 38956606.
+\item
+  Sturm G, Finotello F, Petitprez F, Zhang JD, Baumbach J, Fridman WH,
+  et al.~Comprehensive evaluation of transcriptome-based cell-type
+  quantification methods for immuno-oncology. \emph{Bioinformatics}.
+  2019;35:i436-i445.
+  doi:\href{https://doi.org/10.1093/bioinformatics/btz363}{\nolinkurl{10.1093/bioinformatics/btz363}}.
+  PMID 31510660.
 \item
   Rautenstrauch P, Ohler U. Shortcomings of silhouette in single-cell
   integration benchmarking. \emph{Nat Biotechnol}. 2026;44:954-958.
@@ -2051,6 +2551,18 @@ responsibility for the content.
   \emph{Genome Biol}. 2022;23:218.
   doi:\href{https://doi.org/10.1186/s13059-022-02783-y}{\nolinkurl{10.1186/s13059-022-02783-y}}.
   PMID 36253792.
+\item
+  Kleshchevnikov V, Shmatko A, Dann E, Aivazidis A, King HW, Li T, et
+  al.~Cell2location maps fine-grained cell types in spatial
+  transcriptomics. \emph{Nat Biotechnol}. 2022;40:661-671.
+  doi:\href{https://doi.org/10.1038/s41587-021-01139-4}{\nolinkurl{10.1038/s41587-021-01139-4}}.
+  PMID 35027729.
+\item
+  Cable DM, Murray E, Zou LS, Goeva A, Macosko EZ, Chen F, et al.~Robust
+  decomposition of cell type mixtures in spatial transcriptomics.
+  \emph{Nat Biotechnol}. 2022;40:517-526.
+  doi:\href{https://doi.org/10.1038/s41587-021-00830-w}{\nolinkurl{10.1038/s41587-021-00830-w}}.
+  PMID 33603203.
 \item
   Sang-Aram C, Browaeys R, Seurinck R, Saeys Y. Spotless, a reproducible
   pipeline for benchmarking cell type deconvolution in spatial
@@ -2084,6 +2596,12 @@ responsibility for the content.
   doi:\href{https://doi.org/10.1080/29979676.2024.2437947}{\nolinkurl{10.1080/29979676.2024.2437947}}.
   PMID 40051984.
 \item
+  Pratapa A, Jalihal AP, Law JN, Bharadwaj A, Murali TM. Benchmarking
+  algorithms for gene regulatory network inference from single-cell
+  transcriptomic data. \emph{Nat Methods}. 2020;17:147-154.
+  doi:\href{https://doi.org/10.1038/s41592-019-0690-6}{\nolinkurl{10.1038/s41592-019-0690-6}}.
+  PMID 31907445.
+\item
   Saint-Antoine M, Singh A. Benchmarking Gene Regulatory Network
   Inference Methods on Simulated and Experimental Data. \emph{bioRxiv}.
   2023.
@@ -2095,6 +2613,13 @@ responsibility for the content.
   expression data. \emph{BMC Bioinformatics}. 2018;19:232.
   doi:\href{https://doi.org/10.1186/s12859-018-2217-z}{\nolinkurl{10.1186/s12859-018-2217-z}}.
   PMID 29914350.
+\item
+  McCalla SG, Fotuhi Siahpirani A, Li J, Pyne S, Stone M, Periyasamy V,
+  et al.~Identifying strengths and weaknesses of methods for
+  computational network inference from single-cell RNA-seq data.
+  \emph{G3 (Bethesda)}. 2023;13:jkad004.
+  doi:\href{https://doi.org/10.1093/g3journal/jkad004}{\nolinkurl{10.1093/g3journal/jkad004}}.
+  PMID 36626328.
 \item
   Chevalley M, Roohani YH, Mehrjou A, Leskovec J, Schwab P. A
   large-scale benchmark for network inference from single-cell
@@ -2150,6 +2675,13 @@ responsibility for the content.
   is it affecting your analysis?. \emph{BMC Neurosci}. 2010;11:5.
   doi:\href{https://doi.org/10.1186/1471-2202-11-5}{\nolinkurl{10.1186/1471-2202-11-5}}.
   PMID 20074371.
+\item
+  Neavin D, Senabouth A, Arora H, Lee JTH, Ripoll-Cladellas A,
+  sc-eQTLGen Consortium, et al.~Demuxafy: improvement in droplet
+  assignment by integrating multiple single-cell demultiplexing and
+  doublet detection methods. \emph{Genome Biol}. 2024;25:94.
+  doi:\href{https://doi.org/10.1186/s13059-024-03224-8}{\nolinkurl{10.1186/s13059-024-03224-8}}.
+  PMID 38622708.
 \item
   Kang HM, Subramaniam M, Targ S, Nguyen M, Maliskova L, McCarthy E, et
   al.~Multiplexed droplet single-cell RNA-sequencing using natural
@@ -2240,6 +2772,18 @@ responsibility for the content.
   doi:\href{https://doi.org/10.1038/s41467-025-67481-2}{\nolinkurl{10.1038/s41467-025-67481-2}}.
   PMID 41381537.
 \item
+  Davey W, Liu Y, Hasegawa K. Assessing the use of foundation model
+  embeddings to improve drug response predictions using scRNA-Seq
+  expression data. \emph{Bioorg Med Chem}. 2026;140:118732.
+  doi:\href{https://doi.org/10.1016/j.bmc.2026.118732}{\nolinkurl{10.1016/j.bmc.2026.118732}}.
+  PMID 42322669.
+\item
+  Zhang Y, Li W, Wang Z, Du S, Wang S. Synthetic Assessment of Transfer
+  Learning Method From Cell Lines to Single-Cell on Drug Response
+  Prediction. \emph{IEEE Trans Comput Biol Bioinform}. 2026;23:297-312.
+  doi:\href{https://doi.org/10.1109/TCBBIO.2025.3641230}{\nolinkurl{10.1109/TCBBIO.2025.3641230}}.
+  PMID 41359728.
+\item
   McFarland JM, Paolella BR, Warren A, Geiger-Schuller K, Shibue T,
   Rothberg M, et al.~Multiplexed single-cell transcriptional response
   profiling to define cancer vulnerabilities and therapeutic mechanism
@@ -2253,6 +2797,29 @@ responsibility for the content.
   2021;53:332-341.
   doi:\href{https://doi.org/10.1038/s41588-021-00779-1}{\nolinkurl{10.1038/s41588-021-00779-1}}.
   PMID 33649592.
+\item
+  Guo C, Pleiss G, Sun Y, Weinberger KQ. On Calibration of Modern Neural
+  Networks. \emph{Proceedings of ICML 2017 (PMLR 70); arXiv:1706.04599}.
+  2017.
+  doi:\href{https://doi.org/10.48550/arXiv.1706.04599}{\nolinkurl{10.48550/arXiv.1706.04599}}.
+\item
+  Lei J, G'Sell M, Rinaldo A, Tibshirani R, Wasserman L.
+  Distribution-Free Predictive Inference for Regression. \emph{Journal
+  of the American Statistical Association}. 2018.
+  doi:\href{https://doi.org/10.1080/01621459.2017.1307116}{\nolinkurl{10.1080/01621459.2017.1307116}}.
+\item
+  Vovk V, Gammerman A, Shafer G. Algorithmic Learning in a Random World.
+  \emph{Springer (book)}. 2022.
+  doi:\href{https://doi.org/10.1007/978-3-031-06649-8}{\nolinkurl{10.1007/978-3-031-06649-8}}.
+\item
+  Angelopoulos A, Bates S. Conformal Prediction: A Gentle Introduction.
+  \emph{Foundations and Trends® in Machine Learning}. 2023.
+  doi:\href{https://doi.org/10.1561/2200000101}{\nolinkurl{10.1561/2200000101}}.
+\item
+  . Estimating uncertainty in reference-based cell type annotation in
+  single-cell genomics. \emph{Nat Genet}. 2024;56:2600-2601.
+  doi:\href{https://doi.org/10.1038/s41588-024-01995-1}{\nolinkurl{10.1038/s41588-024-01995-1}}.
+  PMID 39592883.
 \item
   Hubert L, Arabie P. Comparing partitions. \emph{Journal of
   Classification}. 1985.
@@ -2353,29 +2920,6 @@ responsibility for the content.
   \emph{Nat Rev Genet}. 2023;24:550-572.
   doi:\href{https://doi.org/10.1038/s41576-023-00586-w}{\nolinkurl{10.1038/s41576-023-00586-w}}.
   PMID 37002403.
-\item
-  Guo C, Pleiss G, Sun Y, Weinberger KQ. On Calibration of Modern Neural
-  Networks. \emph{Proceedings of ICML 2017 (PMLR 70); arXiv:1706.04599}.
-  2017.
-  doi:\href{https://doi.org/10.48550/arXiv.1706.04599}{\nolinkurl{10.48550/arXiv.1706.04599}}.
-\item
-  Lei J, G'Sell M, Rinaldo A, Tibshirani R, Wasserman L.
-  Distribution-Free Predictive Inference for Regression. \emph{Journal
-  of the American Statistical Association}. 2018.
-  doi:\href{https://doi.org/10.1080/01621459.2017.1307116}{\nolinkurl{10.1080/01621459.2017.1307116}}.
-\item
-  Vovk V, Gammerman A, Shafer G. Algorithmic Learning in a Random World.
-  \emph{Springer (book)}. 2022.
-  doi:\href{https://doi.org/10.1007/978-3-031-06649-8}{\nolinkurl{10.1007/978-3-031-06649-8}}.
-\item
-  Angelopoulos A, Bates S. Conformal Prediction: A Gentle Introduction.
-  \emph{Foundations and Trends® in Machine Learning}. 2023.
-  doi:\href{https://doi.org/10.1561/2200000101}{\nolinkurl{10.1561/2200000101}}.
-\item
-  . Estimating uncertainty in reference-based cell type annotation in
-  single-cell genomics. \emph{Nat Genet}. 2024;56:2600-2601.
-  doi:\href{https://doi.org/10.1038/s41588-024-01995-1}{\nolinkurl{10.1038/s41588-024-01995-1}}.
-  PMID 39592883.
 \item
   Venet D, Dumont JE, Detours V. Most random gene expression signatures
   are significantly associated with breast cancer outcome. \emph{PLoS
@@ -2525,20 +3069,6 @@ responsibility for the content.
   doi:\href{https://doi.org/10.1093/nar/gky939}{\nolinkurl{10.1093/nar/gky939}}.
   PMID 30329142.
 \item
-  Rozenblatt-Rosen O, Regev A, Oberdoerffer P, Nawy T, Hupalowska A,
-  Rood JE, et al.~The Human Tumor Atlas Network: Charting Tumor
-  Transitions across Space and Time at Single-Cell Resolution.
-  \emph{Cell}. 2020;181:236-249.
-  doi:\href{https://doi.org/10.1016/j.cell.2020.03.053}{\nolinkurl{10.1016/j.cell.2020.03.053}}.
-  PMID 32302568.
-\item
-  Abdulla S, Aevermann B, Assis P, Badajoz S, Bell SM, Bezzi E, et
-  al.~CZ CELLxGENE Discover: a single-cell data platform for scalable
-  exploration, analysis and modeling of aggregated data. \emph{Nucleic
-  Acids Res}. 2025;53:D886-D900.
-  doi:\href{https://doi.org/10.1093/nar/gkae1142}{\nolinkurl{10.1093/nar/gkae1142}}.
-  PMID 39607691.
-\item
   Kinker GS, Greenwald AC, Tal R, Orlova Z, Cuoco MS, McFarland JM, et
   al.~Pan-cancer single-cell RNA-seq identifies recurring programs of
   cellular heterogeneity. \emph{Nat Genet}. 2020;52:1208-1218.
@@ -2556,6 +3086,35 @@ responsibility for the content.
   \emph{Cell}. 2021;184:792-809.e23.
   doi:\href{https://doi.org/10.1016/j.cell.2021.01.010}{\nolinkurl{10.1016/j.cell.2021.01.010}}.
   PMID 33545035.
+\item
+  Van Rossum G, Drake FL. \emph{Python 3 Reference Manual}. Scotts
+  Valley, CA: CreateSpace; 2009. \url{https://www.python.org}.
+\item
+  Harris CR, Millman KJ, van der Walt SJ, Gommers R, Virtanen P,
+  Cournapeau D, et al.~Array programming with NumPy. \emph{Nature}.
+  2020;585:357-362.
+  doi:\href{https://doi.org/10.1038/s41586-020-2649-2}{\nolinkurl{10.1038/s41586-020-2649-2}}.
+  PMID 32939066.
+\item
+  McKinney W. Data Structures for Statistical Computing in Python.
+  \emph{Proceedings of the 9th Python in Science Conference}.
+  2010:56-61.
+  doi:\href{https://doi.org/10.25080/Majora-92bf1922-00a}{\nolinkurl{10.25080/Majora-92bf1922-00a}}.
+\item
+  Virtanen P, Gommers R, Oliphant TE, Haberland M, Reddy T, Cournapeau
+  D, et al.~SciPy 1.0: fundamental algorithms for scientific computing
+  in Python. \emph{Nat Methods}. 2020;17:261-272.
+  doi:\href{https://doi.org/10.1038/s41592-019-0686-2}{\nolinkurl{10.1038/s41592-019-0686-2}}.
+  PMID 32015543.
+\item
+  Seabold S, Perktold J. Statsmodels: Econometric and Statistical
+  Modeling with Python. \emph{Proceedings of the 9th Python in Science
+  Conference}. 2010:92-96.
+  doi:\href{https://doi.org/10.25080/Majora-92bf1922-011}{\nolinkurl{10.25080/Majora-92bf1922-011}}.
+\item
+  Hunter JD. Matplotlib: A 2D Graphics Environment. \emph{Computing in
+  Science \& Engineering}. 2007;9:90-95.
+  doi:\href{https://doi.org/10.1109/MCSE.2007.55}{\nolinkurl{10.1109/MCSE.2007.55}}.
 \end{enumerate}
 \endgroup
 

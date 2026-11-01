@@ -22,7 +22,7 @@ front = (
     r"\noindent \textbf{Running title:} The evaluation gap in single-cell cancer genomics" "\n\n"
     r"\noindent \textbf{Article type:} Review (quantitative review and resource)" "\n\n"
     r"\noindent \textbf{Word counts:} abstract 303 words; main text 6,280 words (Introduction to Conclusions, excluding tables, legends and references)" "\n\n"
-    r"\noindent \textbf{Display items:} 6 figures, 6 tables, 1 box. \textbf{References:} 121. \textbf{Supplementary data:} S1--S9" "\n\n"
+    r"\noindent \textbf{Display items:} 6 figures, 6 tables, 1 box. \textbf{References:} 143. \textbf{Supplementary data:} S1--S10" "\n\n"
     "PAGEBREAKMARK\n\n"
 )
 body = front + body

@@ -159,13 +159,18 @@ body = re.sub(r"\\caption\{(Table \d+\.)", r"\\caption{\\textbf{\1}", body)
 body = body.replace(r"\begin{longtable}[]", r"\begin{longtable}[l]")
 body = body.replace(r"\toprule\noalign{}", r"\toprule").replace(r"\midrule\noalign{}", r"\midrule").replace(r"\bottomrule\noalign{}", r"\bottomrule")
 
-# Table 4 (14 columns): rebalance widths so short headers fit.
+# Table 4: rebalance widths so short headers fit. The table gained two columns
+# (Curated, Consensus) in the 2026-11-01 revision, so the width list is derived
+# from the actual column count rather than hard-coded to 14.
 j = body.index(r"\caption{\textbf{Table 4.}")
 k = body.rindex(r"\begin{longtable}", 0, j)
 spec = body[k:j]
-widths = ["0.1350", "0.0300", "0.0650", "0.1000"] + ["0.0660"] * 10
 vals = re.findall(r"\\real\{([0-9.]+)\}", spec)
-assert len(vals) == 14, vals
+LEAD = [0.1350, 0.0300, 0.0500, 0.0950]          # class, n, cancer, years
+assert len(vals) > len(LEAD), vals
+n_rest = len(vals) - len(LEAD)
+rest = (1.0 - sum(LEAD)) / n_rest
+widths = [f"{w:.4f}" for w in LEAD] + [f"{rest:.4f}"] * n_rest
 it = iter(widths)
 spec = re.sub(r"(\\real\{)[0-9.]+(\})", lambda m: m.group(1) + next(it) + m.group(2), spec)
 body = body[:k] + "\\setlength{\\tabcolsep}{2pt}\n" + spec + body[j:]
@@ -201,8 +206,12 @@ assert refs.endswith(r"\end{enumerate}")
 refs += "\n\\endgroup\n"
 body = head + refs
 
-for needle in ["contact.jubayerhossain", "fonttitle=", "M.J.H. conceived", "a\ncatalogue of 1,336 GEO", "\\clearpage\n\\section{1. Introduction}"]:
+for needle in ["contact.jubayerhossain", "fonttitle=", "M.J.H. conceived", "\\clearpage\n\\section{1. Introduction}"]:
     assert needle in PREAMBLE + body, needle
-assert "and a\ncatalogue of 1,336 GEO" not in body
+# The Abstract's catalogue clause is wrapped by pandoc at an unpredictable column,
+# so match it with a newline allowed wherever a space may fall. The 2026-11-01
+# revision changed the count from 1,336 to 923 after the GEO eligibility re-screen.
+assert re.search(r"a\s+catalogue\s+of\s+923\s+GEO", body), "Abstract catalogue clause not found"
+assert not re.search(r"and\s+a\s+catalogue\s+of\s+923\s+GEO", body), "duplicated 'and' before catalogue clause"
 open(dst, "w", encoding="utf-8").write(PREAMBLE + body + "\n\\end{document}\n")
 print("written", dst)

@@ -1,0 +1,144 @@
+old_number,new_number,bib_key_final,source,title,pmid,first_citing_section
+1,1,ref001,existing,A plea for neutral comparison studies in computational sciences,23637855,1. Introduction
+2,2,ref002,existing,The self-assessment trap: can we all be better than average?,21988833,1. Introduction
+3,3,ref003,existing,On the optimistic performance evaluation of newly introduced bioinformatic methods,33975646,1. Introduction
+4,4,ref004,existing,Essential guidelines for computational method benchmarking,31221194,1. Introduction
+5,5,ref005,existing,Systematic benchmarking of omics computational tools,30918265,1. Introduction
+6,6,ref006,existing,Meta-analysis of (single-cell method) benchmarks reveals the need for extensibility and interoperability,37198712,1. Introduction
+7,7,ref007,existing,Defining and benchmarking open problems in single-cell analysis,40595413,1. Introduction
+8,8,ref008,existing,A systematic performance evaluation of clustering methods for single-cell RNA-seq data,30271584,1. Introduction
+9,9,ref009,existing,"Bias, robustness and scalability in single-cell differential expression analysis",29481549,1. Introduction
+10,10,ref010,existing,Confronting false discoveries in single-cell differential expression,34584091,1. Introduction
+11,11,ref011,existing,A comparison of single-cell trajectory inference methods,30936559,1. Introduction
+12,12,ref012,existing,A comparison of automatic cell identification methods for single-cell RNA sequencing data,31500660,1. Introduction
+13,13,ref013,existing,A benchmark of batch-effect correction methods for single-cell RNA sequencing data,31948481,1. Introduction
+14,14,ref014,existing,Benchmarking atlas-level data integration in single-cell genomics,34949812,1. Introduction
+15,15,ref015,existing,Benchmarking Computational Doublet-Detection Methods for Single-Cell RNA Sequencing Data,33338399,1. Introduction
+16,16,ref016,existing,Comparison of methods and resources for cell-cell communication inference from single-cell RNA-Seq data,35680885,1. Introduction
+17,17,ref017,existing,Benchmarking spatial and single-cell transcriptomics integration methods for transcript distribution prediction and cell type deconvolution,35577954,1. Introduction
+18,18,ref018,existing,Benchmarking of cell type deconvolution pipelines for transcriptomics data,33159064,1. Introduction
+19,19,ref019,existing,Deep-learning-based gene perturbation effect prediction does not yet outperform simple linear baselines,40759747,1. Introduction
+20,20,ref020,existing,Single-cell RNA-seq highlights intratumoral heterogeneity in primary glioblastoma,24925914,1. Introduction
+21,21,ref021,existing,Dissecting the multicellular ecosystem of metastatic melanoma by single-cell RNA-seq,27124452,1. Introduction
+22,22,ref022,existing,Hallmarks of transcriptional intratumour heterogeneity across a thousand tumours,37258682,1. Introduction
+23,23,ref023,existing,Delineating copy number and clonal substructure in human tumors from single-cell transcriptomes,33462507,1. Introduction
+24,24,ref024,existing,Haplotype-aware analysis of somatic copy number variations from single-cell transcriptomes,36163550,1. Introduction
+25,25,ref025,existing,The Human Cell Atlas,29206104,1. Introduction
+,26,ref026,new:Sayers2025_NCBI,Database resources of the National Center for Biotechnology Information in 2025,39526373,"2.1 Taxonomy, volume series and corpus"
+,27,ref027,new:Sever2019_bioRxiv,bioRxiv: the preprint server for biology,,"2.1 Taxonomy, volume series and corpus"
+,28,ref028,new:Barrett2013_GEO,NCBI GEO: archive for functional genomics data sets--update,23193258,2.6 Ground-truth catalogue
+,29,ref029,new:Mailman2007_dbGaP,The NCBI dbGaP database of genotypes and phenotypes,17898773,2.6 Ground-truth catalogue
+,30,ref030,new:Freeberg2022_EGA,The European Genome-phenome Archive in 2021,34791407,2.6 Ground-truth catalogue
+,31,ref031,new:Sarkans2021_ArrayExpress,From ArrayExpress to BioStudies,33211879,2.6 Ground-truth catalogue
+117,32,ref032,existing,The Human Tumor Atlas Network: Charting Tumor Transitions across Space and Time at Single-Cell Resolution,32302568,2.6 Ground-truth catalogue
+118,33,ref033,existing,"CZ CELLxGENE Discover: a single-cell data platform for scalable exploration, analysis and modeling of aggregated data",39607691,2.6 Ground-truth catalogue
+,34,ref034,new:Hendricks2020_Crossref,Crossref: The sustainable source of community-owned scholarly metadata,,2.9 Reference verification
+26,35,ref035,existing,A benchmarking study of copy number variation inference methods using single-cell RNA-sequencing data,40584741,4.1 CNV inference and malignant-cell calling
+27,36,ref036,existing,Benchmarking copy number aberrations inference tools using single-cell multi-omics datasets,40037644,4.1 CNV inference and malignant-cell calling
+28,37,ref037,existing,A Comparison of Tools That Identify Tumor Cells by Inferring Copy Number Variations from Single-Cell Experiments in Pancreatic Ductal Adenocarcinoma,39200223,4.1 CNV inference and malignant-cell calling
+29,38,ref038,existing,Tool Comparison for Detecting Tumour Cells in Endometrial Cancer via Single-Cell Copy Number Variations Analysis,41160707,4.1 CNV inference and malignant-cell calling
+30,39,ref039,existing,Benchmarking scRNA-seq Copy Number Inference: A Comprehensive Evaluation and Practitioner's Guide,42039587,4.1 CNV inference and malignant-cell calling
+31,40,ref040,existing,Benchmarking scRNA-seq copy number variation callers,41038850,4.1 CNV inference and malignant-cell calling
+,41,ref041,new:Han2026_CNVspatial,Benchmarking copy number alteration inference methods for spatial transcriptomics,42838986,4.1 CNV inference and malignant-cell calling
+32,42,ref042,existing,A variational algorithm to detect the clonal copy number substructure of tumors from scRNA-seq data,36841879,4.1 CNV inference and malignant-cell calling
+33,43,ref043,existing,Heterogeneous pseudobulk simulation enables realistic benchmarking of cell-type deconvolution methods,38956606,4.2 Bulk deconvolution
+,44,ref044,new:Sturm2019_deconv,Comprehensive evaluation of transcriptome-based cell-type quantification methods for immuno-oncology,31510660,4.2 Bulk deconvolution
+34,45,ref045,existing,Shortcomings of silhouette in single-cell integration benchmarking,40739072,4.3 Integration and batch correction
+35,46,ref046,existing,Evaluation of out-of-distribution detection methods for data shifts in single-cell transcriptomics,40439669,4.4 Annotation and label transfer
+36,47,ref047,existing,Conformal inference for reliable single cell RNA-seq annotation,40973204,4.4 Annotation and label transfer
+37,48,ref048,existing,Evaluation of cell-cell interaction methods by integrating single-cell RNA sequencing data with spatial information,36253792,4.5 Cell–cell communication
+,49,ref049,new:Kleshchevnikov2022_cell2location,Cell2location maps fine-grained cell types in spatial transcriptomics,35027729,4.6 Spatial transcriptomics
+,50,ref050,new:Cable2022_RCTD,Robust decomposition of cell type mixtures in spatial transcriptomics,33603203,4.6 Spatial transcriptomics
+38,51,ref051,existing,"Spotless, a reproducible pipeline for benchmarking cell type deconvolution in spatial transcriptomics",38787371,4.6 Spatial transcriptomics
+39,52,ref052,existing,Benchmarking computational methods for detecting spatial domains and domain-specific spatially variable genes from spatial transcriptomics data,40240000,4.6 Spatial transcriptomics
+40,53,ref053,existing,Spatially aware adjusted Rand index for evaluating spatial transcriptomics clustering,41001748,4.6 Spatial transcriptomics
+41,54,ref054,existing,Benchmark pitfalls expose need for expert-guided spatial clustering,42637979,4.6 Spatial transcriptomics
+42,55,ref055,existing,Benchmarking Spatial Co-Localization Methods for Single-Cell Multiplex Imaging Data with Applications to High-Grade Serous Ovarian and Triple Negative Breast Cancer,40051984,4.6 Spatial transcriptomics
+,56,ref056,new:Pratapa2020_BEELINE,Benchmarking algorithms for gene regulatory network inference from single-cell transcriptomic data,31907445,4.7 Gene-regulatory-network inference
+43,57,ref057,existing,Benchmarking Gene Regulatory Network Inference Methods on Simulated and Experimental Data,37215029,4.7 Gene-regulatory-network inference
+44,58,ref058,existing,Evaluating methods of inferring gene regulatory networks highlights their lack of performance for single cell gene expression data,29914350,4.7 Gene-regulatory-network inference
+,59,ref059,new:McCalla2023_GRN,Identifying strengths and weaknesses of methods for computational network inference from single-cell RNA-seq data,36626328,4.7 Gene-regulatory-network inference
+45,60,ref060,existing,A large-scale benchmark for network inference from single-cell perturbation data,40069299,4.7 Gene-regulatory-network inference
+46,61,ref061,existing,Lineage Tracing in Humans Enabled by Mitochondrial Mutations and Single-Cell Genomics,30827679,4.8 Lineage tracing and clonal phylogeny
+47,62,ref062,existing,Massively parallel single-cell mitochondrial DNA genotyping and chromatin profiling,32788668,4.8 Lineage tracing and clonal phylogeny
+48,63,ref063,existing,Mitochondrial variant enrichment from high-throughput single-cell RNA sequencing resolves clonal populations,35210612,4.8 Lineage tracing and clonal phylogeny
+49,64,ref064,existing,Deciphering cell states and genealogies of human haematopoiesis,38253266,4.8 Lineage tracing and clonal phylogeny
+50,65,ref065,existing,MQuad enables clonal substructure discovery using single cell mitochondrial variants,35260582,4.8 Lineage tracing and clonal phylogeny
+51,66,ref066,existing,A practical solution to pseudoreplication bias in single-cell studies,33531494,4.9 Differential expression and abundance
+52,67,ref067,existing,muscat detects subpopulation-specific state transitions from multi-sample multi-condition single-cell transcriptomics data,33257685,4.9 Differential expression and abundance
+53,68,ref068,existing,The problem of pseudoreplication in neuroscientific studies: is it affecting your analysis?,20074371,4.9 Differential expression and abundance
+,69,ref069,new:Neavin2024_Demuxafy,Demuxafy: improvement in droplet assignment by integrating multiple single-cell demultiplexing and doublet detection methods,38622708,"4.10 Doublets, demultiplexing and ambient RNA"
+54,70,ref070,existing,Multiplexed droplet single-cell RNA-sequencing using natural genetic variation,29227470,"4.10 Doublets, demultiplexing and ambient RNA"
+55,71,ref071,existing,Souporcell: robust clustering of single-cell RNA-seq data by genotype without reference genotypes,32366989,"4.10 Doublets, demultiplexing and ambient RNA"
+56,72,ref072,existing,Vireo: Bayesian demultiplexing of pooled single-cell RNA-seq data without genotype reference,31836005,"4.10 Doublets, demultiplexing and ambient RNA"
+57,73,ref073,existing,Cell Hashing with barcoded antibodies enables multiplexing and doublet detection for single cell genomics,30567574,"4.10 Doublets, demultiplexing and ambient RNA"
+58,74,ref074,existing,MULTI-seq: sample multiplexing for single-cell RNA sequencing using lipid-tagged indices,31209384,"4.10 Doublets, demultiplexing and ambient RNA"
+59,75,ref075,existing,Benchmarking single-cell hashtag oligo demultiplexing methods,37829177,"4.10 Doublets, demultiplexing and ambient RNA"
+60,76,ref076,existing,Benchmarking computational decontamination of ambient RNA,42688285,"4.10 Doublets, demultiplexing and ambient RNA"
+61,77,ref077,existing,Genetic demultiplexing of pooled single-cell RNA-sequencing samples in cancer facilitates effective experimental design,34553212,"4.10 Doublets, demultiplexing and ambient RNA"
+62,78,ref078,existing,A comparison of computational methods for expression forecasting,41250104,4.11 Perturbation prediction and foundation models
+63,79,ref079,existing,Spurious correlation inflates performance in single-cell perturbation prediction,42182243,4.11 Perturbation prediction and foundation models
+64,80,ref080,existing,AUC-PR is a More Informative Metric for Assessing the Biological Relevance of In Silico Cellular Perturbation Prediction Models,40161693,4.11 Perturbation prediction and foundation models
+65,81,ref081,existing,Zero-shot evaluation reveals limitations of single-cell foundation models,40251685,4.11 Perturbation prediction and foundation models
+66,82,ref082,existing,Empirical Evaluation of Single-Cell Foundation Models for Predicting Cancer Outcomes,41279698,4.11 Perturbation prediction and foundation models
+67,83,ref083,existing,scDrugMap: benchmarking large foundation models for drug response prediction,41381537,4.12 Drug-response prediction
+,84,ref084,new:Davey2026_drug,Assessing the use of foundation model embeddings to improve drug response predictions using scRNA-Seq expression data,42322669,4.12 Drug-response prediction
+,85,ref085,new:Zhang2026_drug,Synthetic Assessment of Transfer Learning Method From Cell Lines to Single-Cell on Drug Response Prediction,41359728,4.12 Drug-response prediction
+68,86,ref086,existing,Multiplexed single-cell transcriptional response profiling to define cancer vulnerabilities and therapeutic mechanism of action,32855387,4.12 Drug-response prediction
+69,87,ref087,existing,Multimodal pooled Perturb-CITE-seq screens in patient models define mechanisms of cancer immune evasion,33649592,4.12 Drug-response prediction
+88,88,ref088,existing,On Calibration of Modern Neural Networks,,5.1 Is the stated confidence honest?
+89,89,ref089,existing,Distribution-Free Predictive Inference for Regression,,5.1 Is the stated confidence honest?
+90,90,ref090,existing,Algorithmic Learning in a Random World,,5.1 Is the stated confidence honest?
+91,91,ref091,existing,Conformal Prediction: A Gentle Introduction,,5.1 Is the stated confidence honest?
+92,92,ref092,existing,Estimating uncertainty in reference-based cell type annotation in single-cell genomics,39592883,5.1 Is the stated confidence honest?
+70,93,ref093,existing,Comparing partitions,,5.2 Is the metric measuring what it claims?
+71,94,ref094,existing,Properties of the Hubert-Arabie adjusted Rand index,15355155,5.2 Is the metric measuring what it claims?
+72,95,ref095,existing,Silhouettes: A graphical aid to the interpretation and validation of cluster analysis,,5.2 Is the metric measuring what it claims?
+73,96,ref096,existing,The specious art of single-cell genomics,37590228,5.2 Is the metric measuring what it claims?
+74,97,ref097,existing,Why most published research findings are false,16060722,5.3 Is the conclusion robust to defensible analytical choices?
+75,98,ref098,existing,False-positive psychology: undisclosed flexibility in data collection and analysis allows presenting anything as significant,22006061,5.3 Is the conclusion robust to defensible analytical choices?
+76,99,ref099,existing,Increasing Transparency Through a Multiverse Analysis,27694465,5.3 Is the conclusion robust to defensible analytical choices?
+77,100,ref100,existing,Specification curve analysis,32719546,5.3 Is the conclusion robust to defensible analytical choices?
+78,101,ref101,existing,"Many Analysts, One Data Set: Making Transparent How Variations in Analytic Choices Affect Results",,5.3 Is the conclusion robust to defensible analytical choices?
+79,102,ref102,existing,Variability in the analysis of a single neuroimaging dataset by many teams,32483374,5.3 Is the conclusion robust to defensible analytical choices?
+80,103,ref103,existing,Comparison of transformations for single-cell RNA-seq data,37037999,5.3 Is the conclusion robust to defensible analytical choices?
+81,104,ref104,existing,A systematic evaluation of single cell RNA-seq analysis pipelines,31604912,5.3 Is the conclusion robust to defensible analytical choices?
+82,105,ref105,existing,Choice of pre-processing pipeline influences clustering quality of scRNA-seq datasets,34521337,5.3 Is the conclusion robust to defensible analytical choices?
+83,106,ref106,existing,"pipeComp, a general framework for the evaluation of computational pipelines, reveals performant single cell RNA-seq preprocessing tools",32873325,5.3 Is the conclusion robust to defensible analytical choices?
+84,107,ref107,existing,Preprocessing choices affect RNA velocity results for droplet scRNA-seq data,33428615,5.3 Is the conclusion robust to defensible analytical choices?
+85,108,ref108,existing,Normalization choice drives biological interpretation in single-cell RNA-seq cancer studies: A systematic benchmarking of 465 computational pipelines,42070330,5.3 Is the conclusion robust to defensible analytical choices?
+86,109,ref109,existing,Current best practices in single-cell RNA-seq analysis: a tutorial,31217225,5.3 Is the conclusion robust to defensible analytical choices?
+87,110,ref110,existing,Best practices for single-cell analysis across modalities,37002403,5.3 Is the conclusion robust to defensible analytical choices?
+93,111,ref111,existing,Most random gene expression signatures are significantly associated with breast cancer outcome,22028643,5.4 Null models
+94,112,ref112,existing,Comparative meta-analysis of prognostic gene signatures for late-stage ovarian cancer,24700801,5.4 Null models
+95,113,ref113,existing,Benchmarking single cell RNA-sequencing analysis pipelines using mixture control experiments,31133762,6.1 Designs that supply truth
+96,114,ref114,existing,Massively parallel digital transcriptional profiling of single cells,28091601,6.1 Designs that supply truth
+97,115,ref115,existing,Benchmarking single-cell RNA-sequencing protocols for cell atlas projects,32518403,6.1 Designs that supply truth
+98,116,ref116,existing,Systematic comparison of single-cell and single-nucleus RNA-sequencing methods,32341560,6.1 Designs that supply truth
+99,117,ref117,existing,Simultaneous epitope and transcriptome measurement in single cells,28759029,6.1 Designs that supply truth
+100,118,ref118,existing,Multiplexed quantification of proteins and transcripts in single cells,28854175,6.1 Designs that supply truth
+101,119,ref119,existing,"Multiplexed detection of proteins, transcriptomes, clonotypes and CRISPR perturbations in single cells",31011186,6.1 Designs that supply truth
+102,120,ref120,existing,Integrated analysis of multimodal single-cell data,34062119,6.1 Designs that supply truth
+103,121,ref121,existing,Synthetic spike-in standards for RNA-seq experiments,21816910,6.1 Designs that supply truth
+104,122,ref122,existing,Power analysis of single-cell RNA-sequencing experiments,28263961,6.1 Designs that supply truth
+105,123,ref123,existing,Molecular spikes: a gold standard for single-cell RNA counting,35468967,6.1 Designs that supply truth
+106,124,ref124,existing,Perturb-Seq: Dissecting Molecular Circuits with Scalable Single-Cell RNA Profiling of Pooled Genetic Screens,27984732,6.1 Designs that supply truth
+107,125,ref125,existing,A Multiplexed Single-Cell CRISPR Screening Platform Enables Systematic Dissection of the Unfolded Protein Response,27984733,6.1 Designs that supply truth
+108,126,ref126,existing,Mapping information-rich genotype-phenotype landscapes with genome-scale Perturb-seq,35688146,6.1 Designs that supply truth
+109,127,ref127,existing,The shaky foundations of simulating single-cell RNA sequencing data,36991470,6.1 Designs that supply truth
+110,128,ref128,existing,A benchmark study of simulation methods for single-cell RNA sequencing data,34824223,6.1 Designs that supply truth
+111,129,ref129,existing,Splatter: simulation of single-cell RNA sequencing data,28899397,6.1 Designs that supply truth
+112,130,ref130,existing,scDesign2: a transparent simulator that generates high-fidelity single-cell gene expression count data with gene correlations captured,34034771,6.1 Designs that supply truth
+113,131,ref131,existing,scDesign3 generates realistic in silico data for multimodal single-cell and spatial omics,37169966,6.1 Designs that supply truth
+114,132,ref132,existing,TISCH: a comprehensive web resource enabling interactive single-cell transcriptome visualization of tumor microenvironment,33179754,"6.2 Where it is, publicly"
+115,133,ref133,existing,TISCH2: expanded datasets and new tools for single-cell transcriptome analyses of the tumor microenvironment,36321662,"6.2 Where it is, publicly"
+116,134,ref134,existing,CancerSEA: a cancer single-cell state atlas,30329142,"6.2 Where it is, publicly"
+119,135,ref135,existing,Pan-cancer single-cell RNA-seq identifies recurring programs of cellular heterogeneity,33128048,"6.2 Where it is, publicly"
+120,136,ref136,existing,Pan-cancer single-cell landscape of tumor-infiltrating T cells,34914499,"6.2 Where it is, publicly"
+121,137,ref137,existing,A pan-cancer single-cell transcriptional atlas of tumor infiltrating myeloid cells,33545035,"6.2 Where it is, publicly"
+,138,ref138,new:VanRossum_Python,Python 3 Reference Manual,,Declarations
+,139,ref139,new:Harris2020_NumPy,Array programming with NumPy,32939066,Declarations
+,140,ref140,new:McKinney2010_pandas,Data Structures for Statistical Computing in Python,,Declarations
+,141,ref141,new:Virtanen2020_SciPy,SciPy 1.0: fundamental algorithms for scientific computing in Python,32015543,Declarations
+,142,ref142,new:Seabold2010_statsmodels,Statsmodels: Econometric and Statistical Modeling with Python,,Declarations
+,143,ref143,new:Hunter2007_Matplotlib,Matplotlib: A 2D Graphics Environment,,Declarations
