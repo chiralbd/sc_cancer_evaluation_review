@@ -1,0 +1,132 @@
+quantity,published,decimals_in_manuscript,manuscript_phrase,source_script,revision_status,printed_in_manuscript
+trend_poisson_RR,0.922,3,0.922,code/src/03_statistics.py,unchanged,yes
+trend_poisson_lo,0.875,3,0.875–0.972,code/src/03_statistics.py,unchanged,yes
+trend_poisson_hi,0.972,3,0.875–0.972,code/src/03_statistics.py,unchanged,yes
+trend_poisson_p,0.0027,4,0.0027,code/src/03_statistics.py,unchanged,yes
+trend_2015_25_RR,0.93,3,0.930,code/src/03_statistics.py,unchanged,yes
+trend_2015_25_p,0.02,3,0.020,code/src/03_statistics.py,unchanged,yes
+early_rate_per1000,6.77,2,6.77,code/src/03_statistics.py,unchanged,yes
+late_rate_per1000,3.88,2,3.88,code/src/03_statistics.py,unchanged,yes
+late_early_p,0.0085,4,0.0085,code/src/03_statistics.py,unchanged,yes
+verified_fraction_OR,0.973,3,0.973,code/src/03_statistics.py,unchanged,yes
+verified_fraction_p,0.4,2,0.40,code/src/03_statistics.py,unchanged,yes
+eval_titled_RR,0.94,3,0.940,code/src/03_statistics.py,unchanged,yes
+subfield_papers_2015_2026,34595.0,0,"34,595",code/src/03_statistics.py,unchanged,yes
+benchmarks_2015_2026,157.0,0,157,code/src/03_statistics.py,unchanged,yes
+nb2_full_window_method_IRR,4.84,2,4.84,code/src/03_statistics.py,unchanged,yes
+nb2_full_window_method_lo,2.09,2,2.09,code/src/03_statistics.py,unchanged,yes
+nb2_full_window_method_hi,11.18,2,11.18,code/src/03_statistics.py,unchanged,yes
+nb2_full_window_excl_benchmarking_method_IRR,2.35,2,2.35,code/src/03_statistics.py,unchanged,yes
+nb2_full_window_excl_benchmarking_method_lo,1.66,2,1.66–3.31,code/src/03_statistics.py,unchanged,yes
+nb2_full_window_excl_benchmarking_method_hi,3.31,2,1.66–3.31,code/src/03_statistics.py,unchanged,yes
+nb2_full_window_excl_benchmarking_log_share_change_IRR,0.79,2,0.79,code/src/03_statistics.py,unchanged,yes
+nb2_full_window_excl_benchmarking_log_share_change_lo,0.6,2,0.60–1.06,code/src/03_statistics.py,unchanged,yes
+nb2_full_window_excl_benchmarking_log_share_change_hi,1.06,2,0.60–1.06,code/src/03_statistics.py,unchanged,yes
+nb2_full_window_alt_excl_benchmarking_method_alt_IRR,1.88,2,1.88,code/src/03_statistics.py,unchanged,yes
+nb2_full_window_alt_excl_benchmarking_method_alt_lo,1.19,2,1.19–2.98,code/src/03_statistics.py,unchanged,yes
+nb2_full_window_alt_excl_benchmarking_method_alt_hi,2.98,2,1.19–2.98,code/src/03_statistics.py,unchanged,yes
+nb2_window_matched_excl_benchmarking_method_IRR,2.81,2,2.81,code/src/03_statistics.py,unchanged,yes
+nb2_window_matched_excl_benchmarking_method_lo,1.87,2,1.87–4.22,code/src/03_statistics.py,unchanged,yes
+nb2_window_matched_excl_benchmarking_method_hi,4.22,2,1.87–4.22,code/src/03_statistics.py,unchanged,yes
+nb2_window_matched_excl_benchmarking_log_share_change_IRR,0.77,2,0.77,code/src/03_statistics.py,unchanged,yes
+nb2_window_matched_excl_benchmarking_log_share_change_lo,0.55,2,0.55–1.08,code/src/03_statistics.py,unchanged,yes
+nb2_window_matched_excl_benchmarking_log_share_change_hi,1.08,2,0.55–1.08,code/src/03_statistics.py,unchanged,yes
+panel_biology_RR,0.901,3,0.901,code/src/03_statistics.py,unchanged,yes
+panel_biology_lo,0.84,3,0.840–0.966,code/src/03_statistics.py,superseded by the topic-clustered refit (value remains the correct naive output),no
+panel_biology_hi,0.966,3,0.840–0.966,code/src/03_statistics.py,superseded by the topic-clustered refit (value remains the correct naive output),no
+panel_biology_p,0.0035,4,0.0035,code/src/03_statistics.py,superseded by the topic-clustered refit (value remains the correct naive output),no
+panel_method_RR,1.012,3,1.012,code/src/03_statistics.py,unchanged,yes
+panel_ratio,1.12,2,1.12,code/src/03_statistics.py,unchanged,yes
+panel_ratio_p,0.042,3,0.042,code/src/03_statistics.py,superseded by the topic-clustered refit (value remains the correct naive output),no
+panel_topic_years,294.0,0,294,code/src/03_statistics.py,unchanged,yes
+n_coded,1771.0,0,"1,771",code/src/03_statistics.py,unchanged,yes
+n_sc_omics,989.0,0,989,code/src/03_statistics.py,unchanged,yes
+sc_share_2015_pct,17.0,0,17%,code/src/03_statistics.py,unchanged,yes
+sc_share_2026_pct,89.0,0,89%,code/src/03_statistics.py,unchanged,yes
+sc_trend_RR,0.92,3,0.920,code/src/03_statistics.py,unchanged,yes
+sc_trend_lo,0.844,3,0.844–1.003,code/src/03_statistics.py,unchanged,yes
+sc_trend_hi,1.003,3,0.844–1.003,code/src/03_statistics.py,unchanged,yes
+sc_trend_p,0.058,3,0.058,code/src/03_statistics.py,unchanged,yes
+sc_trend_2015_25_RR,0.95,2,"0.95, 0.86–1.06",code/src/03_statistics.py,unchanged,yes
+sc_trend_2015_25_lo,0.86,2,0.86–1.06,code/src/03_statistics.py,unchanged,yes
+sc_trend_2015_25_hi,1.06,2,0.86–1.06,code/src/03_statistics.py,unchanged,yes
+sc_panel_biology_RR,0.882,3,0.882,code/src/03_statistics.py,unchanged,yes
+sc_panel_biology_lo,0.795,3,0.795–0.979,code/src/03_statistics.py,superseded by the topic-clustered refit (value remains the correct naive output),no
+sc_panel_biology_hi,0.979,3,0.795–0.979,code/src/03_statistics.py,superseded by the topic-clustered refit (value remains the correct naive output),no
+sc_panel_biology_p,0.018,3,p = 0.018,code/src/03_statistics.py,superseded by the topic-clustered refit (value remains the correct naive output),no
+sc_panel_ratio_p,0.086,3,p = 0.086,code/src/03_statistics.py,superseded by the topic-clustered refit (value remains the correct naive output),no
+sc_benchmarks,100.0,0,100,code/src/03_statistics.py,unchanged,yes
+prev_sample_size_pct,15.3,1,15.3%,code/src/03_statistics.py,unchanged,yes
+prev_generalization_pct,14.5,1,14.5%,code/src/03_statistics.py,unchanged,yes
+prev_clinical_translation_pct,8.5,1,8.5%,code/src/03_statistics.py,unchanged,yes
+prev_no_ground_truth_pct,1.1,1,1.1%,code/src/03_statistics.py,unchanged,yes
+prev_parameter_sensitivity_pct,1.8,1,1.8%,code/src/03_statistics.py,unchanged,yes
+prev_no_benchmark_pct,1.4,1,1.4%,code/src/03_statistics.py,unchanged,yes
+prev_uncertainty_pct,1.3,1,1.3%,code/src/03_statistics.py,unchanged,yes
+prev_metric_invalid_pct,0.4,1,0.4%,code/src/03_statistics.py,unchanged,yes
+clinical_translation_OR,1.14,2,OR 1.14,code/src/03_statistics.py,unchanged,yes
+any_check_OR,0.81,2,OR 0.81,code/src/03_statistics.py,unchanged,yes
+any_check_OR_lo,0.74,2,0.74–0.88,code/src/03_statistics.py,unchanged,yes
+any_check_OR_hi,0.88,2,0.74–0.88,code/src/03_statistics.py,unchanged,yes
+any_check_2015_18_pct,14.0,1,14.0%,code/src/03_statistics.py,unchanged,yes
+any_check_2024_26_pct,3.6,1,3.6%,code/src/03_statistics.py,unchanged,yes
+any_problem_2015_18_pct,55.0,1,55.0%,code/src/03_statistics.py,unchanged,yes
+any_problem_2024_26_pct,41.2,1,41.2%,code/src/03_statistics.py,unchanged,yes
+kappa_sc_genomics,0.88,2,κ = 0.88,code/src/03_statistics.py,unchanged,yes
+kappa_technical_artifact,0.85,2,κ = 0.85,code/src/03_statistics.py,unchanged,yes
+kappa_parameter_sensitivity,0.66,2,0.66,code/src/03_statistics.py,unchanged,yes
+kappa_sample_size,0.63,2,κ = 0.63,code/src/03_statistics.py,unchanged,yes
+kappa_any_problem,0.35,2,κ = 0.35,code/src/03_statistics.py,unchanged,yes
+rate15_deconvolution,11.54,2,11.54,code/src/03_statistics.py,unchanged,yes
+rate15_cnv_scdna,10.3,2,10.30,code/src/03_statistics.py,unchanged,yes
+rate15_clonal_phylogeny,8.17,2,8.17,code/src/03_statistics.py,unchanged,yes
+rate15_clinical_prognosis,2.19,2,2.19,code/src/03_statistics.py,unchanged,yes
+rate15_benchmarking,120.64,2,120.64,code/src/03_statistics.py,unchanged,yes
+papers15_clinical_prognosis,16859.0,0,"16,859",code/src/03_statistics.py,unchanged,yes
+papers15_lineage_barcoding,397.0,0,397,code/src/03_statistics.py,unchanged,yes
+eval_titled_corpus_n,489.0,0,489,code/src/03b_statistics_revision_2026-11-01.py,new in revision 2026-11-01,yes
+verified_share_pct,32.3108,1,32.3%,code/src/03b_statistics_revision_2026-11-01.py,new in revision 2026-11-01,yes
+verified_share_wilson_lo,28.3176,1,28.3-36.6,code/src/03b_statistics_revision_2026-11-01.py,new in revision 2026-11-01,yes
+verified_share_wilson_hi,36.5799,1,28.3-36.6,code/src/03b_statistics_revision_2026-11-01.py,new in revision 2026-11-01,yes
+panel_biology_cluster_lo,0.807035,3,0.807-1.006,code/src/03b_statistics_revision_2026-11-01.py,new in revision 2026-11-01,yes
+panel_biology_cluster_hi,1.005875,3,0.807-1.006,code/src/03b_statistics_revision_2026-11-01.py,new in revision 2026-11-01,yes
+panel_biology_cluster_p,0.063494,4,0.063,code/src/03b_statistics_revision_2026-11-01.py,new in revision 2026-11-01,yes
+panel_ratio_cluster_lo,0.971073,3,0.971-1.298,code/src/03b_statistics_revision_2026-11-01.py,new in revision 2026-11-01,yes
+panel_ratio_cluster_hi,1.29823,3,0.971-1.298,code/src/03b_statistics_revision_2026-11-01.py,new in revision 2026-11-01,yes
+panel_ratio_cluster_p,0.117893,4,0.118,code/src/03b_statistics_revision_2026-11-01.py,new in revision 2026-11-01,yes
+panel_biology_hc0_p,0.006201,4,0.0062,code/src/03b_statistics_revision_2026-11-01.py,new in revision 2026-11-01,yes
+panel_ratio_hc0_p,0.056674,4,0.057,code/src/03b_statistics_revision_2026-11-01.py,new in revision 2026-11-01,yes
+sc_panel_biology_cluster_lo,0.753142,3,0.753-1.032,code/src/03b_statistics_revision_2026-11-01.py,new in revision 2026-11-01,yes
+sc_panel_biology_cluster_hi,1.032355,3,0.753-1.032,code/src/03b_statistics_revision_2026-11-01.py,new in revision 2026-11-01,yes
+sc_panel_biology_cluster_p,0.117786,4,0.118,code/src/03b_statistics_revision_2026-11-01.py,new in revision 2026-11-01,yes
+sc_panel_ratio_cluster_p,0.192246,4,0.192,code/src/03b_statistics_revision_2026-11-01.py,new in revision 2026-11-01,yes
+panel_ratio_q_BH,0.064554,4,q = 0.065,code/src/03b_statistics_revision_2026-11-01.py,new in revision 2026-11-01,yes
+clinical_translation_q_BH,0.012493,4,q = 0.0125,code/src/03b_statistics_revision_2026-11-01.py,new in revision 2026-11-01,yes
+clinical_translation_p_bonferroni,0.051942,3,0.052,code/src/03b_statistics_revision_2026-11-01.py,new in revision 2026-11-01,yes
+no_benchmark_q_BH,0.053685,4,q = 0.054,code/src/03b_statistics_revision_2026-11-01.py,new in revision 2026-11-01,yes
+topic_paper_overlap_factor,2.4653,2,2.47x,code/src/03b_statistics_revision_2026-11-01.py,new in revision 2026-11-01,yes
+topic_bench_overlap_factor,1.7197,2,1.72x,code/src/03b_statistics_revision_2026-11-01.py,new in revision 2026-11-01,yes
+benchmarks_without_topic_tag,32.0,0,32,code/src/03b_statistics_revision_2026-11-01.py,new in revision 2026-11-01,yes
+irr_method_primary_topic_rarest,1.9655,2,1.97,code/src/03b_statistics_revision_2026-11-01.py,new in revision 2026-11-01,yes
+irr_method_primary_topic_largest,1.7999,2,1.80,code/src/03b_statistics_revision_2026-11-01.py,new in revision 2026-11-01,yes
+irr_method_pmid_bootstrap_median,2.3023,2,2.30,code/src/03b_statistics_revision_2026-11-01.py,new in revision 2026-11-01,yes
+irr_method_pmid_bootstrap_lo,1.6809,2,1.68-3.20,code/src/03b_statistics_revision_2026-11-01.py,new in revision 2026-11-01,yes
+irr_method_pmid_bootstrap_hi,3.2019,2,1.68-3.20,code/src/03b_statistics_revision_2026-11-01.py,new in revision 2026-11-01,yes
+verified_fraction_cum11_point,0.7386,2,0.74,code/src/03b_statistics_revision_2026-11-01.py,new in revision 2026-11-01,yes
+verified_fraction_cum11_lo,0.3624,2,0.36,code/src/03b_statistics_revision_2026-11-01.py,new in revision 2026-11-01,yes
+verified_fraction_cum11_hi,1.5054,2,1.51,code/src/03b_statistics_revision_2026-11-01.py,new in revision 2026-11-01,yes
+title_recall_pct_2015_2026,79.4,1,79.4%,code/src/03b_statistics_revision_2026-11-01.py,new in revision 2026-11-01,yes
+title_recall_OR,1.0423,3,1.042,code/src/03b_statistics_revision_2026-11-01.py,new in revision 2026-11-01,yes
+title_recall_p,0.4812,3,0.481,code/src/03b_statistics_revision_2026-11-01.py,new in revision 2026-11-01,yes
+negcontrol_nonsc_OR,1.0665,3,1.066,code/src/03b_statistics_revision_2026-11-01.py,new in revision 2026-11-01,yes
+negcontrol_nonsc_p,0.2311,3,0.231,code/src/03b_statistics_revision_2026-11-01.py,new in revision 2026-11-01,yes
+negcontrol_nonsc_n,782.0,0,782,code/src/03b_statistics_revision_2026-11-01.py,new in revision 2026-11-01,yes
+negcontrol_nonsc_k,39.0,0,39,code/src/03b_statistics_revision_2026-11-01.py,new in revision 2026-11-01,yes
+any_check_k_2015_18,18.0,0,18,code/src/03b_statistics_revision_2026-11-01.py,new in revision 2026-11-01,yes
+any_check_k_2019_21,15.0,0,15,code/src/03b_statistics_revision_2026-11-01.py,new in revision 2026-11-01,yes
+any_check_k_2022_23,7.0,0,7,code/src/03b_statistics_revision_2026-11-01.py,new in revision 2026-11-01,yes
+any_check_k_2024_26,14.0,0,14,code/src/03b_statistics_revision_2026-11-01.py,new in revision 2026-11-01,yes
+any_check_k_total,54.0,0,54,code/src/03b_statistics_revision_2026-11-01.py,new in revision 2026-11-01,yes
+median_abstract_len_2015_18,1436.0,0,"1,436",code/src/03b_statistics_revision_2026-11-01.py,new in revision 2026-11-01,yes
+median_abstract_len_2024_26,1660.0,0,"1,660",code/src/03b_statistics_revision_2026-11-01.py,new in revision 2026-11-01,yes
+worst_topic_calibration_error,0.8593,3,0.859,code/src/03b_statistics_revision_2026-11-01.py,new in revision 2026-11-01,yes

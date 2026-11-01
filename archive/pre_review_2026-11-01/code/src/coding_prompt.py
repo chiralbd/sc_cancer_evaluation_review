@@ -1,0 +1,20 @@
+"""Verbatim coding instructions and tool schema used for the stated-problem coding (Methods 2.4).
+
+These strings are exported from the analysis session unchanged. Abstracts were
+sent in batches of 15 (retries in batches of 10), truncated to 2,200 characters.
+"""
+
+CATEGORIES = ['no_ground_truth', 'no_benchmark', 'metric_invalid', 'parameter_sensitivity', 'uncertainty', 'technical_artifact', 'resolution_limit', 'reproducibility', 'generalization', 'sample_size', 'confounding', 'causality', 'interpretability', 'clinical_translation', 'cost_scalability', 'data_access', 'other_methodological']
+
+EVALUATION_CHECKS = ['parameter_sensitivity', 'uncertainty', 'metric_invalid', 'no_benchmark', 'no_ground_truth']
+
+DEFINITIONS = 'Categories (code a category ONLY if the abstract explicitly states it as a limitation, challenge, gap or open problem, for the field or for the study itself):\n- no_ground_truth: no validated reference standard, gold standard or true labels exist against which a method or result can be checked.\n- no_benchmark: methods/tools have not been systematically compared or benchmarked; lack of guidance on which method to use.\n- metric_invalid: an evaluation metric or score is misleading, does not measure what it claims, or is inadequate.\n- parameter_sensitivity: results depend on analytical, preprocessing, parameter, reference or pipeline choices.\n- uncertainty: predictions/estimates lack uncertainty, confidence or error quantification, or are poorly calibrated.\n- technical_artifact: technical noise, dropout, sparsity, batch effects, doublets, ambient RNA, dissociation or sampling artifacts.\n- resolution_limit: insufficient sensitivity, resolution, coverage, depth or throughput of the technology.\n- reproducibility: findings or analyses fail to replicate or are hard to reproduce.\n- generalization: methods or findings may not transfer to other datasets, cohorts, platforms or cancer types.\n- sample_size: small number of patients, samples or cells.\n- confounding: confounding factors (patient, clinical covariates, tissue site) obscure conclusions.\n- causality: mechanism, driver or causal role is unknown; associations are correlative only.\n- interpretability: biological composition, heterogeneity or landscape poorly characterised, or results hard to interpret biologically.\n- clinical_translation: barriers to clinical application, validation or adoption.\n- cost_scalability: cost, labour or computational scalability limits.\n- data_access: data unavailable, restricted or not shared.\n- other_methodological: another methodological limitation not listed.\nIf no limitation or open problem is stated, return an empty list. Do not infer limitations the authors do not state.\nAlso set sc_genomics = true only if the study generates or analyses single-cell (or single-nucleus) sequencing or single-cell omics data (scRNA-seq, scATAC, scDNA, CITE-seq, spatial transcriptomics with single-cell reference, etc.); false for flow cytometry only, single-cell imaging only, CTC enumeration, single-cell PCR or non-omics single-cell assays.'
+
+TOOL = {'name': 'code_abstracts', 'description': 'Record codes for each abstract', 'input_schema': {'type': 'object', 'properties': {'items': {'type': 'array', 'items': {'type': 'object', 'properties': {'id': {'type': 'integer'}, 'sc_genomics': {'type': 'boolean'}, 'problems': {'type': 'array', 'items': {'type': 'string', 'enum': ['no_ground_truth', 'no_benchmark', 'metric_invalid', 'parameter_sensitivity', 'uncertainty', 'technical_artifact', 'resolution_limit', 'reproducibility', 'generalization', 'sample_size', 'confounding', 'causality', 'interpretability', 'clinical_translation', 'cost_scalability', 'data_access', 'other_methodological']}}}, 'required': ['id', 'sc_genomics', 'problems']}}}, 'required': ['items']}}
+
+
+
+def build_prompt(batch):
+    """batch: iterable of objects with .pmid, .title, .abstract"""
+    txt = "\n\n".join(f"[ID {r.pmid}] TITLE: {r.title}\nABSTRACT: {r.abstract[:2200]}" for r in batch)
+    return DEFINITIONS + "\n\nCode each of the following abstracts. Return one item per ID.\n\n" + txt

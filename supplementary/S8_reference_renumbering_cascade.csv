@@ -1,0 +1,144 @@
+scenario_ref,identifier,title,number_now,number_if_A05_only,number_if_all_adopted
+existing,[1],A plea for neutral comparison studies in computational sciences,1,1,1
+existing,[2],The self-assessment trap: can we all be better than average?,2,2,2
+existing,[3],On the optimistic performance evaluation of newly introduced bioinformatic methods,3,3,3
+existing,[4],Essential guidelines for computational method benchmarking,4,4,4
+existing,[5],Systematic benchmarking of omics computational tools,5,5,5
+existing,[6],Meta-analysis of (single-cell method) benchmarks reveals the need for extensibility and interoperability,6,6,6
+existing,[7],Defining and benchmarking open problems in single-cell analysis,7,7,7
+existing,[8],A systematic performance evaluation of clustering methods for single-cell RNA-seq data,8,8,8
+existing,[9],"Bias, robustness and scalability in single-cell differential expression analysis",9,9,9
+existing,[10],Confronting false discoveries in single-cell differential expression,10,10,10
+existing,[11],A comparison of single-cell trajectory inference methods,11,11,11
+existing,[12],A comparison of automatic cell identification methods for single-cell RNA sequencing data,12,12,12
+existing,[13],A benchmark of batch-effect correction methods for single-cell RNA sequencing data,13,13,13
+existing,[14],Benchmarking atlas-level data integration in single-cell genomics,14,14,14
+existing,[15],Benchmarking Computational Doublet-Detection Methods for Single-Cell RNA Sequencing Data,15,15,15
+existing,[16],Comparison of methods and resources for cell-cell communication inference from single-cell RNA-Seq data,16,16,16
+existing,[17],Benchmarking spatial and single-cell transcriptomics integration methods for transcript distribution prediction and cell,17,17,17
+existing,[18],Benchmarking of cell type deconvolution pipelines for transcriptomics data,18,18,18
+existing,[19],Deep-learning-based gene perturbation effect prediction does not yet outperform simple linear baselines,19,19,19
+existing,[20],Single-cell RNA-seq highlights intratumoral heterogeneity in primary glioblastoma,20,20,20
+existing,[21],Dissecting the multicellular ecosystem of metastatic melanoma by single-cell RNA-seq,21,21,21
+existing,[22],Hallmarks of transcriptional intratumour heterogeneity across a thousand tumours,22,22,22
+existing,[23],Delineating copy number and clonal substructure in human tumors from single-cell transcriptomes,23,23,23
+existing,[24],Haplotype-aware analysis of somatic copy number variations from single-cell transcriptomes,24,24,24
+existing,[25],The Human Cell Atlas,25,25,25
+existing,[26],A benchmarking study of copy number variation inference methods using single-cell RNA-sequencing data,26,26,35
+existing,[27],Benchmarking copy number aberrations inference tools using single-cell multi-omics datasets,27,27,36
+existing,[28],A Comparison of Tools That Identify Tumor Cells by Inferring Copy Number Variations from Single-Cell Experiments in Panc,28,28,37
+existing,[29],Tool Comparison for Detecting Tumour Cells in Endometrial Cancer via Single-Cell Copy Number Variations Analysis,29,29,38
+existing,[30],Benchmarking scRNA-seq Copy Number Inference: A Comprehensive Evaluation and Practitioner's Guide,30,30,39
+existing,[31],Benchmarking scRNA-seq copy number variation callers,31,31,40
+existing,[32],A variational algorithm to detect the clonal copy number substructure of tumors from scRNA-seq data,32,33,42
+existing,[33],Heterogeneous pseudobulk simulation enables realistic benchmarking of cell-type deconvolution methods,33,34,43
+existing,[34],Shortcomings of silhouette in single-cell integration benchmarking,34,35,45
+existing,[35],Evaluation of out-of-distribution detection methods for data shifts in single-cell transcriptomics,35,36,46
+existing,[36],Conformal inference for reliable single cell RNA-seq annotation,36,37,47
+existing,[37],Evaluation of cell-cell interaction methods by integrating single-cell RNA sequencing data with spatial information,37,38,48
+existing,[38],"Spotless, a reproducible pipeline for benchmarking cell type deconvolution in spatial transcriptomics",38,39,49
+existing,[39],Benchmarking computational methods for detecting spatial domains and domain-specific spatially variable genes from spati,39,40,52
+existing,[40],Spatially aware adjusted Rand index for evaluating spatial transcriptomics clustering,40,41,53
+existing,[41],Benchmark pitfalls expose need for expert-guided spatial clustering,41,42,54
+existing,[42],Benchmarking Spatial Co-Localization Methods for Single-Cell Multiplex Imaging Data with Applications to High-Grade Sero,42,43,55
+existing,[43],Benchmarking Gene Regulatory Network Inference Methods on Simulated and Experimental Data,43,44,56
+existing,[44],Evaluating methods of inferring gene regulatory networks highlights their lack of performance for single cell gene expre,44,45,57
+existing,[45],A large-scale benchmark for network inference from single-cell perturbation data,45,46,60
+existing,[46],Lineage Tracing in Humans Enabled by Mitochondrial Mutations and Single-Cell Genomics,46,47,61
+existing,[47],Massively parallel single-cell mitochondrial DNA genotyping and chromatin profiling,47,48,62
+existing,[48],Mitochondrial variant enrichment from high-throughput single-cell RNA sequencing resolves clonal populations,48,49,63
+existing,[49],Deciphering cell states and genealogies of human haematopoiesis,49,50,64
+existing,[50],MQuad enables clonal substructure discovery using single cell mitochondrial variants,50,51,65
+existing,[51],A practical solution to pseudoreplication bias in single-cell studies,51,52,66
+existing,[52],muscat detects subpopulation-specific state transitions from multi-sample multi-condition single-cell transcriptomics da,52,53,67
+existing,[53],The problem of pseudoreplication in neuroscientific studies: is it affecting your analysis?,53,54,68
+existing,[54],Multiplexed droplet single-cell RNA-sequencing using natural genetic variation,54,55,69
+existing,[55],Souporcell: robust clustering of single-cell RNA-seq data by genotype without reference genotypes,55,56,70
+existing,[56],Vireo: Bayesian demultiplexing of pooled single-cell RNA-seq data without genotype reference,56,57,71
+existing,[57],Cell Hashing with barcoded antibodies enables multiplexing and doublet detection for single cell genomics,57,58,72
+existing,[58],MULTI-seq: sample multiplexing for single-cell RNA sequencing using lipid-tagged indices,58,59,73
+existing,[59],Benchmarking single-cell hashtag oligo demultiplexing methods,59,60,74
+existing,[60],Benchmarking computational decontamination of ambient RNA,60,61,75
+existing,[61],Genetic demultiplexing of pooled single-cell RNA-sequencing samples in cancer facilitates effective experimental design,61,62,77
+existing,[62],A comparison of computational methods for expression forecasting,62,63,78
+existing,[63],Spurious correlation inflates performance in single-cell perturbation prediction,63,64,79
+existing,[64],AUC-PR is a More Informative Metric for Assessing the Biological Relevance of In Silico Cellular Perturbation Prediction,64,65,80
+existing,[65],Zero-shot evaluation reveals limitations of single-cell foundation models,65,66,81
+existing,[66],Empirical Evaluation of Single-Cell Foundation Models for Predicting Cancer Outcomes,66,67,82
+existing,[67],scDrugMap: benchmarking large foundation models for drug response prediction,67,68,83
+existing,[68],Multiplexed single-cell transcriptional response profiling to define cancer vulnerabilities and therapeutic mechanism of,68,69,86
+existing,[69],Multimodal pooled Perturb-CITE-seq screens in patient models define mechanisms of cancer immune evasion,69,70,87
+existing,[70],Comparing partitions,70,71,88
+existing,[71],Properties of the Hubert-Arabie adjusted Rand index,71,72,89
+existing,[72],Silhouettes: A graphical aid to the interpretation and validation of cluster analysis,72,73,90
+existing,[73],The specious art of single-cell genomics,73,74,91
+existing,[74],Why most published research findings are false,74,75,92
+existing,[75],False-positive psychology: undisclosed flexibility in data collection and analysis allows presenting anything as signifi,75,76,93
+existing,[76],Increasing Transparency Through a Multiverse Analysis,76,77,94
+existing,[77],Specification curve analysis,77,78,95
+existing,[78],"Many Analysts, One Data Set: Making Transparent How Variations in Analytic Choices Affect Results",78,79,96
+existing,[79],Variability in the analysis of a single neuroimaging dataset by many teams,79,80,97
+existing,[80],Comparison of transformations for single-cell RNA-seq data,80,81,98
+existing,[81],A systematic evaluation of single cell RNA-seq analysis pipelines,81,82,99
+existing,[82],Choice of pre-processing pipeline influences clustering quality of scRNA-seq datasets,82,83,100
+existing,[83],"pipeComp, a general framework for the evaluation of computational pipelines, reveals performant single cell RNA-seq prep",83,84,101
+existing,[84],Preprocessing choices affect RNA velocity results for droplet scRNA-seq data,84,85,102
+existing,[85],Normalization choice drives biological interpretation in single-cell RNA-seq cancer studies: A systematic benchmarking o,85,86,103
+existing,[86],Current best practices in single-cell RNA-seq analysis: a tutorial,86,87,104
+existing,[87],Best practices for single-cell analysis across modalities,87,88,105
+existing,[88],On Calibration of Modern Neural Networks,88,89,106
+existing,[89],Distribution-Free Predictive Inference for Regression,89,90,107
+existing,[90],Algorithmic Learning in a Random World,90,91,108
+existing,[91],Conformal Prediction: A Gentle Introduction,91,92,109
+existing,[92],Estimating uncertainty in reference-based cell type annotation in single-cell genomics,92,93,110
+existing,[93],Most random gene expression signatures are significantly associated with breast cancer outcome,93,94,111
+existing,[94],Comparative meta-analysis of prognostic gene signatures for late-stage ovarian cancer,94,95,112
+existing,[95],Benchmarking single cell RNA-sequencing analysis pipelines using mixture control experiments,95,96,113
+existing,[96],Massively parallel digital transcriptional profiling of single cells,96,97,114
+existing,[97],Benchmarking single-cell RNA-sequencing protocols for cell atlas projects,97,98,115
+existing,[98],Systematic comparison of single-cell and single-nucleus RNA-sequencing methods,98,99,116
+existing,[99],Simultaneous epitope and transcriptome measurement in single cells,99,100,117
+existing,[100],Multiplexed quantification of proteins and transcripts in single cells,100,101,118
+existing,[101],"Multiplexed detection of proteins, transcriptomes, clonotypes and CRISPR perturbations in single cells",101,102,119
+existing,[102],Integrated analysis of multimodal single-cell data,102,103,120
+existing,[103],Synthetic spike-in standards for RNA-seq experiments,103,104,121
+existing,[104],Power analysis of single-cell RNA-sequencing experiments,104,105,122
+existing,[105],Molecular spikes: a gold standard for single-cell RNA counting,105,106,123
+existing,[106],Perturb-Seq: Dissecting Molecular Circuits with Scalable Single-Cell RNA Profiling of Pooled Genetic Screens,106,107,124
+existing,[107],A Multiplexed Single-Cell CRISPR Screening Platform Enables Systematic Dissection of the Unfolded Protein Response,107,108,125
+existing,[108],Mapping information-rich genotype-phenotype landscapes with genome-scale Perturb-seq,108,109,126
+existing,[109],The shaky foundations of simulating single-cell RNA sequencing data,109,110,127
+existing,[110],A benchmark study of simulation methods for single-cell RNA sequencing data,110,111,128
+existing,[111],Splatter: simulation of single-cell RNA sequencing data,111,112,129
+existing,[112],scDesign2: a transparent simulator that generates high-fidelity single-cell gene expression count data with gene correla,112,113,130
+existing,[113],scDesign3 generates realistic in silico data for multimodal single-cell and spatial omics,113,114,131
+existing,[114],TISCH: a comprehensive web resource enabling interactive single-cell transcriptome visualization of tumor microenvironme,114,115,132
+existing,[115],TISCH2: expanded datasets and new tools for single-cell transcriptome analyses of the tumor microenvironment,115,116,133
+existing,[116],CancerSEA: a cancer single-cell state atlas,116,117,134
+existing,[117],The Human Tumor Atlas Network: Charting Tumor Transitions across Space and Time at Single-Cell Resolution,117,118,32
+existing,[118],"CZ CELLxGENE Discover: a single-cell data platform for scalable exploration, analysis and modeling of aggregated data",118,119,33
+existing,[119],Pan-cancer single-cell RNA-seq identifies recurring programs of cellular heterogeneity,119,120,135
+existing,[120],Pan-cancer single-cell landscape of tumor-infiltrating T cells,120,121,136
+existing,[121],A pan-cancer single-cell transcriptional atlas of tumor infiltrating myeloid cells,121,122,137
+new,Sayers2025_NCBI,,,,26
+new,Sever2019_bioRxiv,,,,27
+new,Barrett2013_GEO,,,,28
+new,Mailman2007_dbGaP,,,,29
+new,Freeberg2022_EGA,,,,30
+new,Sarkans2021_ArrayExpress,,,,31
+new,Hendricks2020_Crossref,,,,34
+new,Han2026_CNVspatial,,,32,41
+new,Sturm2019_deconv,,,,44
+new,Kleshchevnikov2022_cell2location,,,,50
+new,Cable2022_RCTD,,,,51
+new,Pratapa2020_BEELINE,,,,58
+new,McCalla2023_GRN,,,,59
+new,Neavin2024_Demuxafy,,,,76
+new,Davey2026_drug,,,,84
+new,Zhang2026_drug,,,,85
+new,VanRossum_Python,,,,138
+new,Harris2020_NumPy,,,,139
+new,McKinney2010_pandas,,,,140
+new,Virtanen2020_SciPy,,,,141
+new,Seabold2010_statsmodels,,,,142
+new,Hunter2007_Matplotlib,,,,143

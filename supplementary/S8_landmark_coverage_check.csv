@@ -1,0 +1,18 @@
+section,expected_work,pmid,status,in_S1
+4.1 CNV inference and malignant-cell calling,"Han S 2026, Benchmarking CNA inference for spatial transcriptomics",42838986,NOT CITED,True
+4.2 Bulk deconvolution,"Avila Cobos F 2020, Benchmarking of cell type deconvolution pipelines",33257685,cited,False
+4.2 Bulk deconvolution,"Sturm G 2019, Comprehensive evaluation of transcriptome-based cell-type quantification (immuno-oncology)",31510660,NOT CITED,True
+4.3 Integration and batch correction,"Luecken MD 2022, Benchmarking atlas-level data integration",34949812,cited,True
+4.3 Integration and batch correction,"Tran HTN 2020, A benchmark of batch-effect correction methods",31948481,cited,True
+4.4 Annotation and label transfer,"Abdelaal T 2019, A comparison of automatic cell identification methods",31500660,cited,True
+4.5 Cell–cell communication,"Dimitrov D 2022, Comparison of methods and resources for cell-cell communication inference",35680885,cited,True
+4.6 Spatial transcriptomics,"Kleshchevnikov V 2022, cell2location (method paper named in the text)",35027729,NOT CITED,False
+4.6 Spatial transcriptomics,"Cable DM 2022, RCTD (method paper named in the text)",33603203,NOT CITED,False
+4.7 Gene-regulatory-network inference,"Pratapa A 2020, BEELINE",31907445,NOT CITED,True
+4.7 Gene-regulatory-network inference,"McCalla SG 2023, Identifying strengths and weaknesses of network inference methods",36626328,NOT CITED,True
+4.8 Lineage tracing and clonal phylogeny,(none: the text states no neutral benchmark of single-cell phylogeny tools on shared truth was found),,n/a (no landmark claimed),
+4.9 Differential expression and abundance,"Soneson C 2018, Bias, robustness and scalability in single-cell DE analysis",29481549,cited,True
+"4.10 Doublets, demultiplexing and ambient RNA","Xi NM 2021, Benchmarking computational doublet-detection methods",33338399,cited,True
+"4.10 Doublets, demultiplexing and ambient RNA","Neavin D 2024, Demuxafy",38622708,NOT CITED,False
+4.11 Perturbation prediction and foundation models,"Ahlmann-Eltze C 2025, Deep-learning perturbation prediction does not yet outperform linear baselines",40759747,cited,True
+4.12 Drug-response prediction,Davey W 2026 + Zhang Y 2026 (the two uncited catalogued records),42322669;41359728,NOT CITED,True;True

@@ -1,0 +1,24 @@
+finding_id,record_id,field,old_value,new_value,manuscript_location
+B-01,eval_titled_corpus_n,evaluation-titled corpus size,486,489,Abstract Methods; Abstract Results; §2.2; §3.2 first sentence
+B-01,verified_share_ci,Wilson 95% CI for that share,28.5-36.8,28.3-36.6,Abstract Results; §3.2 first sentence
+B-01,verified_share_pct,verified-benchmark share of evaluation-titled papers,32.5%,32.3%,Abstract Results; §3.2 first sentence
+B-02,panel_biology_ci,panel biology/application slope 95% CI,0.840-0.966,0.807-1.006,Abstract Results sentence 2; §3.2 ¶4; §10
+B-02,panel_biology_p,panel biology/application slope p,0.0035,0.0635,§3.2 ¶4
+B-02,panel_ratio_ci,panel slope ratio (method/biology) 95% CI,1.004-1.255,0.971-1.298,§3.2 ¶4
+B-02,panel_ratio_p,panel slope ratio p,0.042,0.118,Abstract Results sentence 2; §3.2 ¶4; §10
+B-02,sc_panel_biology_p,single-cell-restricted panel biology slope p,0.018,0.118,§3.2 ¶4
+B-02,sc_panel_ratio_p,single-cell-restricted panel slope-difference p,0.086,0.192,§3.2 ¶4
+B-03,clinical_translation_q,multiplicity adjustment for the clinical-translation OR,not reported,"nominal p = 0.0031, BH q = 0.0125, Bonferroni p = 0.052",§3.3; Table 3
+B-03,no_benchmark_q,multiplicity adjustment for the no-benchmark OR,not reported,"nominal p = 0.0221, BH q = 0.0537 (no longer significant)",Table 3
+B-03,panel_ratio_q,multiplicity adjustment for the slope ratio,not reported,"nominal p = 0.042, BH q = 0.065",§2.8; §3.2 ¶4
+B-06,verified_fraction_sentence,interpretation of the verified-fraction null,'not because evaluation work became less rigorous',"'no detectable change in classification yield (OR 0.97 per year, 0.91-1.04); over 11 year-steps the interval is compatible with a fall to 0.36 or a rise to 1.51 of the 2015 odds'",§3.2 ¶1 final sentence
+B-09,calibration_disclosure,calibration of the reconstructed 2026 query,+-0.7% for every year 2015-2025,"unverifiable from the released package; worst released per-topic error 0.859 mean absolute log error (T-cell states, a factor of 2.36), 7 of 26 topics above 0.2",§2.7 sentences 2-4
+D-04,irr_235_sensitivity,robustness of IRR 2.35 to topic overlap,not reported,1.80-1.97 under a single-primary-topic assignment; bootstrap over benchmark PMIDs 2.30 (1.68-3.20),§3.2 ¶3; Table 2; §9
+D-04,topic_overlap_bench,topic-benchmark overlap factor,not reported,1.72x (270 topic-benchmark rows against 157 unique benchmarks),§2.8; §3.2 ¶3-4; §9
+D-04,topic_overlap_papers,topic-paper overlap factor,not reported,"2.47x (85,287 topic-paper counts against 34,595 subfield papers)",§2.8; §3.2 ¶3-4; §9
+D-04,untagged_benchmarks,benchmarks absent from the topic analysis,not reported,32 of 158 carry no topic tag,§2.8; §3.2 ¶3; §9
+D-07,composition_shift,single-cell-omics share of the sampled population,not reported as a threat,rises monotonically 17.3% (2015) to 88.7% (2026),§9 seventh limitation
+D-07,period_positive_counts,absolute positive counts behind 14.0% -> 3.6%,not reported,"18/129, 15/240, 7/229, 14/391 (54 positives in total)",§3.3 final paragraph; Fig. 4c caption; §9
+D-08,abstract_length,median abstract length over the window,not reported,"1,436 (2015-18) to 1,660 (2024-26) characters; adjusting the sc-omics trend for abstract length leaves OR 0.799 (0.728-0.877)",§3.3 (new sentence)
+D-08,negative_control,non-single-cell-omics negative control,not reported,"OR 1.066/yr (0.96-1.18), p = 0.231 on 782 abstracts and 39 positives, against OR 0.808 (0.74-0.88), p < 0.0001 on 989 sc-omics abstracts and 54 positives",§3.3 (new sentence)
+D-08,title_recall,title-query recall of the benchmark catalogue,not reported,"79.4% of the 267 catalogue records dated 2015-2026 (214/269 overall), no time trend (OR 1.042/yr, 0.929-1.170, p = 0.481)",§3.2 (new sentence)

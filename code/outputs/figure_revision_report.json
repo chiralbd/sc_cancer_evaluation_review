@@ -1,0 +1,128 @@
+{
+ "overlap_check": {
+  "Figure1": [],
+  "Figure2": [],
+  "Figure3": [],
+  "Figure4": [
+   [
+    "2015\u201318",
+    "2019\u201321"
+   ],
+   [
+    "2019\u201321",
+    "2022\u201323"
+   ],
+   [
+    "2022\u201323",
+    "2024\u201326"
+   ]
+  ],
+  "Figure5": [],
+  "Figure6": []
+ },
+ "caption_numbers": {
+  "Figure5": {
+   "panel_a_class_rows": 16,
+   "panel_a_gt_columns": 9,
+   "panel_a_cell_total": 305,
+   "n_benchmarks": 269,
+   "checks": {
+    "Robustness to analysis choices": {
+     "benchmarks_k": 42,
+     "benchmarks_pct": 15.6,
+     "benchmarks_ci": [
+      11.8,
+      20.4
+     ],
+     "problems_k": 34,
+     "problems_n": 1506,
+     "problems_pct": 2.3,
+     "problems_ci": [
+      1.6,
+      3.1
+     ]
+    },
+    "Calibration / uncertainty": {
+     "benchmarks_k": 10,
+     "benchmarks_pct": 3.7,
+     "benchmarks_ci": [
+      2.0,
+      6.7
+     ],
+     "problems_k": 10,
+     "problems_n": 1506,
+     "problems_pct": 0.7,
+     "problems_ci": [
+      0.4,
+      1.2
+     ]
+    },
+    "Metric validity": {
+     "benchmarks_k": 36,
+     "benchmarks_pct": 13.4,
+     "benchmarks_ci": [
+      9.8,
+      18.0
+     ],
+     "problems_k": 16,
+     "problems_n": 1506,
+     "problems_pct": 1.1,
+     "problems_ci": [
+      0.7,
+      1.7
+     ]
+    }
+   }
+  },
+  "Figure6": {
+   "total_series": 923,
+   "study_groups": 830,
+   "per_modality_series": {
+    "Paired bulk RNA": 233,
+    "Longitudinal / on-treatment": 229,
+    "Paired spatial": 186,
+    "CITE-seq protein": 181,
+    "Genotype / hashtag multiplex": 134,
+    "Matched WES/WGS": 106,
+    "Perturb-seq": 57,
+    "Cell-line mixture": 24,
+    "mtDNA lineage": 15
+   },
+   "per_year_series": {
+    "2015": 2,
+    "2016": 4,
+    "2017": 0,
+    "2018": 11,
+    "2019": 25,
+    "2020": 43,
+    "2021": 57,
+    "2022": 115,
+    "2023": 134,
+    "2024": 171,
+    "2025": 179,
+    "2026": 182
+   },
+   "deposited_2023_26": 666,
+   "deposited_2023_26_pct": 72.2,
+   "median_samples": 14,
+   "top14_cancer_types": [
+    "lung cancer",
+    "glioma/glioblastoma",
+    "acute myeloid leukaemia",
+    "breast cancer",
+    "colorectal cancer",
+    "melanoma",
+    "myelodysplastic/myeloproliferative",
+    "lymphoma",
+    "renal cell carcinoma",
+    "chronic myeloid leukaemia",
+    "acute lymphoblastic leukaemia",
+    "pancreatic cancer",
+    "hepatocellular/liver cancer",
+    "head and neck cancer"
+   ],
+   "heatmap_max": 32,
+   "heatmap_sum": 963
+  }
+ }
+}

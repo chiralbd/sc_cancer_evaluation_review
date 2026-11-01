@@ -1,0 +1,11 @@
+analysis,quantity,k,n,estimate,lower95,upper95,p,note
+Title-query recall among the benchmark catalogue,"recall, all 269 catalogue records",214.0,269,0.7955390334572491,,,,title contains benchmark|comparison|evaluation|assessment (case-insensitive)
+Title-query recall among the benchmark catalogue,"recall, 2015-2026 records",212.0,267,0.7940074906367042,0.7414926135484887,0.8381823028532103,,Wilson interval
+Title-query recall among the benchmark catalogue,"logistic recall ~ year, OR per year",212.0,267,1.0423044966949238,0.9287911223740293,1.169691050721477,0.4812475572805158,no detectable time trend in recall; conditional on catalogue membership (see caveat)
+Negative control: evaluation-check share by year,single-cell-omics abstracts: OR per year,54.0,989,0.8076729241122306,0.7395503992409566,0.882070448496182,2.0228341999287255e-06,"logistic GLM, any evaluation-check problem ~ year centred 2020"
+Negative control: evaluation-check share by year,non-single-cell-omics abstracts (negative control): OR per year,39.0,782,1.0664552075682232,0.959871437248637,1.184874000428016,0.2310658128575831,"logistic GLM, any evaluation-check problem ~ year centred 2020"
+Abstract length over the window,"median abstract length, 2015-18 (characters)",,583,1436.0,,,,"all 1,771 sampled abstracts"
+Abstract length over the window,"median abstract length, 2019-21 (characters)",,442,1443.0,,,,"all 1,771 sampled abstracts"
+Abstract length over the window,"median abstract length, 2022-23 (characters)",,297,1564.0,,,,"all 1,771 sampled abstracts"
+Abstract length over the window,"median abstract length, 2024-26 (characters)",,449,1660.0,,,,"all 1,771 sampled abstracts"
+Abstract length over the window,"sc-omics evaluation-check OR per year, adjusted for abstract length",54.0,989,0.7993382352971246,0.7283750248028176,0.8772151606665709,2.3378603981004113e-06,unadjusted OR 0.8077; adjustment does not attenuate

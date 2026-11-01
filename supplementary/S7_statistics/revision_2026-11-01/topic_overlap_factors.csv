@@ -1,0 +1,17 @@
+statistic,value
+sum of topic paper counts 2015-2026 (Table 2),85287.0
+subfield papers 2015-2026 (yearly_series.csv),34595.0
+paper overlap factor,2.4653
+sum of topic benchmark counts 2015-2026 (Table 2),270.0
+unique benchmarks 2015-2026,157.0
+benchmark overlap factor,1.7197
+benchmarks in catalogue (all years),158.0
+benchmarks carrying no topic tag,32.0
+mean topic tags per benchmark (all 158),1.7342
+mean topic tags per tagged benchmark (126),2.1746
+benchmarks with exactly 0 topic tag(s),32.0
+benchmarks with exactly 1 topic tag(s),46.0
+benchmarks with exactly 2 topic tag(s),36.0
+benchmarks with exactly 3 topic tag(s),26.0
+benchmarks with exactly 4 topic tag(s),12.0
+benchmarks with exactly 5 topic tag(s),6.0

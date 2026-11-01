@@ -1,0 +1,12 @@
+claim,checkable,result
+updated_2026 = round(archived_2026 x growth_ratio),yes,27/27 series exact
+growth_ratio = 15 Oct count / 4 Oct count,yes,reproduces for all 27 series
+growth ratios ranged 1.014 to 1.064,yes,recomputed range 1.0141-1.0638
+"subfield ratio 1.031; 7,342 -> 7,571",yes,recomputed 1.0312; 7342 -> 7571
+"three evaluation-titled 2026 records indexed after 4 Oct, none a benchmark",yes,"new_evaluation_titled_2026-10-05_to_15.csv lists 3 records, all is_benchmark=False"
+reconstructed query reproduced every year 2015-2025 within +-0.7%,no,per-year reconstructed counts are not in the released package; cannot be checked
+example 442 versus 443 records in 2015,no,no file contains a reconstructed 2015 count; the only '442' in the package is an unrelated sample size
+"example 7,528 versus 7,556 in 2025",no,"the string 7528 / 7,528 does not occur anywhere in supplementary/ or code/"
+per-topic clause selected as the best of two or three candidates on 2017/2021/2025,partly,"only the resulting mean absolute log error is released, not the candidate clauses or their counts"
+subfield calibration error,no,calibration_mean_abs_log_error_2017_2021_2025 is NaN for __SUBFIELD_TOTAL__ in the released log
+per-topic calibration quality,yes,"released for all 26 topics; median 0.091, worst 0.859 (tcell_exhaustion, factor 2.36x); 7 of 26 topics exceed 0.2"

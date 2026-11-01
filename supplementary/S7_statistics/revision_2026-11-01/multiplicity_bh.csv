@@ -1,0 +1,37 @@
+family,test,p,rank,q_BH,p_bonferroni,OR_per_year,OR_lo,OR_hi,significant_unadjusted_0.05,significant_BH_0.05,significant_bonferroni_0.05
+A: primary model tests (17),"NB2 coverage, window-matched 2023-26, excl. benchmarking: method IRR",6.774001578233257e-07,1,9.91413688073018e-06,1.1515802682996536e-05,,,,True,True,True
+A: primary model tests (17),"NB2 coverage, full window, excl. benchmarking: method IRR (2.35)",1.166369044791786e-06,2,9.91413688073018e-06,1.982827376146036e-05,,,,True,True,True
+A: primary model tests (17),"Poisson: evaluation-titled per subfield paper, trend (RR 0.940)",7.523564303504801e-05,3,0.0004263353105319387,0.0012790059315958163,,,,True,True,True
+A: primary model tests (17),"NB2 coverage, full window, all 26 topics: method IRR (4.84)",0.00022566916028305884,4,0.0009590939312030001,0.0038363757248120003,,,,True,True,True
+A: primary model tests (17),"Poisson: benchmarks per 1,000 subfield papers, trend 2015-2026 (RR 0.922)",0.002716879368924784,5,0.009237389854344266,0.04618694927172133,,,,True,True,True
+A: primary model tests (17),Panel: biology/application year slope (RR 0.901),0.0034644783450802834,6,0.00981602197772747,0.05889613186636482,,,,True,True,False
+A: primary model tests (17),"NB2 coverage, full window, alt classification, excl. benchmarking: method IRR (1.88)",0.006994341929011887,7,0.01698625897045744,0.11890381279320207,,,,True,True,False
+A: primary model tests (17),Exact conditional rate comparison 2023-26 vs 2015-20,0.008531908163707046,8,0.018130304847877473,0.14504243878301978,,,,True,True,False
+A: primary model tests (17),sc-restricted panel: biology year slope (RR 0.882),0.017843452109294052,9,0.03370429842866654,0.3033386858579989,,,,True,True,False
+A: primary model tests (17),Poisson: benchmark trend 2015-2025 only (RR 0.930),0.019970274228189224,10,0.03394946618792168,0.3394946618792168,,,,True,True,False
+A: primary model tests (17),Panel: slope ratio method/biology (1.12),0.041770186310123865,11,0.06455392429746415,0.7100931672721057,,,,True,False,False
+A: primary model tests (17),sc-genomics sensitivity: benchmark trend 2015-2026 (RR 0.920),0.05782737407683087,12,0.0819221132755104,0.9830653593061248,,,,False,False,False
+A: primary model tests (17),sc-restricted panel: slope ratio,0.08554960250548299,13,0.11187255712255469,1.0,,,,False,False,False
+A: primary model tests (17),"NB2 coverage, full window, excl. benchmarking: log share-change IRR (0.79)",0.11205673097497332,14,0.1360688876124676,1.0,,,,False,False,False
+A: primary model tests (17),"NB2 coverage, window-matched, excl. benchmarking: log share-change IRR (0.77)",0.13086270787140705,15,0.148311068920928,1.0,,,,False,False,False
+A: primary model tests (17),"Binomial: verified fraction of evaluation-titled, trend (OR 0.973)",0.4042889690556938,16,0.42955702962167464,1.0,,,,False,False,False
+A: primary model tests (17),Panel: method-topic year slope (RR 1.012),0.7942634203352463,17,0.7942634203352463,1.0,,,,False,False,False
+B: Table 3 per-year odds ratios (17),Table 3 OR/yr: resolution_limit,1.6363864652153583e-05,1,0.0002781856990866109,0.0002781856990866109,0.699901176962128,0.595057566220686,0.823217257154074,True,True,True
+B: Table 3 per-year odds ratios (17),Table 3 OR/yr: no_ground_truth,0.00039875069785483063,2,0.0033893809317660606,0.006778761863532121,0.6952438012865685,0.5685345628123383,0.8501927144699312,True,True,True
+B: Table 3 per-year odds ratios (17),Table 3 OR/yr: parameter_sensitivity,0.0010512164712951145,3,0.005956893337338982,0.017870680012016946,0.7805225458426555,0.6729931874161326,0.9052327066009411,True,True,True
+B: Table 3 per-year odds ratios (17),Table 3 OR/yr: clinical_translation,0.0030553921235722797,4,0.012492593296456047,0.051941666100728756,1.139421943253724,1.045147567095865,1.2422000544627485,True,True,False
+B: Table 3 per-year odds ratios (17),Table 3 OR/yr: technical_artifact,0.0036742921460164845,5,0.012492593296456047,0.06246296648228024,0.7990006711781238,0.6867420353473427,0.929609721968161,True,True,False
+B: Table 3 per-year odds ratios (17),Table 3 OR/yr: interpretability,0.0069089912261927,6,0.019575475140879314,0.1174528508452759,0.8767078219280621,0.7968763519326911,0.9645368483651132,True,True,False
+B: Table 3 per-year odds ratios (17),Table 3 OR/yr: no_benchmark,0.022105433119310527,7,0.05368462328975414,0.37579236302827895,0.8241038979868504,0.698276042094823,0.9726056655755857,True,False,False
+B: Table 3 per-year odds ratios (17),Table 3 OR/yr: reproducibility,0.08032760910852538,8,0.17069616935561643,1.0,0.8323779658462412,0.6776718264334388,1.0224020698525804,False,False,False
+B: Table 3 per-year odds ratios (17),Table 3 OR/yr: sample_size,0.12551959865137507,9,0.23709257523037514,1.0,0.9558121858616985,0.9021160152742987,1.012704484981274,False,False,False
+B: Table 3 per-year odds ratios (17),Table 3 OR/yr: confounding,0.2856880027645913,10,0.4693687244809034,1.0,0.824596562551953,0.5787311142987344,1.174914349985181,False,False,False
+B: Table 3 per-year odds ratios (17),Table 3 OR/yr: cost_scalability,0.30370917466411396,11,0.4693687244809034,1.0,1.3282925319677596,0.7732881554074835,2.2816346508651657,False,False,False
+B: Table 3 per-year odds ratios (17),Table 3 OR/yr: metric_invalid,0.37991262306409446,12,0.516506106618257,1.0,1.202265824315943,0.796941821381766,1.8137373062087938,False,False,False
+B: Table 3 per-year odds ratios (17),Table 3 OR/yr: uncertainty,0.42066458942262575,13,0.516506106618257,1.0,0.9297212698504789,0.7786203827105603,1.1101451475021389,False,False,False
+B: Table 3 per-year odds ratios (17),Table 3 OR/yr: data_access,0.4253579701562117,14,0.516506106618257,1.0,0.8383630346157811,0.5434705478401265,1.2932670971839684,False,False,False
+B: Table 3 per-year odds ratios (17),Table 3 OR/yr: generalization,0.6362467982807174,15,0.7210797047181464,1.0,0.9856320399266623,0.9282572892739667,1.0465530724674685,False,False,False
+B: Table 3 per-year odds ratios (17),Table 3 OR/yr: causality,0.8143950959577022,16,0.8652947894550586,1.0,1.0114836771688724,0.919513648902392,1.1126525749784357,False,False,False
+B: Table 3 per-year odds ratios (17),Table 3 OR/yr: other,0.9990003490823367,17,0.9990003490823367,1.0,708244750.2079909,0.0,inf,False,False,False
+C: section 3.3 headline abstract-level trend models (2),"any evaluation-check problem, OR/yr (0.808)",2.0228341999288076e-06,1,4.045668399857615e-06,4.045668399857615e-06,,,,True,True,True
+C: section 3.3 headline abstract-level trend models (2),"any methodological problem, OR/yr",0.0059279705206046794,2,0.0059279705206046794,0.011855941041209359,,,,True,True,True

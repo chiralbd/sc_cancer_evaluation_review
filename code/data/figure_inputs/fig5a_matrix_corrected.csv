@@ -1,0 +1,17 @@
+# Simulation,Orthogonal assay,Genotype multiplex,Cell-line mixture,Held-out measurement,Expert labels,Curated reference,Consensus only,Not stated  # rows in Table4_benchmark_classes_corrected.csv order
+16,6,0,7,0,5,1,0,26
+20,6,0,1,1,4,0,0,9
+18,7,0,3,0,2,1,0,6
+5,3,0,0,0,3,0,0,14
+3,0,0,0,0,8,0,0,7
+5,5,0,2,0,0,0,0,7
+1,0,0,0,0,0,1,0,12
+7,0,0,0,1,0,6,0,2
+6,2,8,1,0,0,0,0,2
+8,0,0,0,0,1,0,0,4
+0,0,1,0,10,0,0,0,0
+3,0,0,0,0,0,0,1,4
+1,1,0,1,0,2,0,0,2
+2,3,0,1,0,0,0,1,2
+0,0,0,0,1,0,0,0,2
+2,2,0,0,0,0,0,0,0

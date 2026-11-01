@@ -1,0 +1,15 @@
+quantity,status,denominator_or_n
+85 of 85 quantities in code/data/expected_values.csv,reproduce at the printed precision from code/src/03_statistics.py on the shipped inputs,denominator 85
+"subfield benchmark trend RR 0.922 (0.875-0.972), p=0.0027","unchanged; HC0 p=9.0e-05, quasi-Poisson (Pearson scale 1.256) p=0.0075, NB2 RR 0.921 p=0.0046 - significant under every robust variant",12 yearly observations
+"2015-2025 trend RR 0.930, p=0.020",unchanged; HC0 p=0.0055; BH q=0.0339 within the 17-test family (survives),11 yearly observations
+evaluation-titled trend RR 0.940 (0.911-0.969),unchanged; HC0 p=4.1e-09,12 yearly observations
+"exact conditional rate comparison 2023-26 vs 2015-20, p=0.0085",unchanged; BH q=0.0181,"157 benchmarks / 34,595 papers"
+NB2 method IRR 2.35 (1.66-3.31),"point estimate and conclusion unchanged; HC0 1.69-3.26, singleton-cluster 1.64-3.36, PMID bootstrap 2.30 (1.68-3.20); attenuates to 1.80-1.97 but stays >1 under a single-primary-topic assignment","25 topics, 270 topic-benchmark rows"
+"NB2 method IRR 4.84 (2.09-11.18), 1.88 (1.19-2.98), 2.81 (1.87-4.22)",point estimates unchanged; all remain >1 under HC0 (4.84 widens to 1.57-14.89),26 / 25 / 25 topics
+NB2 log share-change IRR 0.79 (0.60-1.06),"unchanged; HC0 0.64-0.99, PMID bootstrap 0.79 (0.60-1.01)",25 topics
+"panel point estimates 0.901, 1.012, 1.123 and sc-restricted 0.882, 1.018, 1.154",unchanged - robust SEs alter intervals and p-values only,294 and 261 topic-years
+panel method slope 1.012 (flat),"unchanged and non-significant under every estimator (naive p=0.794, clustered p=0.811, HC0 p=0.807)",294 topic-years
+any evaluation-check problem OR 0.808 (0.74-0.88),unchanged; BH q=4e-06; unaffected by adjustment for abstract length (0.799) or publication type (0.793),"989 sc-omics abstracts, 54 positives"
+period prevalences 14.0 / 6.2 / 3.1 / 3.6%,unchanged; absolute counts now also reported,129 / 240 / 229 / 391 abstracts
+"158 verified benchmarks; 157 in 2015-2026; 1,771 coded abstracts; 989 sc-omics",unchanged,as published
+"every Cohen's kappa and every per-topic rate per 1,000 papers",not touched by this track; all reproduce,as published

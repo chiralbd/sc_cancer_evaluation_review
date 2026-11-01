@@ -150,14 +150,10 @@ for t in data_tables:
                     r.font.size = Pt(9)
                     if i == 0: r.font.bold = True
 
-# page setup, line numbers, page numbers
+# page setup, header, page numbers
 for sec in d.sections:
     sec.page_height, sec.page_width = Cm(29.7), Cm(21.0)
     sec.left_margin = sec.right_margin = sec.top_margin = sec.bottom_margin = Cm(2.5)
-    sp = sec._sectPr
-    ln = OxmlElement("w:lnNumType")
-    ln.set(qn("w:countBy"), "1"); ln.set(qn("w:restart"), "continuous"); ln.set(qn("w:distance"), "283")
-    sp.append(ln)
     fp = sec.footer.paragraphs[0]; fp.alignment = WD_ALIGN_PARAGRAPH.CENTER
     run = fp.add_run()
     for kind, txt in (("begin", None), (None, "PAGE"), ("end", None)):
@@ -167,14 +163,6 @@ for sec in d.sections:
             it = OxmlElement("w:instrText"); it.set(qn("xml:space"), "preserve"); it.text = txt; run._r.append(it)
     hp = sec.header.paragraphs[0]; hp.alignment = WD_ALIGN_PARAGRAPH.RIGHT
     hr = hp.add_run("The evaluation gap in single-cell cancer genomics"); hr.italic = True; hr.font.size = Pt(9)
-
-# no line numbers inside tables / references (suppressLineNumbers)
-def suppress(p):
-    ppr = p._p.get_or_add_pPr(); e = OxmlElement("w:suppressLineNumbers"); ppr.append(e)
-for t in data_tables:
-    for row in t.rows:
-        for c in row.cells:
-            for p in c.paragraphs: suppress(p)
 
 d.core_properties.title = title
 d.core_properties.author = "Md. Jubayer Hossain"

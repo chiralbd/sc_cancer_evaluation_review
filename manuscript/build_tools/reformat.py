@@ -36,7 +36,6 @@ PREAMBLE = r"""\documentclass[11pt]{article}
 \usepackage[most]{tcolorbox}
 \usepackage{enumitem}
 \usepackage{float}
-\usepackage[mathlines]{lineno}
 \usepackage{fancyhdr}
 \usepackage{titlesec}
 \usepackage{caption}
@@ -86,7 +85,7 @@ PREAMBLE = r"""\documentclass[11pt]{article}
 \setlength{\LTpre}{6pt}
 \setlength{\LTpost}{6pt}
 \renewcommand{\arraystretch}{1.2}
-\newenvironment{tablefont}{\par\scriptsize\setlength{\tabcolsep}{3.5pt}\nolinenumbers}{\par\linenumbers}
+\newenvironment{tablefont}{\par\scriptsize\setlength{\tabcolsep}{3.5pt}}{\par}
 \newcommand{\thead}[1]{\textbf{#1}}
 
 %% ---------------------------------------------------------------
@@ -131,8 +130,6 @@ E-mail: \href{mailto:contact.jubayerhossain@gmail.com}{contact.jubayerhossain@gm
 \end{tabular}}
 \end{flushleft}
 \end{titlepage}
-
-\linenumbers
 """
 
 # ---- body clean-up ------------------------------------------------------
@@ -193,11 +190,11 @@ body = body.replace(
     "curated the data, performed the analyses, prepared the figures and\n"
     "wrote and revised the manuscript.")
 
-# References: numbered [n] list in small type, single-spaced, no line numbers.
+# References: numbered [n] list in small type, single-spaced.
 i = body.index(r"\section{References}")
 head, refs = body[:i], body[i:]
 refs = refs.replace("\\begin{enumerate}\n\\def\\labelenumi{\\arabic{enumi}.}\n\\tightlist",
-                    "\\begingroup\\small\\setstretch{1.05}\\nolinenumbers\n"
+                    "\\begingroup\\small\\setstretch{1.05}\n"
                     "\\begin{enumerate}[label={[\\arabic*]},leftmargin=2.6em,labelsep=0.5em,itemsep=1.5pt]", 1)
 refs = refs.rstrip()
 assert refs.endswith(r"\end{enumerate}")

@@ -1,0 +1,22 @@
+analysis,quantity,estimate,lower95,upper95,p,n,note
+published (overlapping topic tags),"NB2 method IRR, full window excl. benchmarking",2.3460284500527915,1.6634985443576888,3.30859892070555,1.166369044791786e-06,25,270 topic-benchmark rows over 157 unique benchmarks
+published (overlapping topic tags),panel biology slope,0.9009861158259134,0.8401508767383886,0.9662264283559655,0.0034644783450802834,294,naive Poisson SEs
+published (overlapping topic tags),panel method slope,1.0116259698962313,0.9274505607047475,1.1034411388902965,0.7942634203352463,294,
+published (overlapping topic tags),panel slope ratio,1.1227986226723337,1.0043240584283246,1.2552489771555742,0.041770186310123865,294,
+single primary topic = rarest tag (smallest 2015-26 topic volume),"NB2 method IRR, full window excl. benchmarking",1.9655048575461538,1.0490471801215155,3.6825887512418984,0.03490709232959625,25,"126 tagged benchmarks, one topic each"
+single primary topic = rarest tag (smallest 2015-26 topic volume),panel biology slope,0.8049093200925327,0.7291072842889956,0.8885921558219189,1.703708883704637e-05,294,
+single primary topic = rarest tag (smallest 2015-26 topic volume),panel method slope,0.9233888489405438,0.8149276536085319,1.0462854740199181,0.21121255826781737,294,
+single primary topic = rarest tag (smallest 2015-26 topic volume),panel slope ratio,1.1471961199733538,0.9782015766285047,1.3453862364625102,0.09123837670476467,294,
+single primary topic = commonest tag (largest 2015-26 topic volume),"NB2 method IRR, full window excl. benchmarking",1.7998618496275798,1.0127262729254336,3.1987939528683835,0.04517034667887264,25,"126 tagged benchmarks, one topic each"
+single primary topic = commonest tag (largest 2015-26 topic volume),panel biology slope,0.8557011399762064,0.787378698212455,0.9299520581632579,0.0002420752273057642,294,
+single primary topic = commonest tag (largest 2015-26 topic volume),panel method slope,0.9253057668333836,0.8139006077582002,1.051959851084765,0.23560119105534105,294,
+single primary topic = commonest tag (largest 2015-26 topic volume),panel slope ratio,1.08134221588055,0.9280152940783822,1.2600018505155108,0.316156526119187,294,
+single primary topic = uniform random draw (200 replicates),"NB2 method IRR, full window excl. benchmarking",2.207043149886881,1.7240523814291977,2.6644338945407022,,138,"interval is the 2.5-97.5 percentile across assignment draws, not a sampling CI; 0.685 of draws gave p<0.05"
+single primary topic = uniform random draw (200 replicates),panel biology slope,0.8357935279537612,0.8116588178242219,0.8621255393509499,,200,"interval is the 2.5-97.5 percentile across assignment draws, not a sampling CI; 1.000 of draws gave p<0.05"
+single primary topic = uniform random draw (200 replicates),panel method slope,0.9308512093263623,0.8773758433385168,0.9831508535834366,,200,"interval is the 2.5-97.5 percentile across assignment draws, not a sampling CI; 0.070 of draws gave p<0.05"
+single primary topic = uniform random draw (200 replicates),panel slope ratio,1.1155897219535116,1.0242704119177595,1.2011926896697245,,200,"interval is the 2.5-97.5 percentile across assignment draws, not a sampling CI; 0.130 of draws gave p<0.05"
+"nonparametric bootstrap over the 157 benchmark PMIDs (1,000 replicates)","NB2 method IRR, full window excl. benchmarking",2.3022650695478597,1.6808659260335643,3.2018505376783795,0.0,992,percentile CI; p is the two-sided bootstrap p against the null of 1
+"nonparametric bootstrap over the 157 benchmark PMIDs (1,000 replicates)",NB2 log share-change IRR,0.7941896950744793,0.6032002929660866,1.0129801298285146,0.06653225806451613,992,percentile CI; p is the two-sided bootstrap p against the null of 1
+"nonparametric bootstrap over the 157 benchmark PMIDs (1,000 replicates)",panel biology slope,0.9050941233330811,0.8298395493417084,1.0132763581246467,0.07,1000,percentile CI; p is the two-sided bootstrap p against the null of 1
+"nonparametric bootstrap over the 157 benchmark PMIDs (1,000 replicates)",panel method slope,1.0116919990443898,0.9109337898620725,1.1550104368298932,0.836,1000,percentile CI; p is the two-sided bootstrap p against the null of 1
+"nonparametric bootstrap over the 157 benchmark PMIDs (1,000 replicates)",panel slope ratio,1.1174339245301996,0.9885890544170831,1.2713350842316786,0.092,1000,percentile CI; p is the two-sided bootstrap p against the null of 1

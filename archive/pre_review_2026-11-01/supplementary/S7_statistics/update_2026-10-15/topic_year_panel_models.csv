@@ -1,0 +1,8 @@
+effect,estimate,lower95,upper95,p,model,analysis
+"year rate ratio, method topics",1.011625969896231,0.9274505607047471,1.1034411388902965,0.7942634203352509,"Poisson GLM, topic fixed effects, offset log topic-year papers, 2015-2026, excl. benchmarking topic",all verified benchmarks
+"year rate ratio, biology/application topics",0.9009861158259139,0.8401508767383888,0.9662264283559663,0.0034644783450805705,"Poisson GLM, topic fixed effects, offset log topic-year papers, 2015-2026, excl. benchmarking topic",all verified benchmarks
+ratio of year effects (method / biology),1.1227986226723328,1.0043240584283235,1.2552489771555735,0.041770186310125586,contrast,all verified benchmarks
+"year rate ratio, all topics (common slope)",0.9470170086880682,0.8964518329528017,1.0004343588549676,0.05184088420112166,"Poisson GLM, topic fixed effects",all verified benchmarks
+"year RR, method topics (sc-genomics only)",1.0178782133482163,0.8971543576351261,1.1548470432000404,0.7832370758019788,,single-cell-genomics benchmarks and denominators
+"year RR, biology/application topics (sc-genomics only)",0.8817656314080617,0.7945823457383678,0.9785148548826036,0.01784345210929434,,single-cell-genomics benchmarks and denominators
+ratio method/biology (sc-genomics only),1.1543636733978857,0.9801120176995574,1.35959509361831,0.08554960250548092,,single-cell-genomics benchmarks and denominators

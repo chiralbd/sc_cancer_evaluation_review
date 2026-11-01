@@ -64,7 +64,7 @@ The scripts only read files and print results. `ref_metadata.py` needs internet 
 
 **Rules:**
 - Check against the **source** (PubMed, the paper itself, the data file), never against another part of the manuscript alone.
-- Every finding needs a location: section, PDF line number, table/figure, or file and row.
+- Every finding needs a location: section and paragraph, PDF page, table/figure, or file and row.
 - Do not use language-model tools to do the checking. The point of this round is a human check.
 
 ---
@@ -147,7 +147,7 @@ For each number below, find it in the source file, recompute it if you can, and 
 | 91 simulation; 44 orthogonal; 107 not stated | §3.4, Fig. 5a | `S1_benchmark_catalogue.csv` (`table4.py` prints the totals) |
 | 1,336 series; 1,166 groups; 138 WES/WGS, 227 CITE-seq, 250 spatial | Abstract, §2.6, §6.2 | `S3_ground_truth_catalogue.csv` (`table5.py` prints them) |
 
-Then do the same for a further **random 30 numbers** anywhere in §3–§6, picked by PDF line number.
+Then do the same for a further **random 30 numbers** anywhere in §3–§6: pick random PDF pages, then a random paragraph on each page.
 
 ### B3. Arithmetic and internal consistency
 
@@ -215,7 +215,7 @@ The scripts confirm that the tables match S1 and S3. They cannot confirm that S1
 
 Use one shared spreadsheet with these columns:
 
-| ID | Reviewer | Workstream (A/B/C) | Location (section / PDF line / table / figure / file:row) | Finding | Evidence (source, link, recomputed value) | Severity | Suggested fix | Author response | Status |
+| ID | Reviewer | Workstream (A/B/C) | Location (section / PDF page and paragraph / table / figure / file:row) | Finding | Evidence (source, link, recomputed value) | Severity | Suggested fix | Author response | Status |
 |---|---|---|---|---|---|---|---|---|---|
 
 **Severity scale:**

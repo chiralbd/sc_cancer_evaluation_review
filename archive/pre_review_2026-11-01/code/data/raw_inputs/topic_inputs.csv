@@ -1,0 +1,27 @@
+topic,label,method,method_alt,true_benchmarks,rel_share_25_vs_21,log_share_change,papers_23_26,bench_23_26,papers_15_26,bench_15_26
+benchmarking,Benchmarking & evaluation,1,1,46,1.0717641609317097,0.0693060393143837,283,35,373,45
+cell_communication,Cell-cell communication,1,0,5,2.3195158688144395,0.8413584866669395,2196,5,2524,5
+clinical_prognosis,Clinical prognosis & biomarkers,0,0,37,1.593171649195348,0.465726777285869,13532,23,16859,37
+clonal_phylogeny,Clonal evolution & phylogeny,1,1,7,0.4401288560565956,-0.8206877402693091,468,7,857,7
+cnv_scdna,CNV inference / scDNA-seq,1,1,16,0.8814508987101913,-0.1261859806693157,1045,12,1553,16
+ctc_liquid_biopsy,CTC / liquid biopsy / MRD,1,0,8,0.4619673107464266,-0.7722611463638348,568,3,1151,8
+deconvolution,Bulk deconvolution,1,1,13,1.2255545688963267,0.203393450857874,846,10,1040,12
+drug_response_pred,Drug-response prediction,0,1,6,3.1921941172578085,1.160708491415744,3920,5,4528,6
+epigenome_multiome,scATAC / multiome / epigenome,1,0,3,0.902816115858731,-0.1022363832247435,573,3,706,3
+foundation_dl,Deep learning / foundation models,1,1,12,3.054158284806776,1.1165040341392931,2996,9,3361,12
+immunotherapy_resp,Immunotherapy response,0,0,13,1.5256008470089992,0.422388330501217,7558,11,9259,13
+integration_batch,Integration & batch effects,1,1,3,1.2854742559900567,0.2511277210666874,324,2,389,3
+ith_quantification,Intratumor heterogeneity metrics,1,1,8,0.6715684791650912,-0.3981392888213815,1559,5,2416,7
+lineage_barcoding,Lineage tracing & barcoding,1,1,0,0.6771546645263751,-0.389855576436085,266,0,397,0
+longitudinal_therapy,Longitudinal / on-treatment,0,0,1,1.0293316079446309,0.0289096672734208,681,0,930,1
+malignant_calling,Malignant-vs-normal cell calling,1,1,8,1.3654781142904908,0.3115046341872807,1213,6,1500,8
+metastasis,Metastasis & dissemination,0,0,12,1.2405558617146868,0.2155595547478266,5716,10,7811,12
+pancancer_atlas,Pan-cancer atlases,0,0,6,1.9696112166412356,0.6778361713146731,1393,6,1643,6
+perturbseq,Perturbation screens,1,1,0,1.4782953943885653,0.3908896634418461,109,0,136,0
+plasticity_emt,Plasticity / EMT / stemness,0,0,9,1.1240899632578398,0.1169737867542132,2636,1,3653,9
+qc_artifacts,QC artifacts (doublets/ambient),1,1,1,1.4290188812422795,0.3569881117661646,275,1,342,1
+resistance_persister,Drug resistance & persisters,0,0,9,1.2487464201046268,0.2221401841934353,1964,5,2624,9
+spatial_tumor,Spatial transcriptomics in tumors,1,0,13,6.234550141551775,1.830106426016079,3030,13,3231,13
+tcell_exhaustion,T-cell states & exhaustion,0,0,12,1.3154686552964914,0.2741929939976835,4103,11,5127,12
+tcr_bcr_repertoire,TCR/BCR repertoire,1,0,4,0.7813847084625274,-0.2466876659632883,1032,2,1508,4
+tme_composition,Tumor microenvironment composition,0,0,22,1.628364775334071,0.4875763059548942,9383,16,11369,21

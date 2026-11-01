@@ -27,7 +27,6 @@
 \usepackage[most]{tcolorbox}
 \usepackage{enumitem}
 \usepackage{float}
-\usepackage[mathlines]{lineno}
 \usepackage{fancyhdr}
 \usepackage{titlesec}
 \usepackage{caption}
@@ -77,7 +76,7 @@
 \setlength{\LTpre}{6pt}
 \setlength{\LTpost}{6pt}
 \renewcommand{\arraystretch}{1.2}
-\newenvironment{tablefont}{\par\scriptsize\setlength{\tabcolsep}{3.5pt}\nolinenumbers}{\par\linenumbers}
+\newenvironment{tablefont}{\par\scriptsize\setlength{\tabcolsep}{3.5pt}}{\par}
 \newcommand{\thead}[1]{\textbf{#1}}
 
 %% ---------------------------------------------------------------
@@ -122,8 +121,6 @@ E-mail: \href{mailto:contact.jubayerhossain@gmail.com}{contact.jubayerhossain@gm
 \end{tabular}}
 \end{flushleft}
 \end{titlepage}
-
-\linenumbers
 
 \section{Abstract}\label{abstract}
 \begingroup\setlength{\parindent}{0pt}\setlength{\parskip}{0.6ex}
@@ -177,7 +174,7 @@ cells, the integration of patients, the reference used to label the
 immune compartment and the inference of cell-type proportions or
 interactions are each delegated to software. That software typically
 returns point estimates; in the benchmark literature catalogued here,
-calibration or uncertainty is assessed in 3.3\% of studies (§3.4).
+calibration or uncertainty is assessed in 3.3\% of studies (3.4).
 Principles for evaluating such software are nevertheless established.
 Neutral comparison studies {[}1{]} should be designed to avoid the
 self-assessment trap, in which developers rank their own method best
@@ -1830,7 +1827,7 @@ responsibility for the content.
 \clearpage
 \section{References}\label{references}
 
-\begingroup\small\setstretch{1.05}\nolinenumbers
+\begingroup\small\setstretch{1.05}
 \begin{enumerate}[label={[\arabic*]},leftmargin=2.6em,labelsep=0.5em,itemsep=1.5pt]
 \item
   Boulesteix AL, Lauer S, Eugster MJ. A plea for neutral comparison
